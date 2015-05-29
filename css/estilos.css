@@ -93,10 +93,10 @@ html,body{width: 100%;height: 100%;}
 #logohome{width: 100%;display: inline-block;text-align: center;}
 #logohome img{margin:20px auto;width: 100%; max-width: 320px}
 .bnt_noticias{background-image: url("../images/icono-noticias.png");}
-.bnt_torneos{background-image: url("../images/icono-noticias.png");}
-.bnt_avisos{background-image: url("../images/icono-noticias.png");}
-.bnt_actividades{background-image: url("../images/icono-noticias.png");}
-.bnt_golf{background-image: url("../images/icono-noticias.png");}
-.bnt_restaurantes{background-image: url("../images/icono-noticias.png");}
-.bnt_miclub{background-image: url("../images/icono-noticias.png");}
-.bnt_contacto{background-image: url("../images/icono-noticias.png");}
+.bnt_torneos{background-image: url("../images/icono-torneos.png");}
+.bnt_avisos{background-image: url("../images/icono-avisos.png");}
+.bnt_actividades{background-image: url("../images/icono-actividades.png");}
+.bnt_golf{background-image: url("../images/icono-golf.png");}
+.bnt_restaurantes{background-image: url("../images/icono-restaurantes.png");}
+.bnt_miclub{background-image: url("../images/icono-miclub.png");}
+.bnt_contacto{background-image: url("../images/icono-contacto.png");}
