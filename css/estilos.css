@@ -21,8 +21,8 @@ h1,h2,h3{font-weight:bold;}
 h4,h5,h6{font-weight:normal;}
 h1{font-size:36px; font-family: 'Cinzel', serif;}
 h2{font-size:30px; font-family: 'Cinzel', serif;}
-h3{font-size:24px; font-family: 'Cinzel', serif;}
-h4{font-size:18px}
+h3{font-size:24px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
+h4{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
 h5{font-size:16px}
 h6{font-size:14px}
 a:link{color:#c90808;text-decoration:none}
@@ -101,6 +101,17 @@ html,body{width: 100%;height: 100%;}
 .bnt_restaurantes{background-image: url("../images/icono-restaurantes.png"); font-family: 'Cinzel', serif;}
 .bnt_miclub{background-image: url("../images/icono-miclub.png"); font-family: 'Cinzel', serif;}
 .bnt_contacto{background-image: url("../images/icono-contacto.png"); font-family: 'Cinzel', serif;}
+
+
+
+
+#menuactividades{position: relative; width: 100%;}
+#menuactividades li {background-image: url("../images/fondo-boton.png");display: inline-block;float: left;margin: 1%;width: 98%;}
+#menuactividades li a{background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #fff;display: inline-block;font-size: 1em;height: 48px;line-height: 48px;text-indent: 20px;width: 100%;}
+.btn_nextlist{background-image: url("../images/nextlist.png"); font-family: 'Cinzel', serif;}
+
+
+
 
 
 
