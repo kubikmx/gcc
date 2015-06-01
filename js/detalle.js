@@ -4,6 +4,9 @@ function onLoad(){
 }
 
 function loadinfo(){
+	var cadVariables = location.search.substring(1,location.search.length ); // sin ?
+	var arrVariables = cadVariables.split("&"); // array de cadenas de tipo "var1=valor1"
+	var idv=0;
 
 	for (i=0; i<arrVariables.length; i++) {
 	  arrVariableActual = arrVariables[i].split("=");
@@ -12,19 +15,17 @@ function loadinfo(){
 	  else
 	    eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
 	}
+	
+	if (idv!=0){
 
-/*
-	$.getJSON("http://www.k-i.co/cc/webservices/noticias.php", function(result){
-        $.each(result, function(i, field){
-         var bloque=  '<div class="bordelist"><div class="articulo"><img src="http://k-i.co/cc/images/noticias/thumbs/'+field.imagen+'" >';
-         	 bloque+= '<p><span>'+ field.nombre +' </span>'+field.intro+'</p>';
-			 bloque+= '<a href="detalle.html" data-id="'+field.id_noticia+'"></a>';
-			 bloque+= '</div><div class="clear"></div></div>';	
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
+	        $.each(result, function(i, field){
+				$("#titulo_detalle").html(field.nombre);
+				$(".fotonoticia").attr("src","http://k-i.co/cc/images/noticias/"+field.imagen);	
+				$(".parrafodetalle").html(field.detalle);
+	        });
+	    });
+	}
 
-		$("#listado_normal").append(bloque);	 
-
-        });
-    });
-*/
 
 }
