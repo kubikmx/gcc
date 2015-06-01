@@ -148,3 +148,57 @@ html,body{width: 100%;height: 100%;}
 
 
 .barratop{position:absolute; background-color:#000; width:100%; height:40px; opacity:.7}
+
+/* Detalle Campo */
+#holeData{
+	width:25%;
+	height:auto;
+	display:block;
+	float:right;
+}
+#holeData .content{
+	background:#16264d;
+	color:#fff;
+}
+#Contentbottom{
+	width:100%;
+	height:100px;
+}
+.TeeMarks .line{
+	clear:both;
+}
+
+.teeMark{
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	display:block;
+	position:relative;
+	float:left;
+}
+.teeMark.blue{background-color:#7898e6}
+.teeMark.white{background-color:#fff;border:1px solid #c7c7c7;}
+.teeMark.gold{background-color:#b2a326}
+.teeMark.green{background-color:#55a03e}
+.teeMark.red{background-color:#ff0600}
+
+#holeNb{
+	width:60px;
+	height:60px;
+	line-height:60px;
+	text-align: center;
+	display:block;
+	font-size:40px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border:solid 5px #fff;
+	background:none;
+	display:block;
+	position:relative;
+	font-family:'Open Sans';
+	font-weight:700;
+	margin:10px auto; 
+}
