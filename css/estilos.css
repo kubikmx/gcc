@@ -25,6 +25,9 @@ h3{font-size:24px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px
 h4{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
 h5{font-size:16px}
 h6{font-size:14px}
+h7{font-size:36px; font-family: 'Open Sans', sans-serif; font-weight:700; text-transform:uppercase;}
+.spanchica{ font-family: 'Open Sans', sans-serif; font-size:16px; text-transform:uppercase; font-weight:700;}
+
 a:link{color:#c90808;text-decoration:none}
 a:visited{color:#990707;text-decoration:none}
 a:hover{text-decoration:none;color:#ff0000}
@@ -34,8 +37,8 @@ a:active{text-decoration:none}
 .column_1_1{width: 100%;}
 .column_1_2{width:50%!important;overflow:hidden; float:left;}
 .column_1_3{width:33%;overflow:hidden}
-.column_1_4{width:25%}
-.column_1_5{width:20%;overflow:hidden}
+.column_1_4{width:25%; float:left;}
+.column_1_5{width:20%;overflow:hidden; float:left;}
 .column_4_5{width:80%;overflow:hidden}
 .column_2_3{width:67%;overflow:hidden}
 .column_3_4{width:75%;overflow:hidden}
@@ -61,6 +64,8 @@ a:active{text-decoration:none}
 .padding{padding:15px 40px}
 .extraPadding{padding:30px}
 .padding2{padding:15px}
+.padding3{padding:10px}
+.padding4{padding:5px}
 .no_border{border:0!important}
 .no_padding{padding:0!important}
 .no_margin{margin:0!important}
@@ -213,3 +218,28 @@ html,body{width: 100%;height: 100%;}
 	font-weight:700;
 	margin:10px auto; 
 }
+
+
+#holeNbnegro{
+	width:45px;
+	height:45px;
+	line-height:45px;
+	display:block;
+	font-size:35px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border:solid 5px #000;
+	background:none;
+	display:block;
+	position:relative;
+	font-family:'Open Sans';
+	font-weight:700;
+	margin:25px auto; 
+	text-indent: 0px !important;
+	text-align:center;
+}
+
+
+
+
