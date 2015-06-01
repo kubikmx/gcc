@@ -1,6 +1,4 @@
 function onLoad(){
-	//document.title = App.Properties.__caption;	
-	//document.getElementById('blockName').innerText = App.Properties.__caption;
 	loadinfo();
 }
 
@@ -12,7 +10,7 @@ function loadinfo(){
 			 bloque+= '<a href="detalle.html?id='+field.id_noticia+'" data-id="'+field.id_noticia+'"></a>';
 			 bloque+= '</div><div class="clear"></div></div>';	
 
-		$("#listado_normal").append(bloque);	 
+		$("#listado_normal").append(bloque);
 
         });
     });
