@@ -1,0 +1,167 @@
+@charset "utf-8";
+html{color:#000;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}
+del,ins{text-decoration:none}
+li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:baseline}
+sub{vertical-align:baseline}
+legend{color:#000}
+a{text-decoration:none;color:inherit}
+a:hover{text-decoration:none;color:inherit}
+body{margin-left:0;margin-top:0;margin-right:0;margin-bottom:0;position:relative;text-align:justify; font-family: 'Open Sans', sans-serif; font-size: 1em; }
+body,td,th{font-size:14px;color:#373737;}
+h1,h2,h3{font-weight:bold;}
+h4,h5,h6{font-weight:normal;}
+h1{font-size:36px; font-family: 'Cinzel', serif;}
+h2{font-size:30px; font-family: 'Cinzel', serif;}
+h3{font-size:24px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px; text-transform:uppercase;}
+h4{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
+h5{font-size:16px}
+h6{font-size:14px}
+a:link{color:#c90808;text-decoration:none}
+a:visited{color:#990707;text-decoration:none}
+a:hover{text-decoration:none;color:#ff0000}
+a:active{text-decoration:none}
+.safe_area{width:1200px;margin:0 auto;position:relative}
+.half_safe_area{width:600px;margin:0 auto;position:relative}
+.column_1_1{width: 100%;}
+.column_1_2{width:50%!important;overflow:hidden; float:left;}
+.column_1_3{width:33%;overflow:hidden}
+.column_1_4{width:25%}
+.column_1_5{width:20%;overflow:hidden}
+.column_4_5{width:80%;overflow:hidden}
+.column_2_3{width:67%;overflow:hidden}
+.column_3_4{width:75%;overflow:hidden}
+.column_7_6{width:110%;overflow:hidden}
+.column_3_5{width:60%;overflow:hidden}
+.column_2_5{width:40%;overflow:hidden}
+.column_1_6{width:16.66%;overflow:hidden}
+.column_1_10{width:11%;overflow:hidden; float:left;}
+.column_5_6{width:83.3%;overflow:hidden}
+.row_3_4{height:75%}
+.row_1_4{height:25%}
+.container{margin:0 auto}
+.whitespace{width:100%}
+.block{display:block}
+.reset{margin:0;padding:0}
+.left,.fleft{float:left}
+.right,.fright{float:right}
+.space{margin-bottom:30px}
+.big{font-size:24px}
+.megabig{font-size:40px;font-weight:bold;padding-top:65px;padding-bottom:10px}
+.bigestTxt{font-size:75px}
+.smallTxt{font-size:11px}
+.padding{padding:15px 40px}
+.extraPadding{padding:30px}
+.padding2{padding:15px}
+.no_border{border:0!important}
+.no_padding{padding:0!important}
+.no_margin{margin:0!important}
+.center{display:block;text-align:center}
+.clear,.clearb,.cBoth{clear:both}
+.bg_image{background-size:cover;background-position:50% 50%;background-repeat:none}
+.full_height{height:100%}
+.no_hidden{overflow:visible}
+.hidden{display:none}
+.clear{clear: both;}
+
+
+html,body{width: 100%;height: 100%;}
+#listado_normal{width: 100%; display: inline-block;background-color: #e9e6cd; position: relative;}
+.bordelist {background-color: #f8f8f0;padding:1%; margin: 2%}
+.articulo{width: 100%; display: inline-block; float: left;background-color: #323230; color:#ffffff;font-size: .8em; position: relative;}
+.articulo img{width: 48%; display: inline-block; float: left;border-right: 10px solid #f8f7f0;}
+.articulo p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
+.articulo a{background-image: url("../images/ir.png");background-position: center center;background-repeat: no-repeat;height: 36px;left: 0;margin-top: -18px;position: absolute;top: 50%;width: 97%;}
+.articulo span{color:#b2a326; width: 100%; display: inline-block; font-size: 1.1em; font-family: 'Dosis', sans-serif; text-transform:uppercase; font-weight:600; }
+
+
+
+.detallearticulo{width: 94%; display: inline-block; float: left; font-size: .8em; position: relative; padding:3%}
+.detallearticulo img{width: 48%; display: inline-block; float: left;margin-right: 10px;}
+.articulo p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
+
+
+
+.fondocrema{width: 100%; display: inline-block;background-color: #e9e6cd; position: initial; margin-top: -27px; padding-top: 27px;}
+
+
+
+
+.cinta{width: 100%; margin-top: -36px; background:url(../images/cinta.png) center top repeat-x; background-size:contain; height:100px; position:relative;}
+.cinta img{width: 100%;margin-top: -36px;}
+.textocinta{ margin-left:30%; margin-top:-50px;}
+
+#contenedorhome{background-image: url(../images/fondo.jpg); width: 100%; height: 100%;background-size: cover  }
+#menuhome{position: absolute; width: 100%;bottom: 0}
+#menuhome li {background-image: url("../images/fondo-boton.png");display: inline-block;float: left;margin: 1%;width: 48%;}
+#menuhome li a{background-position: 6px 8px;background-repeat: no-repeat;background-size: 32px auto;color: #fff;display: inline-block;font-size: 1em;height: 48px;line-height: 48px;text-indent: 42px;width: 100%;}
+#logohome{width: 100%;display: inline-block;text-align: center;}
+#logohome img{margin:20px auto;width: 100%; max-width: 320px}
+.bnt_noticias{background-image: url("../images/icono-noticias.png"); font-family: 'Cinzel', serif;}
+.bnt_torneos{background-image: url("../images/icono-torneos.png"); font-family: 'Cinzel', serif;}
+.bnt_avisos{background-image: url("../images/icono-avisos.png"); font-family: 'Cinzel', serif;}
+.bnt_actividades{background-image: url("../images/icono-actividades.png"); font-family: 'Cinzel', serif;}
+.bnt_golf{background-image: url("../images/icono-golf.png"); font-family: 'Cinzel', serif;}
+.bnt_restaurantes{background-image: url("../images/icono-restaurantes.png"); font-family: 'Cinzel', serif;}
+.bnt_miclub{background-image: url("../images/icono-miclub.png"); font-family: 'Cinzel', serif;}
+.bnt_contacto{background-image: url("../images/icono-contacto.png"); font-family: 'Cinzel', serif;}
+
+
+
+
+#menuactividades{position: relative; width: 100%;}
+#menuactividades li {background-image: url("../images/fondo-boton.png");display: inline-block;float: left;margin: 1%;width: 98%;}
+#menuactividades li a{background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #fff;display: inline-block;font-size: 1em;height: 48px;line-height: 48px;text-indent: 20px;width: 100%;}
+
+
+
+#menugolf{position: relative; width: 100%;}
+#menugolf li { background-color:#fff;display: inline-block;float: left;margin: 1%;width: 98%; color:#000;}
+#menugolf li a{background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #000;display: inline-block;font-size: 1em;height: 100px;line-height: 100px;text-indent: 20px;width: 100%;}
+
+
+.btn_nextlist{background-image: url("../images/nextlist.png"); font-family: 'Cinzel', serif;}
+
+.btn_nextgolflist{background-image: url("../images/nextgolflist.png"); font-family: 'Open Sans', sans-serif; background-position: right 50% !important;}
+
+
+
+.fotonoticia{width:50%!important;overflow:hidden; float:left; margin-right:10px;}
+
+
+
+
+#containtertitle{position: relative; width: 100%; margin-top:-40px;}
+#containtertitle li {background-image: url("../images/cinta.png"); background-position:center; background-size:contain; background-repeat:repeat-x; display: inline-block;float: left;margin: 0%;width: 100%; height:90px;}
+
+
+.icontitle{background-image: url("../images/logotitle.png"); font-family: 'Cinzel', serif; background-position: 0px 0px;background-repeat: no-repeat;background-size: 90px auto;color: #fff;display: inline-block;font-size: 1em;height: 90px;line-height: 90px;text-indent: 100px;width: 100%;}
+
+
+
+.barratop{position:absolute; background-color:#000; width:100%; height:40px; opacity:.7}
+
+/* Detalle Campo */
+
+.holeImg{width:100%;height:auto;display:block;}
+#holeData{width:70%;height:auto;display:block;float:right;position:relative;top:0px;right:30px;}
+#holeData .content{background:#16264d;color:#fff;padding-top:10px;padding-bottom:30px;text-align:center;}
+#holeData .content p.labels{font-size: 0.8em;margin-top:5px;}
+#holeData .content p.data{font-size: 1.8em;}
+#Contentbottom{width:100%;height:30px;}/* CANVAS */
+.TeeMarks .line{clear:both;height:35px;line-height:35px;font-weight:700;}
+.teeMark{width:25px;height:25px;margin:5px;border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;display:block;position:relative;float:left;}
+.teeMark.blue{background-color:#7898e6}
+.teeMark.white{background-color:#fff;border:1px solid #c7c7c7;}
+.teeMark.gold{background-color:#b2a326}
+.teeMark.green{background-color:#55a03e}
+.teeMark.red{background-color:#ff0600}
+#holeNb{width:60px;height:60px;line-height:60px;text-align: center;display:block;font-size:40px;border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;border:solid 5px #fff;background:none;display:block;position:relative;font-family:'Open Sans';font-weight:700;margin:10px auto;}
