@@ -1,0 +1,19 @@
+escudo
+
+Azul
+
+rgb 0 33 77
+cmyk 100 96 35 39
+#00214d
+
+Dorado
+
+rgb 185 165 0
+cmyk 34 28 100 2
+#b9a500
+
+Azul claro
+
+rgb 10 148 214
+cmyk 77	29 0 0
+# 0a94d6
