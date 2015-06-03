@@ -88,7 +88,12 @@ html,body{width: 100%;height: 100%;}
 
 .detallearticulo{width: 94%; display: inline-block; float: left; font-size: .8em; position: relative; padding:3%}
 .detallearticulo img{width: 48%; display: inline-block; float: left;margin-right: 10px;}
-.articulo p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
+
+
+
+.detallerestaurante{width: 94%; display: inline-block; float: left; font-size: .8em; position: relative; padding:3%; text-align:left;}
+.detallerestaurante img{width: 48%; display: inline-block; float: left;margin-right: 10px;}
+.detallerestaurante p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
 
 
 
