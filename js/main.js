@@ -58,3 +58,6 @@ function loadinfoactivities(){
         });
     });
 }
+$(function(){
+    screen.lockOrientation('portrait');
+});

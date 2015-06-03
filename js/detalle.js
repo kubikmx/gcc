@@ -94,3 +94,7 @@ function comparte(){
 	var url="http://k-i.co/cc/share.php";
 	window.plugins.socialsharing.share(mensaje+', '+titulo+', '+imagen, titulo, imagen, null);
 }
+
+$(function(){
+    screen.lockOrientation('portrait');
+});
