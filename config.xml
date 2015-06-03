@@ -17,6 +17,9 @@
         KubikInteractive
     </author>
 
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
+
     <feature name="SocialSharing">
         <param name="ios-package" value="SocialSharing" />
     </feature>
@@ -30,7 +33,5 @@
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </config-file>
 
-    <gap:plugin name="nl.x-services.plugins.socialsharing" />
-    <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
     
 </widget>
