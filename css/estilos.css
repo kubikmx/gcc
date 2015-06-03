@@ -289,10 +289,34 @@ html,body{width: 100%;height: 100%;}
 	color: white !important;
 	font-size: 1em !important;
 }
-
 .textBig{
 	font-size: 1.5em !important;
-
+}
+.login{
+	margin-top: 90px;
+	left: 0;
+	right:0;
+	width: 100%;
+	text-align: center;
+}
+.btn_club{
+	border: none;
+	background-image: url("../images/fondo-boton.png");
+	color: #fff !important;
+	font-family: 'Cinzel', serif;
+	padding: 10px;
+	width:60%;
+	margin-top: 400px;
+	margin: 0 auto;
+	display: inline-block;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.miclub{
+	font-weight: bolder;
+	font-size: 1.1em;
+	font-family: 'Cinzel', serif;
 }
 
   
