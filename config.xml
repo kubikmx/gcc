@@ -29,9 +29,9 @@
       <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
     </feature>
 
-    <config-file target="AndroidManifest.xml" parent="/manifest">
+    <!--<config-file target="AndroidManifest.xml" parent="/manifest">
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    </config-file>
+    </config-file>-->
 
     
 </widget>
