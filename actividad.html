@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Actividades</title>
+	<title>Actividad</title>
 	
 	<!-- AppMachine Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="/bridge/styles.css">
@@ -15,24 +15,28 @@
 	<script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery.validate.pack.js"></script>
 
-	
 	<!-- AppMachine modules -->
 	<script src="phonegap.js"></script>
 
-	<script src="js/main.js"></script>
-    
+	<script src="js/detalle.js"></script>
 </head>
-<body onload="loadinfoactivities()">
+<body onload="loadactivity()">
 	<div id="headersection" class="column_1_1">
-		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
-        <img class="column_1_1" src="images/header.jpg" >
-        <ul id="containtertitle">
-			<li><div class="icontitle">Natación</div></li>
+    	<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
+		<img class="column_1_1" src="images/headernatacion.jpg" >
+		<ul id="containtertitle">
+			<li><div class="icontitle"></div></li>
         </ul>
-     </div>
-     
-	<div id="listado_normal">		
 	</div>
     
+	<div id="detalle_std">
+		<h3 id="titulo_detalle"></h3>
+       <div class="detallearticulo"> 
+       <img class="fotonoticia"  src="" >
+	   <p class="parrafodetalle"></p>
+       </div>
+	</div>
+    
+	<button class="btn_genericonegro" onclick="comparte()">Compartir</button>
 </body>
 </html>
