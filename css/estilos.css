@@ -278,11 +278,16 @@ html,body{width: 100%;height: 100%;}
  	width: 100%;
  }
  .directorio li{
- 	width: 100%;
- 	padding: 15px 0px;
- }
+ 	padding: 10px 15px 30px;
+
+  }
  .directorio li:nth-child(2n){
- 	background-color: white;
+ 	background-color: #f8f7f0;
+
+ }
+  .directorio li:first-child{
+ 	background-color: #b2a326;
+ 	color: white;
 
  }
 .zona{
@@ -294,13 +299,7 @@ html,body{width: 100%;height: 100%;}
 	width: 20%;
 	float: left;
 	overflow: hidden;
-}
-.conmutador{
-	background-color: #b2a326;
-	padding: 10px 15px;
-	width: 100%;
-	color: white !important;
-	font-size: 1em !important;
+	text-align: right;
 }
 .textBig{
 	font-size: 1.5em !important;
@@ -331,4 +330,8 @@ html,body{width: 100%;height: 100%;}
 	font-size: 1.1em;
 	font-family: 'Cinzel', serif;
 }
-
+.contacto_nombre{
+	font-size:1.9em; 
+	color:black;
+	text-align: left;
+}
