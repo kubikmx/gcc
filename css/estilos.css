@@ -88,7 +88,12 @@ html,body{width: 100%;height: 100%;}
 
 .detallearticulo{width: 94%; display: inline-block; float: left; font-size: .8em; position: relative; padding:3%}
 .detallearticulo img{width: 48%; display: inline-block; float: left;margin-right: 10px;}
-.articulo p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
+
+
+
+.detallerestaurante{width: 94%; display: inline-block; float: left; font-size: .8em; position: relative; padding:3%; text-align:left;}
+.detallerestaurante img{width: 48%; display: inline-block; float: left;margin-right: 10px;}
+.detallerestaurante p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
 
 
 
@@ -125,12 +130,20 @@ html,body{width: 100%;height: 100%;}
 
 
 
+#menurestaurantes{position: relative; width: 85%; margin:auto; margin-top:-10px; text-align:left;}
+#menurestaurantes li {background-image: url("../images/fondo-boton.png");display: inline-block;float: left;margin: 1%;width: 98%;}
+#menurestaurantes li a{background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #fff;display: inline-block;font-size: 1em;height: 48px;line-height: 48px;text-indent: 20px;width: 100%;}
+
+
+
 #menugolf{position: relative; width: 100%;}
 #menugolf li { background-color:#fff;display: inline-block;float: left;margin: 1%;width: 98%; color:#000;}
 #menugolf li a{background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #000;display: inline-block;font-size: 1em;height: 100px;line-height: 100px;text-indent: 20px;width: 100%;}
 
 
 .btn_nextlist{background-image: url("../images/nextlist.png"); font-family: 'Cinzel', serif;}
+
+.btn_genericonegro{background-image: url("../images/nextlist.png"); font-family: 'Cinzel', serif; background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #000;display: inline-block;font-size: 1em;height: 50px; line-height: 50px;text-indent: 20px; width: 70%; text-align:left; margin: 20px 15%; border:0px !important; background-color:#000; color:#FFF; }
 
 .btn_nextgolflist{background-image: url("../images/nextgolflist.png"); font-family: 'Open Sans', sans-serif; background-position: right 50% !important;}
 
@@ -238,8 +251,6 @@ html,body{width: 100%;height: 100%;}
 	text-align: center;
 }
 
-
-
 .numeros{font-size:36px; font-family: 'Open Sans', sans-serif; font-weight:600;}
 .spanchica{color:#000; font-family: 'Open Sans', sans-serif; font-size: 20px; text-transform:uppercase; font-weight:600; }
 
@@ -257,3 +268,67 @@ html,body{width: 100%;height: 100%;}
 #reglamento {list-style: decimal outside; width:90%; margin:0 auto;}
 #reglamento li {list-style: decimal;margin:7px auto;}
 .bold{font-weight:700;}
+
+ .section_contacto a{
+ 	display: inline-block;
+ 	color: black;
+ 	font-size: 1em;
+ }
+ .directorio{
+ 	width: 100%;
+ }
+ .directorio li{
+ 	width: 100%;
+ 	padding: 15px 0px;
+ }
+ .directorio li:nth-child(2n){
+ 	background-color: white;
+
+ }
+.zona{
+	width: 80%;
+	float: left;
+	overflow: hidden;
+}
+.ext{
+	width: 20%;
+	float: left;
+	overflow: hidden;
+}
+.conmutador{
+	background-color: #b2a326;
+	padding: 10px 15px;
+	width: 100%;
+	color: white !important;
+	font-size: 1em !important;
+}
+.textBig{
+	font-size: 1.5em !important;
+}
+.login{
+	margin-top: 90px;
+	left: 0;
+	right:0;
+	width: 100%;
+	text-align: center;
+}
+.btn_club{
+	border: none;
+	background-image: url("../images/fondo-boton.png");
+	color: #fff !important;
+	font-family: 'Cinzel', serif;
+	padding: 10px;
+	width:60%;
+	margin-top: 400px;
+	margin: 0 auto;
+	display: inline-block;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.miclub{
+	font-weight: bolder;
+	font-size: 1.1em;
+	font-family: 'Cinzel', serif;
+}
+

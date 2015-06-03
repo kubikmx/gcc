@@ -45,14 +45,23 @@ function loadaviso(){
 	
 	if (idv!=0){
 
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_aviso.php?id="+idv, function(result){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
-				$(".fotonoticia").attr("src","http://k-i.co/cc/images/avisos/"+field.imagen);	
+				$(".fotonoticia").attr("src","http://k-i.co/cc/images/eventos/"+field.imagen);	
 				$(".parrafodetalle").html(field.detalle);
 	        });
 	    });
 	}
 
 
+}
+
+function comparte(){
+	var mensaje=$(".parrafodetalle").html();
+	var titulo=$("#titulo_detalle").html();
+	var imagen=$(".fotonoticia").attr("src");
+	var subject=$("#titulo_detalle").html();
+	var url="http://k-i.co/cc/share.php";
+	window.plugins.socialsharing.share(mensaje+', '+titulo+', '+imagen, titulo, imagen, null);
 }
