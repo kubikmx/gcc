@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Noticias</title>
+	<title>Actividades</title>
 	
 	<!-- AppMachine Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="/bridge/styles.css">
@@ -22,7 +22,7 @@
 	<script src="js/main.js"></script>
     
 </head>
-<body onload="onLoad()">
+<body onload="loadmenuactivities()">
 	<div id="headersection" class="column_1_1">
 		<div class="barratop">
         <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a>
@@ -32,20 +32,8 @@
 			<li><div class="icontitle">ACTIVIDADES</div></li>
         </ul>
      </div>
-     <span><h3>DEPORTIVAS</h3></span>     
-    <ul id="menuactividades">
-			<li><a href="actividades.html" class="btn_nextlist">Natación</a></li>
-            <li><a href="actividades.html" class="btn_nextlist">Golf</a></li>
-            <li><a href="actividades.html" class="btn_nextlist">Futbol Soccer</a></li>
-            <li><a href="actividades.html" class="btn_nextlist">Tenis</a></li>
-	</ul>
-    
-    <span><h3>ARTÍSTICAS</h3></span>     
-    <ul id="menuactividades">
-			<li><a href="#" class="btn_nextlist">Pintura</a></li>
-            <li><a href="#" class="btn_nextlist">Escultura</a></li>
-            <li><a href="#" class="btn_nextlist">Fotografía</a></li>
-	</ul>
+    <div id="listadeactividades">
+	</div> 	
     
     
 </body>
