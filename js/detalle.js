@@ -95,6 +95,5 @@ function comparte(){
 	window.plugins.socialsharing.share(mensaje+', '+titulo+', '+imagen, titulo, imagen, null);
 }
 
-$(function(){
+
     screen.lockOrientation('portrait');
-});
