@@ -17,4 +17,6 @@
         KubikInteractive
     </author>
 
+    <gap:plugin name="com.gestionaleauto.socialshare" version="0.0.3" />
+
 </widget>
