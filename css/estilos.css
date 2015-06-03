@@ -84,6 +84,8 @@ html,body{width: 100%;height: 100%;}
 
 
 
+
+
 .detallearticulo{width: 94%; display: inline-block; float: left; font-size: .8em; position: relative; padding:3%}
 .detallearticulo img{width: 48%; display: inline-block; float: left;margin-right: 10px;}
 .articulo p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
@@ -164,4 +166,73 @@ html,body{width: 100%;height: 100%;}
 .teeMark.gold{background-color:#b2a326}
 .teeMark.green{background-color:#55a03e}
 .teeMark.red{background-color:#ff0600}
-#holeNb{width:60px;height:60px;line-height:60px;text-align: center;display:block;font-size:40px;border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;border:solid 5px #fff;background:none;display:block;position:relative;font-family:'Open Sans';font-weight:700;margin:10px auto;}
+#holeNb{
+	width:60px;
+	height:60px;
+	line-height:60px;
+	text-align: center;
+	display:block;
+	font-size:40px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border:solid 5px #fff;
+	background:none;
+	display:block;
+	position:relative;
+	font-family:'Open Sans';
+	font-weight:700;
+	margin:10px auto; 
+}
+
+
+
+#holeNbnegro{
+	width:45px;
+	height:45px;
+	line-height:45px;
+	display:block;
+	font-size:35px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border:solid 5px #000;
+	background:none;
+	display:block;
+	position:relative;
+	font-family:'Open Sans';
+	font-weight:700;
+	margin:25px auto; 
+	text-indent: 0px !important;
+	text-align:center;
+}
+
+h7{font-size:36px; font-family: 'Open Sans', sans-serif; font-weight:600;}
+.spanchica{color:#000; font-family: 'Open Sans', sans-serif; font-size: 20px; text-transform:uppercase; font-weight:600; }
+
+
+.padding_sides{
+	padding: 0 15px;
+}
+.contact input, #mensaje{
+	width: 98%;
+	border: none;
+	padding: 1%;
+}
+.btn_enviaremail{
+	border: none;
+	background-image: url("../images/fondo-boton.png");
+	color: #fff;
+	font-family: 'Cinzel', serif;
+	height: 40px;
+	width: 100%;
+	margin-top: 10px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+
+
+
+
