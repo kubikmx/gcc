@@ -35,7 +35,7 @@
         <false/>
     </gap:config-file>
 
-    <preference name="orientation" value="landscape" />
+    <preference name="orientation" value="portrait" />
 
     
 </widget>
