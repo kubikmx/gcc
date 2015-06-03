@@ -96,4 +96,3 @@ function comparte(){
 }
 
 
-    screen.lockOrientation('portrait');
