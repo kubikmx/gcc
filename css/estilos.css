@@ -125,6 +125,12 @@ html,body{width: 100%;height: 100%;}
 
 
 
+#menurestaurantes{position: relative; width: 85%; margin:auto; margin-top:-10px; text-align:left;}
+#menurestaurantes li {background-image: url("../images/fondo-boton.png");display: inline-block;float: left;margin: 1%;width: 98%;}
+#menurestaurantes li a{background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #fff;display: inline-block;font-size: 1em;height: 48px;line-height: 48px;text-indent: 20px;width: 100%;}
+
+
+
 #menugolf{position: relative; width: 100%;}
 #menugolf li { background-color:#fff;display: inline-block;float: left;margin: 1%;width: 98%; color:#000;}
 #menugolf li a{background-position: right 8px; background-repeat: no-repeat;background-size: 32px auto;color: #000;display: inline-block;font-size: 1em;height: 100px;line-height: 100px;text-indent: 20px;width: 100%;}
