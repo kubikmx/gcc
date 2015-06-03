@@ -256,8 +256,41 @@ html,body{width: 100%;height: 100%;}
 .numeros{font-size:36px; font-family: 'Open Sans', sans-serif; font-weight:600;}
 .spanchica{color:#000; font-family: 'Open Sans', sans-serif; font-size: 20px; text-transform:uppercase; font-weight:600; }
 
- 
+ .section_contacto a{
+ 	display: inline-block;
+ 	color: black;
+ 	font-size: 1em;
+ }
+ .directorio{
+ 	width: 100%;
+ }
+ .directorio li{
+ 	padding: 15px 0px;
+ }
+ .directorio li:first-chl{
 
+ }
+.zona{
+	width: 80%;
+	float: left;
+	overflow: hidden;
+}
+.ext{
+	width: 20%;
+	float: left;
+	overflow: hidden;
+}
+.conmutador{
+	background-color: #b2a326;
+	padding: 10px 15px;
+	width: 100%;
+	color: white !important;
+	font-size: 1em !important;
+}
 
+.textBig{
+	font-size: 1.5em !important;
+
+}
 
   
