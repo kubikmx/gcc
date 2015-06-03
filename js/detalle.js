@@ -63,5 +63,5 @@ function comparte(){
 	var imagen=$(".fotonoticia").attr("src");
 	var subject=$("#titulo_detalle").html();
 	var url="http://k-i.co/cc/share.php";
-	window.plugins.socialsharing.share(mensaje+', '+titulo+', '+imagen, titulo, imagen, url);
+	window.plugins.socialsharing.share(mensaje+', '+titulo+', '+imagen, titulo, imagen, null);
 }
