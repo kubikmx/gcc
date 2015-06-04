@@ -19,15 +19,15 @@
 	<!-- AppMachine modules -->
 	<script src="phonegap.js"></script>
 
-	<script src="js/main.js"></script>
+	<script src="js/detalle.js"></script>
     
 </head>
-<body>
+<body onload="loadrestaurant()">
 	<div id="headersection" class="column_1_1">
 		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
-        <img class="column_1_1" src="images/header-restaurante1.jpg" >
+        <img class="column_1_1" src="images/header-restaurante1.jpg" id="imagerestaurant" >
         <ul id="containtertitle">
-			<li><div class="icontitle">Terraza Principal</div></li>
+			<li><div id="namerestaurant" class="icontitle">Terraza Principal</div></li>
         </ul>
      </div>
      
@@ -35,9 +35,7 @@
 <div class="column_1_1 center">
 		
         <div class="detallerestaurante"> 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis tristique quam ut eleifend. Morbi ultrices nulla sit amet velit feugiat sodales. Donec euismod urna non velit tempor sollicitudin. Nam dignissim diam ut posuere interdum. <br>
-<br>
-Sed porta, felis ut tempor lobortis, nunc eros lobortis lorem, sed molestie velit diam sed ex. Etiam suscipit, metus et dictum congue, nunc turpis efficitur sem, sed venenatis mauris quam a erat. Vivamus eleifend erat eget fringilla maximus. <br><br>
+        
 
 
         
