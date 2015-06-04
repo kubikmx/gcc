@@ -24,9 +24,9 @@
 </head>
 <body class="fondocrema section_contacto" >
 	<div id="" class="column_1_1 ">
-		<div class="barratop">
-        <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a>
-        </div>
+		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
+        <div class="clear"> </div>
+        <div class="barratopder"> <a href="./"><img src="images/home.png" width="40" height="40"></a></div>
         <img class="column_1_1" src="images/header-contacto.jpg" >
         <ul id="containtertitle">
 			<li><div class="icontitle">CONTACTO</div></li>
@@ -35,7 +35,7 @@
      <br><br>
 
      <div style="">
-     <h3 style="font-size:1.9em; color:black"><br>Guadalajara Country Club A.C.</h3> 
+     <h3 class="contacto_nombre"><br>Guadalajara Country Club A.C.</h3> 
 
 		<a class="padding_sides" href="https://www.google.com.mx/maps/place/Guadalajara+Country+Club/@20.7043528,-103.376069,15z/data=!4m2!3m1!1s0x0000000000000000:0xbeb0d36d4d9a8031">
 			<span class="textBig">Mar Caribe No. 260</span><br>
@@ -43,13 +43,17 @@
 			Guadalajara, Jalisco, México. 
 		</a><br><br>
 
-		<a href="tel://013338172858" class="textBig padding_sides ">(0133) 3817 2858</a>
+		<a href="tel://013338172858" class="textBig padding_sides "> Teléfono: (0133) 3817 2858</a>
 	</div>
 
-	<h3>Directorio ></h3> 
-<!-- 
-		<a href="tel://013338172858" class="padding_sides conmutador">Conmutador: 3817 2858</a>
-		<ul class="padding_sides directorio">
+	<h3 id="desplegar">Directorio <img id="on" src="images/desplegar.png"> <img id="off" src="images/desplegar2.png" style="display:none"></h3> 
+
+		<ul class="directorio" style="display:none;">
+
+			<li>
+				<div class="zona">Zona</div>
+				<div class="ext">Extensión</div>
+			</li>
 			<li>
 				<div class="zona">Alberca techada</div>
 				<div class="ext">280</div>
@@ -59,7 +63,7 @@
 				<div class="ext">131, 106</div>
 			</li>
 			<li>
-				<div class="zona">Ama de llaves</div>
+				<div class="zona">Atención a socios</div>
 				<div class="ext">181</div>
 			</li>
 			<li>
@@ -82,10 +86,78 @@
 				<div class="zona">Comunicación</div>
 				<div class="ext">176</div>
 			</li>
-		</ul> -->
+			<li>
+				<div class="zona">Deportes</div>
+				<div class="ext">170, 164</div>
+			</li>
+			<li>
+				<div class="zona">Gerencia administrativa</div>
+				<div class="ext">138</div>
+			</li>
+			<li>
+				<div class="zona">Gerencia general</div>
+				<div class="ext">124, 128</div>
+			</li>
+			<li>
+				<div class="zona">Gerencia recursos humanos</div>
+				<div class="ext">116, 117</div>
+			</li>
+			<li>
+				<div class="zona">Gerente de operaciones</div>
+				<div class="ext">196</div>
+			</li>
+			<li>
+				<div class="zona">Gimnasio</div>
+				<div class="ext">193</div>
+			</li>
+			<li>
+				<div class="zona">Golf</div>
+				<div class="ext">178, 110</div>
+			</li>
+			<li>
+				<div class="zona">Hípico</div>
+				<div class="ext">141</div>
+			</li>
+			<li>
+				<div class="zona">Ingreso socios</div>
+				<div class="ext">130, 155</div>
+			</li>
+			<li>
+				<div class="zona">Servicios médicos</div>
+				<div class="ext">120, 136</div>
+			</li>
+			<li>
+				<div class="zona">Snacks Tenis</div>
+				<div class="ext">258</div>
+			</li>
+			<li>
+				<div class="zona">Starter</div>
+				<div class="ext">111</div>
+			</li>
+			<li>
+				<div class="zona">Tenis</div>
+				<div class="ext">140, 109</div>
+			</li>
+			<li>
+				<div class="zona">Terraza Alberca</div>
+				<div class="ext">143, 172</div>
+			</li>
+			<li>
+				<div class="zona">Terraza Principal</div>
+				<div class="ext">144, 119</div>
+			</li>
+			<li>
+				<div class="zona cerrar">
+				<h5 class="dorado">Ocultar directorio <img src="images/desplegar2.png"></h5>
 
+					
+				</div>
+				
+			</li>
 
-    <h3>ESCRÍBENOS</h3>   
+		</ul>
+
+    <h3>¿Tienes algún comentario? <br><small>Escríbenos</small></h3>   
 
      <form class="contact padding_sides" id="contact_form" action="#" method="POST" >
 		<div class="">
@@ -108,20 +180,37 @@
 			<label for="message">Mensaje:</label><br />
 			<textarea id="mensaje" class="input" name="message" rows="5"></textarea><br />
 		</div>
-		<input class="btn_enviaremail" id="submit_button" type="submit" value="Enviar email" />
+		<input class="btn_enviaremail" id="submit_button" type="submit" value="Enviar" />
 	</form>	
-	<br><br>
+	<br>
 
+	<h4 class="center">
+		<a href="http://www.gcc.com.mx">
+			www.gcc.com.mx
+		</a>
+	</h4>
+		<br><br>  
 
+<script type="text/javascript">
 
+  	$(document).ready(function(){
 
+		$( "#desplegar" ).click(function() {
+		  $( ".directorio" ).toggle(200);
+		  $("#off").toggle();
+		  $("#on").toggle();
+		});
 
+		$( ".cerrar" ).click(function() {
+		  $( ".directorio" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
+		});
 
+	});
 
-		<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59710.79091821341!2d-103.36909!3d20.713293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x65b73967f4a79e3c!2sCOUNTRY+Hotel+and+Suites!5e0!3m2!1sen!2sus!4v1433200149269" width="100%" height="400" frameborder="0" style="border:0"></iframe> -->
-    
-
-<br><br>
+</script>
 
 </body>
 </html>
+

@@ -15,7 +15,7 @@ sub{vertical-align:baseline}
 legend{color:#000}
 a{text-decoration:none;color:inherit}
 a:hover{text-decoration:none;color:inherit}
-body{margin-left:0;margin-top:0;margin-right:0;margin-bottom:0;position:relative;text-align:justify; font-family: 'Open Sans', sans-serif; font-size: 1em; background-image:url(../images/bg.png) }
+body{margin-left:0;margin-top:0;margin-right:0;margin-bottom:0;position:relative;text-align:justify; font-family: 'Open Sans', sans-serif; font-size: 1em; }
 body,td,th{font-size:14px;color:#373737;}
 h1,h2,h3{font-weight:bold;}
 h4,h5,h6{font-weight:normal;}
