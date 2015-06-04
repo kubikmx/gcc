@@ -162,15 +162,15 @@
      <form class="contact padding_sides" id="contact_form" action="#" method="POST" >
 		<div class="">
 			<label for="name">Nombre:</label><br />
-			<input id="nombre" class="input" name="name" type="text" value="" size="40" /><br />
+			<input id="nombre" class="input" name="nombre" type="text" value="" size="40" /><br />
 		</div>
 		<div class="">
 			<label for="last">Apellidos:</label><br />
-			<input id="apellidos" class="input" name="name" type="text" value="" size="40" /><br />
+			<input id="apellidos" class="input" name="apellidos" type="text" value="" size="40" /><br />
 		</div>
 		<div class="">
 			<label for="phone">Teléfono:</label><br />
-			<input id="tel" class="input" name="name" type="text" value="" size="14" /><br />
+			<input id="tel" class="input" name="telefono" type="text" value="" size="14" /><br />
 		</div>
 		<div class="">
 			<label for="email">Email:</label><br />
@@ -178,10 +178,11 @@
 		</div>
 		<div class="">
 			<label for="message">Mensaje:</label><br />
-			<textarea id="mensaje" class="input" name="message" rows="5"></textarea><br />
+			<textarea id="mensaje" class="input" name="mensaje" rows="5"></textarea><br />
 		</div>
-		<input class="btn_enviaremail" id="submit_button" type="submit" value="Enviar" />
+		<input class="btn_enviaremail" id="submit_button" type="button" value="Enviar" onclick="enviarcontacto()" />
 	</form>	
+	<div id="mensajerespuesta"></div>
 	<br>
 
 	<h4 class="center">

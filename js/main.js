@@ -60,7 +60,20 @@ function loadinfoactivities(){
 }
 
 function enviarcontacto(){
-    $("#contact_form")
+    $("#contact_form").hide();
+    $("#mensajerespuesta").html("Espere un momento...");
+    $.ajax({
+      type: "POST",
+      url: "http://www.k-i.co/cc/webservices/sendcontact.php",
+      data: $("#contact_form").serialize(),
+      success: function( data ) {
+        $("#mensajerespuesta").html("Mensaje Enviado");
+        $("#mensajerespuesta").show();
+      },
+      dataType: "json"
+    });
+
+    
 }
 
 function loadinforestaurants(){
