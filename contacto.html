@@ -63,7 +63,7 @@
 				<div class="ext">131, 106</div>
 			</li>
 			<li>
-				<div class="zona">Ama de llaves</div>
+				<div class="zona">Atención a socios</div>
 				<div class="ext">181</div>
 			</li>
 			<li>
@@ -106,10 +106,55 @@
 				<div class="zona">Gerente de operaciones</div>
 				<div class="ext">196</div>
 			</li>
-			<!-- <li>
+			<li>
 				<div class="zona">Gimnasio</div>
 				<div class="ext">193</div>
-			</li> -->
+			</li>
+			<li>
+				<div class="zona">Golf</div>
+				<div class="ext">178, 110</div>
+			</li>
+			<li>
+				<div class="zona">Hípico</div>
+				<div class="ext">141</div>
+			</li>
+			<li>
+				<div class="zona">Ingreso socios</div>
+				<div class="ext">130, 155</div>
+			</li>
+			<li>
+				<div class="zona">Servicios médicos</div>
+				<div class="ext">120, 136</div>
+			</li>
+			<li>
+				<div class="zona">Snacks Tenis</div>
+				<div class="ext">258</div>
+			</li>
+			<li>
+				<div class="zona">Starter</div>
+				<div class="ext">111</div>
+			</li>
+			<li>
+				<div class="zona">Tenis</div>
+				<div class="ext">140, 109</div>
+			</li>
+			<li>
+				<div class="zona">Terraza Alberca</div>
+				<div class="ext">143, 172</div>
+			</li>
+			<li>
+				<div class="zona">Terraza Principal</div>
+				<div class="ext">144, 119</div>
+			</li>
+			<li>
+				<div class="zona cerrar">
+				<h5 class="dorado">Ocultar directorio <img src="images/desplegar2.png"></h5>
+
+					
+				</div>
+				
+			</li>
+
 		</ul>
 
     <h3>¿Tienes algún comentario? <br><small>Escríbenos</small></h3>   
@@ -137,7 +182,14 @@
 		</div>
 		<input class="btn_enviaremail" id="submit_button" type="submit" value="Enviar" />
 	</form>	
-	<br><br>   
+	<br>
+
+	<h4 class="center">
+		<a href="http://www.gcc.com.mx">
+			www.gcc.com.mx
+		</a>
+	</h4>
+		<br><br>  
 
 <script type="text/javascript">
 
@@ -147,6 +199,12 @@
 		  $( ".directorio" ).toggle(200);
 		  $("#off").toggle();
 		  $("#on").toggle();
+		});
+
+		$( ".cerrar" ).click(function() {
+		  $( ".directorio" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
 		});
 
 	});
