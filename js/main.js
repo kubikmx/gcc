@@ -66,7 +66,7 @@ function enviarcontacto(){
 function loadinforestaurants(){
     $.getJSON("http://www.k-i.co/cc/webservices/restaurantes.php", function(result){
         $.each(result, function(i, field){
-         var bloque=  '<div class="column_1_1 center"><img class="column_5_6 padding_sides" src="images/restaurantes/'+field.imagen+'" ><ul id="menurestaurantes"><li><a href="restaurantdetalle.html?idv='+field.id_restaurante+'" class="btn_nextlist">'+field.nombre+'</a></li> </ul></div><div class="clear padding"></div>';  
+         var bloque=  '<div class="column_1_1 center"><img class="column_5_6 padding_sides" src="http://k-i.co/cc/images/restaurantes/'+field.imagen+'" ><ul id="menurestaurantes"><li><a href="restaurantdetalle.html?idv='+field.id_restaurante+'" class="btn_nextlist">'+field.nombre+'</a></li> </ul></div><div class="clear padding"></div>';  
 
         $("#listado_restaurants").append(bloque);
 
