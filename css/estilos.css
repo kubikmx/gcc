@@ -257,6 +257,22 @@ html,body{width: 100%;height: 100%;}
  
 /* Portada Golf */
 #portadaGolf .fondoBco{width: 100%; display: inline-block;background-color: #fff; position: initial; margin-top: -27px; padding-top: 27px;}
+.golfBtn{
+	width:185px;
+	height:75px;
+	display:block;
+	position:relative;
+	margin:0 auto;
+	padding-left:85px;
+	line-height:75px;
+	color:#fff;
+	font-size:24px;
+}
+.golfBtn#golfCampo{background:url(../images/btn_campo.png)no-repeat;}
+.golfBtn#golfHandicap{background:url(../images/btn_handicap.png)no-repeat;}
+.golfBtn#golfReglamento{background:url(../images/btn_reglamento.png)no-repeat;}
+
+
 /* Handicap */
 .imgLink{
 	width:100%;
