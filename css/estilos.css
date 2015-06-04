@@ -274,17 +274,23 @@ html,body{width: 100%;height: 100%;}
  	color: black;
  	font-size: 1em;
  }
+ .section_contacto h3{
+ 	font-size: 1.4em;
+ }
  .directorio{
  	width: 100%;
  }
  .directorio li{
- 	width: 100%;
- 	padding: 15px 0px;
+ 	padding: 10px 15px 30px;
  }
  .directorio li:nth-child(2n){
  	background-color: white;
-
  }
+ .directorio li:first-child{
+ 	background-color: #b2a326;
+ 	color: white;
+ }
+
 .zona{
 	width: 80%;
 	float: left;
@@ -301,9 +307,10 @@ html,body{width: 100%;height: 100%;}
 	width: 100%;
 	color: white !important;
 	font-size: 1em !important;
+	text-align: right;
 }
 .textBig{
-	font-size: 1.5em !important;
+	font-size: 1.3em !important;
 }
 .login{
 	margin-top: 90px;
@@ -331,4 +338,16 @@ html,body{width: 100%;height: 100%;}
 	font-size: 1.1em;
 	font-family: 'Cinzel', serif;
 }
+.contacto_nombre{
+	font-size:1.9em; 
+	font-size:1.7em !important; 
+	color:black;
+	text-align: left;
+}
 
+.center{
+	text-align: center;
+}
+.dorado{
+	color:#b2a326;
+}
