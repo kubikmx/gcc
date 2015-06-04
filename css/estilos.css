@@ -15,7 +15,7 @@ sub{vertical-align:baseline}
 legend{color:#000}
 a{text-decoration:none;color:inherit}
 a:hover{text-decoration:none;color:inherit}
-body{margin-left:0;margin-top:0;margin-right:0;margin-bottom:0;position:relative;text-align:justify; font-family: 'Open Sans', sans-serif; font-size: 1em; }
+body{margin-left:0;margin-top:0;margin-right:0;margin-bottom:0;position:relative;text-align:justify; font-family: 'Open Sans', sans-serif; font-size: 1em; background-image:url(../images/bg.png) }
 body,td,th{font-size:14px;color:#373737;}
 h1,h2,h3{font-weight:bold;}
 h4,h5,h6{font-weight:normal;}
@@ -162,8 +162,8 @@ html,body{width: 100%;height: 100%;}
 
 
 
-.barratop{position:absolute; background-color:#5493d3; width:40px; height:40px; float:left; }
-.barratopder{position:absolute; background-color:#5493d3; width:40px; height:40px; right:0; }
+.barratop{position:absolute; background-color:#000; width:100%; height:40px; opacity:.7}
+
 /* Detalle Campo */
 
 .holeImg{width:100%;height:auto;display:block;}
@@ -274,23 +274,15 @@ html,body{width: 100%;height: 100%;}
  	color: black;
  	font-size: 1em;
  }
- .section_contacto h3{
- 	font-size: 1.4em;
- }
  .directorio{
  	width: 100%;
  }
  .directorio li{
- 	padding: 10px 15px 30px;
-
-  }
- .directorio li:nth-child(2n){
- 	background-color: #f8f7f0;
-
+ 	width: 100%;
+ 	padding: 15px 0px;
  }
-  .directorio li:first-child{
- 	background-color: #b2a326;
- 	color: white;
+ .directorio li:nth-child(2n){
+ 	background-color: white;
 
  }
 .zona{
@@ -302,10 +294,16 @@ html,body{width: 100%;height: 100%;}
 	width: 20%;
 	float: left;
 	overflow: hidden;
-	text-align: right;
+}
+.conmutador{
+	background-color: #b2a326;
+	padding: 10px 15px;
+	width: 100%;
+	color: white !important;
+	font-size: 1em !important;
 }
 .textBig{
-	font-size: 1.3em !important;
+	font-size: 1.5em !important;
 }
 .login{
 	margin-top: 90px;
@@ -333,14 +331,4 @@ html,body{width: 100%;height: 100%;}
 	font-size: 1.1em;
 	font-family: 'Cinzel', serif;
 }
-.contacto_nombre{
-	font-size:1.7em !important; 
-	color:black;
-	text-align: left;
-}
-.center{
-	text-align: center;
-}
-.dorado{
-	color:#b2a326;
-}
+
