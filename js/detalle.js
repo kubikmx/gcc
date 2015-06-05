@@ -146,9 +146,24 @@ function cargaimagenmenu(){
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#imagenzoom").attr("src","http://k-i.co/cc/images/restaurantes/"+field.menu);	
+				zoomactive();
 	        });
 	    });
 	}
 
 	
+}
+
+function zoomactive(){
+     document.addEventListener('deviceready', function(){
+        //enabling zoom control
+         cordova.plugins.ZoomControl.ZoomControl("true");
+         // enabling built in zoom control
+         cordova.plugins.ZoomControl.setBuiltInZoomControls("true");
+         // enabling display zoom control
+         cordova.plugins.ZoomControl.setDisplayZoomControls("true");
+
+     }, function(){
+     });
+
 }
