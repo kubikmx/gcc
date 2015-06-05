@@ -116,9 +116,39 @@ function loadrestaurant(){
 				$("#namerestaurant").html(field.nombre);
 				$("#imagerestaurant").attr("src","http://k-i.co/cc/images/restaurantes/"+field.imagen);	
 				$(".detallerestaurante").html(field.detalle);
+				if (field.menu!=""){ 
+					$("#aconsultamenu").attr("href","menurestaurant.html?idv="+field.id_restaurante);
+					$("#aconsultamenu").show();
+				} else 
+					$("#aconsultamenu").hide();
 	        });
 	    });
 	}
 
 
+}
+
+function cargaimagenmenu(){
+	var cadVariables = location.search.substring(1,location.search.length ); // sin ?
+	var arrVariables = cadVariables.split("&"); // array de cadenas de tipo "var1=valor1"
+	var idv=0;
+
+	for (i=0; i<arrVariables.length; i++) {
+	  arrVariableActual = arrVariables[i].split("=");
+	  if (isNaN(parseFloat(arrVariableActual[1])))
+	    eval(arrVariableActual[0]+"='"+unescape(arrVariableActual[1])+"';");
+	  else
+	    eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
+	}
+	
+	if (idv!=0){
+
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv, function(result){
+	        $.each(result, function(i, field){
+				$("#imagenzoom").attr("src","http://k-i.co/cc/images/restaurantes/"+field.menu);	
+	        });
+	    });
+	}
+
+	
 }
