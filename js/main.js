@@ -66,7 +66,10 @@ function loadinfoactivities(){
                  bloque+= '</div><div class="clear"></div></div>';  
 
             $("#listado_normal").append(bloque);
-            $(".icontitle").html(field.nombre)
+            $(".icontitle").html(field.nombre);
+            if (field.imagen!=""){
+                $("#imgheader").attr("src",field.imagen);
+            }
 
             });
         });
