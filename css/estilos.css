@@ -21,10 +21,10 @@ h1,h2,h3{font-weight:bold;}
 h4,h5,h6{font-weight:normal;}
 h1{font-size:36px; font-family: 'Cinzel', serif;}
 h2{font-size:30px; font-family: 'Cinzel', serif;}
-h3{font-size:24px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px; text-transform:uppercase;}
+h3{font-size:20px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px; text-transform:uppercase;}
 h4{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
 h5{font-size:16px}
-h6{font-size:14px}
+h6{font-size:14px; padding-bottom:0px;}
 a:link{color:#c90808;text-decoration:none}
 a:visited{color:#990707;text-decoration:none}
 a:hover{text-decoration:none;color:#ff0000}
@@ -158,7 +158,7 @@ html,body{width: 100%;height: 100%;}
 #containtertitle li {background-image: url("../images/cinta.png"); background-position:center; background-size:contain; background-repeat:repeat-x; display: inline-block;float: left;margin: 0%;width: 100%; height:90px;}
 
 
-.icontitle{background-image: url("../images/logotitle.png"); font-family: 'Cinzel', serif; background-position: 0px 0px;background-repeat: no-repeat;background-size: 90px auto;color: #fff;display: inline-block;font-size: 1em;height: 90px;line-height: 90px;text-indent: 100px;width: 100%;}
+.icontitle{background-image: url("../images/logotitle.png"); font-family: 'Cinzel', serif; background-position: 0px 0px;background-repeat: no-repeat;background-size: 90px auto;color: #fff;display: inline-block;font-size: 1.3em;height: 90px;line-height: 90px;text-indent: 100px;width: 100%;}
 
 
 
