@@ -77,7 +77,9 @@ function loadactivity(){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/actividades/"+field.imagen);	
 				$(".parrafodetalle").html(field.detalle);
+				$("#imagenheader").attr("src","http://www.k-i.co/cc/images/categorias/thumbs/"+field.imagencat);
 	        });
+
 	    });
 	}
 
