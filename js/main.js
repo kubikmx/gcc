@@ -46,17 +46,31 @@ function loadmenuactivities(){
 }
 
 function loadinfoactivities(){
-    $.getJSON("http://www.k-i.co/cc/webservices/actividades.php", function(result){
-        $.each(result, function(i, field){
-         var bloque=  '<div class="bordelist"><div class="articulo"><img src="http://k-i.co/cc/images/actividades/thumbs/'+field.imagen+'" >';
-             bloque+= '<p><span>'+ field.nombre +' </span>'+field.intro+'</p>';
-             bloque+= '<a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"></a>';
-             bloque+= '</div><div class="clear"></div></div>';  
+    var cadVariables = location.search.substring(1,location.search.length ); // sin ?
+    var arrVariables = cadVariables.split("&"); // array de cadenas de tipo "var1=valor1"
+    var idv=0;
 
-        $("#listado_normal").append(bloque);
+    for (i=0; i<arrVariables.length; i++) {
+      arrVariableActual = arrVariables[i].split("=");
+      if (isNaN(parseFloat(arrVariableActual[1])))
+        eval(arrVariableActual[0]+"='"+unescape(arrVariableActual[1])+"';");
+      else
+        eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
+    }
+    if (idv!=0){
+        $.getJSON("http://www.k-i.co/cc/webservices/actividades.php?id="+idv, function(result){
+            $.each(result, function(i, field){
+             var bloque=  '<div class="bordelist"><div class="articulo"><img src="http://k-i.co/cc/images/actividades/thumbs/'+field.imagen+'" >';
+                 bloque+= '<p><span>'+ field.nombre +' </span>'+field.intro+'</p>';
+                 bloque+= '<a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"></a>';
+                 bloque+= '</div><div class="clear"></div></div>';  
 
+            $("#listado_normal").append(bloque);
+            $(".icontitle").html(field.nombre)
+
+            });
         });
-    });
+    }
 }
 
 function enviarcontacto(){
