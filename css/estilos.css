@@ -21,8 +21,8 @@ h1,h2,h3{font-weight:bold;}
 h4,h5,h6{font-weight:normal;}
 h1{font-size:36px; font-family: 'Cinzel', serif;}
 h2{font-size:30px; font-family: 'Cinzel', serif;}
-h3{font-size:20px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px; text-transform:uppercase;}
-h4{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
+h3{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px; text-transform:uppercase;}
+h4{font-size:17px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
 h5{font-size:16px}
 h6{font-size:14px; padding-bottom:0px;}
 a:link{color:#c90808;text-decoration:none}
