@@ -158,7 +158,7 @@ html,body{width: 100%;height: 100%;}
 #containtertitle li {background-image: url("../images/cinta.png"); background-position:center; background-size:contain; background-repeat:repeat-x; display: inline-block;float: left;margin: 0%;width: 100%; height:90px;}
 
 
-.icontitle{background-image: url("../images/logotitle.png"); font-family: 'Cinzel', serif; background-position: 0px 0px;background-repeat: no-repeat;background-size: 90px auto;color: #fff;display: inline-block;font-size: 1.3em;height: 90px;line-height: 90px;text-indent: 100px;width: 100%;}
+.icontitle{background-image: url("../images/logotitle.png"); font-family: 'Cinzel', serif; background-position: 0px 0px;background-repeat: no-repeat;background-size: 90px auto;color: #fff;display: inline-block;font-size: 1em;height: 90px;line-height: 90px;text-indent: 100px;width: 100%;}
 
 
 
