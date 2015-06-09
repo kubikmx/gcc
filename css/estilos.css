@@ -83,6 +83,8 @@ html,body{width: 100%;height: 100%;}
 .articulo span{color:#b2a326; width: 100%; display: inline-block; font-size: 1.1em; font-family: 'Dosis', sans-serif; text-transform:uppercase; font-weight:600; }
 
 
+.textsizer { text-align:right; text-align:right; margin-right:25px;}
+.textsizer a {font-weight:700;text-decoration:none!important; font-size:20px; color:#0a94d6;}
 
 
 
