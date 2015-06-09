@@ -16,6 +16,22 @@ function loadinfo(){
     });
 }
 
+function loadtorneos(){
+    $.getJSON("http://www.k-i.co/cc/webservices/torneos.php", function(result){
+        $.each(result, function(i, field){
+         var bloque=  '<div class="bordelist"><div class="articulo"><img src="http://k-i.co/cc/images/torneos/thumbs/'+field.imagen+'" >';
+             bloque+= '<p><span>'+ field.nombre +' </span>'+field.intro+'</p>';
+             bloque+= '<a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"></a>';
+             bloque+= '</div><div class="clear"></div></div>';  
+
+        $("#listado_normal").append(bloque);
+
+        });
+    });
+}
+
+
+
 function loadavisos(){
 	$.getJSON("http://www.k-i.co/cc/webservices/eventos.php", function(result){
         $.each(result, function(i, field){
