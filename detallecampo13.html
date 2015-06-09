@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Noticias</title>
+	
+	<!-- AppMachine Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/bridge/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,300,600,400' rel='stylesheet' type='text/css'>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.validate.pack.js"></script>
+
+	
+	<!-- AppMachine modules -->
+	<script src="phonegap.js"></script>
+
+	<script src="js/main.js"></script>
+    
+</head>
+<body>
+	<div id="headersection" class="column_1_1">
+		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
+		<div class="clear"> </div>
+        <div class="barratopder"> <a href="./"><img src="images/home.png" width="40" height="40"></a></div>
+        <img class="column_1_1" src="images/headercampo.jpg" >
+        <ul id="containtertitle">
+			<li><div class="icontitle">Campo</div></li>
+        </ul>
+     </div>
+     
+	<div id="hole1">
+
+		<div class="column_3_5 left"><img src="images/hole13.png" alt="Campo Hoyo No.1" class="holeImg"></div>
+		<div class="column_2_5 right" style="position:relative;top:-28px;">
+			<div id="holeData">
+				<div class="content">
+					<h1 id="holeNb">13</h1>
+					<p class="labels">YARDAS</p>
+					<p class="data">401</p>
+					<p class="labels">PAR</p>
+					<p class="data">4</p>
+					<p class="labels">HANDICAP</p>
+					<p class="data">2</p>
+				</div>
+				<canvas id="Contentbottom"></canvas>
+				<div class="TeeMarks">
+					<div class="line"><i class="teeMark blue"></i>440 Y</div>
+					<div class="line"><i class="teeMark white"></i>401 Y</div>
+					<div class="line"><i class="teeMark gold"></i>372 Y</div>
+					<div class="line"><i class="teeMark red"></i>314 Y</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+    <div class="clear padding"> </div>
+    
+    <div id="detalle_std" style="margin-top:-60px;">
+    <h3>DESCRIPCIÓN</h3>
+    <div class="detallearticulo" style="font-size:13px;">    
+    <p>Es el hoyo par 4, que tiene mayor dificultad del campo de golf. Su green está ubicado dando vuelta hacia la izquierda; pero, además esta protegido por el lago más grande del club, con una dimensión de por lo menos 150 yardas protegiendo además todo el frente de dicho green. <br><br></p>
+    <p>Al inicio del lago, y a su lado contrario se observa una gran trampa que pone en peligro un buen score, al errar el tiro de salida. La parte trasera del green también cuenta con una trampa que es temible, ya que el desnivel del green es hacia el mismo lago. En éste hoyo es de suma importancia encontrar el fairway para tener un segundo golpe fácil al green, incrementando la dificultad del hoyo dependiendo de la posición de la bandera. Realmente es un hoyo espectacular y difícil de jugar.
+</p>    
+    </div>
+    </div>
+    
+
+<script>
+	var c2 = document.getElementById('Contentbottom').getContext('2d');
+	c2.fillStyle = '#16264d';
+	c2.beginPath();
+	c2.moveTo(0, 0);
+	c2.lineTo(0, 0);
+	c2.lineTo(300, 0);
+	c2.lineTo(300, 100);
+	c2.lineTo(150, 0);
+	c2.lineTo(0, 100);
+	c2.closePath();
+	c2.fill();
+</script>
+    
+</body>
+</html>

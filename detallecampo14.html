@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Noticias</title>
+	
+	<!-- AppMachine Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/bridge/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,300,600,400' rel='stylesheet' type='text/css'>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.validate.pack.js"></script>
+
+	
+	<!-- AppMachine modules -->
+	<script src="phonegap.js"></script>
+
+	<script src="js/main.js"></script>
+    
+</head>
+<body>
+	<div id="headersection" class="column_1_1">
+		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
+		<div class="clear"> </div>
+        <div class="barratopder"> <a href="./"><img src="images/home.png" width="40" height="40"></a></div>
+        <img class="column_1_1" src="images/headercampo.jpg" >
+        <ul id="containtertitle">
+			<li><div class="icontitle">Campo</div></li>
+        </ul>
+     </div>
+     
+	<div id="hole1">
+
+		<div class="column_3_5 left"><img src="images/hole14.png" alt="Campo Hoyo No.1" class="holeImg"></div>
+		<div class="column_2_5 right" style="position:relative;top:-28px;">
+			<div id="holeData">
+				<div class="content">
+					<h1 id="holeNb">14</h1>
+					<p class="labels">YARDAS</p>
+					<p class="data">401</p>
+					<p class="labels">PAR</p>
+					<p class="data">4</p>
+					<p class="labels">HANDICAP</p>
+					<p class="data">4</p>
+				</div>
+				<canvas id="Contentbottom"></canvas>
+				<div class="TeeMarks">
+					<div class="line"><i class="teeMark blue"></i>440 Y</div>
+					<div class="line"><i class="teeMark white"></i>401 Y</div>
+					<div class="line"><i class="teeMark gold"></i>372 Y</div>
+					<div class="line"><i class="teeMark red"></i>314 Y</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+    <div class="clear padding"> </div>
+    
+    <div id="detalle_std" style="margin-top:-60px;">
+    <h3>DESCRIPCIÓN</h3>
+    <div class="detallearticulo" style="font-size:13px;">    
+    <p>Hoyo par 4. Con trayectoria de derecha a izquierda en su parte media, es uno de los mejores hoyos del campo. Además cuenta con una trayectoria accidentada, ya que inicia con una elevación, terminando con una pequeña barranca antes del green que está protegido por tres enormes trampas que dificultan todavía más la colocación del segundo tiro. <br><br></p>
+    <p>Lo ideal es un segundo golpe a la pelota con un poco de efecto de derecha a izquierda, para lograr un buen score. 
+</p>    
+    </div>
+    </div>
+    
+
+<script>
+	var c2 = document.getElementById('Contentbottom').getContext('2d');
+	c2.fillStyle = '#16264d';
+	c2.beginPath();
+	c2.moveTo(0, 0);
+	c2.lineTo(0, 0);
+	c2.lineTo(300, 0);
+	c2.lineTo(300, 100);
+	c2.lineTo(150, 0);
+	c2.lineTo(0, 100);
+	c2.closePath();
+	c2.fill();
+</script>
+    
+</body>
+</html>
