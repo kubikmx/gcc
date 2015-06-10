@@ -15,14 +15,14 @@ sub{vertical-align:baseline}
 legend{color:#000}
 a{text-decoration:none;color:inherit}
 a:hover{text-decoration:none;color:inherit}
-body{margin-left:0;margin-top:0;margin-right:0;margin-bottom:0;position:relative;text-align:justify; font-family: 'Open Sans', sans-serif; font-size: 1em;  }
+body{margin-left:0;margin-top:0;margin-right:0;margin-bottom:0;position:relative;text-align:justify; font-family: 'Open Sans', sans-serif; font-size: 1em ;  }
 body,td,th{font-size:14px;color:#373737;}
 h1,h2,h3{font-weight:bold;}
 h4,h5,h6{font-weight:normal;}
 h1{font-size:36px; font-family: 'Cinzel', serif;}
 h2{font-size:30px; font-family: 'Cinzel', serif;}
-h3{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px; text-transform:uppercase;}
-h4{font-size:17px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:30px 0 10px 10px}
+h3{font-size:18px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:5px 0 10px 10px; text-transform:uppercase;}
+h4{font-size:17px; font-family: 'Dosis', sans-serif; color:#b2a326; padding:5px 0 10px 10px}
 h5{font-size:16px}
 h6{font-size:14px; padding-bottom:0px;}
 a:link{color:#c90808;text-decoration:none}
@@ -80,12 +80,12 @@ html,body{width: 100%;height: 100%;}
 .articulo img{width: 48%; display: inline-block; float: left;border-right: 10px solid #f8f7f0;}
 .articulo p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
 .articulo a{background-image: url("../images/ir.png");background-position: center center;background-repeat: no-repeat;height: 36px;left: 0;margin-top: -18px;position: absolute;top: 50%;width: 97%;}
-.articulo span{color:#b2a326; width: 100%; display: inline-block; font-size: 1.1em; font-family: 'Dosis', sans-serif; text-transform:uppercase; font-weight:600; }
+.articulo span{color:#b2a326; width: 100%; display: inline-block; font-size: 1.1em; font-family: 'Dosis', sans-serif; text-transform:uppercase; font-weight:600; text-align: left; }
 
 
 .textsizer { text-align:right; text-align:right; margin-right:25px;}
 .textsizer a {font-weight:700;text-decoration:none!important; font-size:20px; color:#0a94d6;}
-
+.ases {position: relative; top:-20px; }
 
 
 .detallearticulo{width: 94%; display: inline-block; float: left; font-size: .8em; position: relative; padding:3%}
@@ -157,7 +157,7 @@ html,body{width: 100%;height: 100%;}
 
 
 #containtertitle{position: relative; width: 100%; margin-top:-40px;}
-#containtertitle li {background-image: url("../images/cinta.png"); background-position:center; background-size:contain; background-repeat:repeat-x; display: inline-block;float: left;margin: 0%;width: 100%; height:90px;}
+#containtertitle li {background-image: url("../images/cinta.png"); background-position:center; background-size:contain; background-repeat:repeat-x; display: inline-block;float: left;margin: 0%;width: 100%; height:90px; font-size: 1em !important;}
 
 
 .icontitle{background-image: url("../images/logotitle.png"); font-family: 'Cinzel', serif; background-position: 0px 0px;background-repeat: no-repeat;background-size: 90px auto;color: #fff;display: inline-block;font-size: 1em;height: 90px;line-height: 90px;text-indent: 100px;width: 100%;}
