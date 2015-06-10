@@ -33,9 +33,71 @@
 	}
 	.com{
 		color: #373737 !important;
+		font-weight: bold;
 	}
 </style> 
 </head>
+<script>
+		$(document).ready(function(){
+			var restaurante;
+			var rapidez;
+			var bebidas;
+			var menu;
+			var atencion;
+			var serviciocapitan;
+			$("input[name=restaurante]").change(function () {	 
+				restaurante = $(this).val();
+				//alert(restaurante);
+			});
+
+			$("input[name=rapidez]").change(function () {	 
+				rapidez = $(this).val();
+				//alert(restaurante);
+			});
+
+			$("input[name=bebidas]").change(function () {	 
+				bebidas = $(this).val();
+				//alert(restaurante);
+			});
+
+			$("input[name=menu]").change(function () {	 
+				menu = $(this).val();
+				//alert(restaurante);
+			});
+
+			$("input[name=atencion]").change(function () {	 
+				atencion = $(this).val();
+				//alert(restaurante);
+			});
+
+			$("input[name=serviciocapitan]").change(function () {	 
+				serviciocapitan = $(this).val();
+				//alert(restaurante);
+			});
+		});
+	function realizaProceso(){
+			alert(restaurante);
+			/*$("input[name=restaurante]").change(function () {	 
+				var restaurante = $(this).val();
+				alert(restaurante);
+			});*/
+	        /*var parametros = {
+	                "valorCaja1" : valorCaja1,
+	                "valorCaja2" : valorCaja2
+	        };
+	        $.ajax({
+	                data:  parametros,
+	                url:   'ejemplo_ajax_proceso.php',
+	                type:  'post',
+	                beforeSend: function () {
+	                        $("#resultado").html("Procesando, espere por favor...");
+	                },
+	                success:  function (response) {
+	                        $("#resultado").html(response);
+	                }
+	        });*/
+	}
+</script>
 <body class="fondocrema section_contacto" >
 	<div id="" class="column_1_1 ">
 		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
@@ -50,6 +112,20 @@
     <h3>ESCRÍBENOS</h3>   
 
      <form class="contact padding_sides" id="contact_form" action="#" method="POST" >
+     	<h4 class="com">Restaurante</h4>
+		<div class="option_enc">
+			<label>
+				<input name="restaurante" type="radio" value="Terraza principal" style="float: left; width: 15%;" />
+				<span>Terraza principal</span>
+			</label>
+		</div><br >
+		<div class="option_enc">
+			<label>
+				<input name="restaurante" type="radio" value="Restaurante 2" style="float: left; width: 15%;" />
+				<span>Restaurante 2</span>
+			</label>
+		</div><br >
+		<div class="clear"></div>
 		<h4 class="com">Rapidez y exactitud de la cuenta</h4>
 		<div class="option_enc">
 			<label>
@@ -154,7 +230,7 @@
 			<h4 class="com">Comentarios</h4>
 			<textarea id="mensaje" class="input" name="message" rows="5"></textarea><br />
 		</div><br>
-		<input class="btn_enviaremail" id="submit_button" type="submit" value="Enviar email" /><br ><br >
+		<input class="btn_enviaremail" id="submit_button" type="button" value="Enviar email"  onclick="realizaProceso();return false;"/><br ><br >
 	</form>	
 </body>
 </html>
