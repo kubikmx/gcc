@@ -34,7 +34,7 @@ function ts( trgt,inc ) {/*
 		cTags = cEl.getElementsByTagName( tgs[ i ] );
 		for ( j = 0 ; j < cTags.length ; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
 	}*/
-	$( "p" ).each(function() {
+	$( ".crecer" ).each(function() {
 		var actual=$(this).css("font-size"); 
 		var current=parseInt(actual.replace("px", "")); 
 		$(this).css("font-size",(current+inc)+"px");
