@@ -38,7 +38,7 @@
 </style> 
 </head>
 <script>
-		$(document).ready(function(){
+		/*$(document).ready(function(){
 			var restaurante;
 			var rapidez;
 			var bebidas;
@@ -74,28 +74,130 @@
 				serviciocapitan = $(this).val();
 				//alert(restaurante);
 			});
-		});
+		});*/
 	function realizaProceso(){
-			alert(restaurante);
+		//Restaurantes
+	    var i;
+	    for (i=0;i<document.opinion_form.restaurante.length;i++){
+	       	if (document.opinion_form.restaurante[i].checked){
+		       	var restaurantes = document.opinion_form.restaurante[i].value;
+		        break;
+	    	}
+	    }
+	    if(typeof restaurantes == "undefined" ){
+	    	alert('Selecciona un restaurante');
+	    	return false;
+	    }
+	    /*else{
+	    	alert(restaurantes);
+	    }*/
+
+	    //Rapidez
+	    var i1;
+	    for (i1=0;i1<document.opinion_form.rapidez.length;i1++){
+	       	if (document.opinion_form.rapidez[i1].checked){
+		       	var rapidez = document.opinion_form.rapidez[i1].value;
+		        break;
+	    	}
+	    }
+	    if(typeof rapidez == "undefined" ){
+	    	alert('Califica la rapidez y exactitud de la cuenta');	
+	    	return false;
+	    }
+	    /*else{
+	    	alert(rapidez);
+	    }*/
+
+	    //Calidad de bebidas
+		var ib;
+	    for (ib=0;ib<document.opinion_form.bebidas.length;ib++){
+	       	if (document.opinion_form.bebidas[ib].checked){
+		       	var bebidas = document.opinion_form.bebidas[ib].value;
+		        break;
+	    	}
+	    }
+	    if(typeof bebidas == "undefined" ){
+	    	alert('Califica la calidad de bebidas');
+	    	return false;
+	    }
+	    /*else{
+	    	alert(bebidas);
+	    }*/	 
+
+	    //Variedad del menu
+		var im;
+	    for (im=0;im<document.opinion_form.menu.length;im++){
+	       	if (document.opinion_form.menu[im].checked){
+		       	var menu = document.opinion_form.menu[im].value;
+		        break;
+	    	}
+	    }
+	    if(typeof menu == "undefined" ){
+	    	alert('Califica la variedad del men\u00fa');
+	    	return false;
+	    }
+	    /*else{
+	    	alert(menu);
+	    }	*/
+
+	    //Atencion meseros
+	    var ime;
+	    for (ime=0;ime<document.opinion_form.atencion.length;ime++){
+	       	if (document.opinion_form.atencion[ime].checked){
+		       	var atencion = document.opinion_form.atencion[ime].value;
+		        break;
+	    	}
+	    }
+	    if(typeof atencion == "undefined" ){
+	    	alert('Califica la atenci\u00f3 n de los meseros');	
+	    	return false;
+	    }
+	    /*else{
+	    	alert(atencion);
+	    }*/	
+
+	    //Atención del jefe de servicios y capitanes
+	    var ica;
+	    for (ica=0;ica<document.opinion_form.serviciocapitan.length;ica++){
+	       	if (document.opinion_form.serviciocapitan[ica].checked){
+		       	var serviciocapitan = document.opinion_form.serviciocapitan[ica].value;
+		        break;
+	    	}
+	    }	
+	    if(typeof serviciocapitan == "undefined" ){
+	    	alert('Califica la atenci\u00f3n del jefe de servicios y capitanes');
+	    	return false;
+	    }
+
+	    var comentarios = document.opinion_form.comentarios.value;
+	    /*else{
+	    	alert(serviciocapitan);
+	    }*/	       
+			//alert(restaurante);
 			/*$("input[name=restaurante]").change(function () {	 
 				var restaurante = $(this).val();
 				alert(restaurante);
 			});*/
-	        /*var parametros = {
-	                "valorCaja1" : valorCaja1,
-	                "valorCaja2" : valorCaja2
+	        var parametros = {
+	                "restaurantes" : restaurantes,
+	                "rapidez" : rapidez,
+	                "bebidas" : bebidas,
+	                "menu" : menu,
+	                "atencion" : atencion,
+	                "serviciocapitan" : serviciocapitan,
+	                "comentarios" : comentarios
 	        };
 	        $.ajax({
 	                data:  parametros,
-	                url:   'ejemplo_ajax_proceso.php',
+	                url:   'http://www.k-i.co/cc/webservices/opiniones.php?restaurantes='+restaurantes+'&rapidez='+rapidez+'&bebidas='+bebidas+'&menu='+menu+'&atencion='+atencion+'&serviciocapitan='+serviciocapitan,
 	                type:  'post',
 	                beforeSend: function () {
-	                        $("#resultado").html("Procesando, espere por favor...");
+	                        $("#formopinion").html("Procesando, espere por favor...");
 	                },
 	                success:  function (response) {
-	                        $("#resultado").html(response);
+	                        $("#formopinion").html(response);
 	                }
-	        });*/
+	        });
 	}
 </script>
 <body class="fondocrema section_contacto" >
@@ -111,7 +213,7 @@
 
     <h3>ESCRÍBENOS</h3>   
 
-     <form class="contact padding_sides" id="contact_form" action="#" method="POST" >
+     <form class="contact padding_sides" name="opinion_form" action="#" method="POST" id="formopinion">
      	<h4 class="com">Restaurante</h4>
 		<div class="option_enc">
 			<label>
@@ -121,8 +223,20 @@
 		</div><br >
 		<div class="option_enc">
 			<label>
-				<input name="restaurante" type="radio" value="Restaurante 2" style="float: left; width: 15%;" />
-				<span>Restaurante 2</span>
+				<input name="restaurante" type="radio" value="Terraza alberca" style="float: left; width: 15%;" />
+				<span>Terraza alberca</span>
+			</label>
+		</div><br >
+		<div class="option_enc">
+			<label>
+				<input name="restaurante" type="radio" value="Terraza tenis" style="float: left; width: 15%;" />
+				<span>Terraza tenis</span>
+			</label>
+		</div><br >
+		<div class="option_enc">
+			<label>
+				<input name="restaurante" type="radio" value="Casita hoyo 4" style="float: left; width: 15%;" />
+				<span>Casita hoyo 4</span>
 			</label>
 		</div><br >
 		<div class="clear"></div>
@@ -228,7 +342,7 @@
 		<div class="clear"></div>
 		<div class="">
 			<h4 class="com">Comentarios</h4>
-			<textarea id="mensaje" class="input" name="message" rows="5"></textarea><br />
+			<textarea id="mensaje" class="input" name="comentarios" rows="5"></textarea><br />
 		</div><br>
 		<input class="btn_enviaremail" id="submit_button" type="button" value="Enviar email"  onclick="realizaProceso();return false;"/><br ><br >
 	</form>	
