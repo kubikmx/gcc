@@ -17,7 +17,7 @@ var tgs = new Array( 'div','td','tr');
 var szs = new Array( 'xx-small','x-small','small','medium','large','x-large','xx-large' );
 var startSz = 2;
 
-function ts( trgt,inc ) {
+function ts( trgt,inc ) {/*
 	if (!document.getElementById) return
 	var d = document,cEl = null,sz = startSz,i,j,cTags;
 	
@@ -33,5 +33,10 @@ function ts( trgt,inc ) {
 	for ( i = 0 ; i < tgs.length ; i++ ) {
 		cTags = cEl.getElementsByTagName( tgs[ i ] );
 		for ( j = 0 ; j < cTags.length ; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
-	}
+	}*/
+	$( "p" ).each(function() {
+		var actual=$(this).css("font-size"); 
+		var current=parseInt(actual.replace("px", "")); 
+		$(this).css("font-size",(current+inc)+"px");
+	});
 }
