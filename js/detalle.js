@@ -188,3 +188,20 @@ function zoomactive(){
     
 
 }
+
+function loadhadicap(){
+
+        $.ajax({
+          type: "POST",
+          url: "http://www.k-i.co/cc/webservices/handicap.php",
+          data: ({date: "last"}),
+          cache: false,
+          dataType: "text",
+          success: onSuccess
+        });
+ 
+        function onSuccess(data)
+        {
+            $("#detalle_std").html( data);
+        }
+}
