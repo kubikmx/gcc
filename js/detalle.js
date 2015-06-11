@@ -203,5 +203,5 @@ function loadhadicap(){
 }
 function onSuccesshandicap(data)
 {
-    $("#detalle_std").html( data);
+    $("#detallehandicap").html( data);
 }
