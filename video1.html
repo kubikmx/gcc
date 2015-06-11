@@ -29,10 +29,10 @@
 	<!-- AppMachine modules -->
 	<script src="phonegap.js"></script>
 
-	<script type="text/javascript" charset="utf-8" src="video.js"></script>
+	<script src="js/main.js"></script>
     
 </head>
-<body onload="javascript:initv()">
+<body>
 	<div id="headersection" class="column_1_1">
 		<div class="barratop icontitlehoyo" style="width:30% !important; line-height:3"> Hoyo 1</div>
         <div class="barratopder"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
@@ -42,25 +42,29 @@
         
      </div>
      
-	<div id="hole1">		
-		<div class="app">
-		    <p><a href="#" onclick="playVideo('https://www.youtube.com/watch?v=gYOLV66XukY')">Play File</a><p/>
-		</div>
+	<div id="hole1">
+
 	</div>
    
-    <script type="text/javascript">
-	    app.initialize();
+<script type="text/javascript">
+	  var videoUrl = "videofiles/hoyo1.mp4";
 
-	    function initv()
-	    {
-	        document.addEventListener("deviceready", console.log('ready'), true);
-	    }
+	  // Just play a video
+	  window.plugins.streamingMedia.playVideo(videoUrl);
 
-	    function playVideo(vidUrl) 
-	    {
-	        window.plugins.videoPlayer.play(vidUrl);
+	  // Play a video with callbacks
+	  var options = {
+	    successCallback: function() {
+	      console.log("Video was closed without error.");
+	    },
+	    errorCallback: function(errMsg) {
+	      console.log("Error! " + errMsg);
 	    }
-	</script>
+	  };
+	  window.plugins.streamingMedia.playVideo(videoUrl, options);
+
+
+</script>    
     
     
 </body>
