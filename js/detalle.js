@@ -197,11 +197,11 @@ function loadhadicap(){
           data: ({date: "last"}),
           cache: false,
           dataType: "text",
-          success: onSuccess
+          success: onSuccesshandicap
         });
- 
-        function onSuccess(data)
-        {
-            $("#detalle_std").html( data);
-        }
+        
+}
+function onSuccesshandicap(data)
+{
+    $("#detalle_std").html( data);
 }
