@@ -47,12 +47,20 @@
     
     
     
-    <video width="100%" height="auto"  autoplay  webkit-playsinline>
-   <source src="videofiles/hoyo1.mp4" type="video/mp4" />
-   <source src="videofiles/hoyo1.webm" type="video/webm"/>
-   <source src="videofiles/hoyo1.ogv" type="video/ogg"/>             
-   <p>Fallback code if video isn't supported</p>/
- </video>
+
+
+ <script type="text/javascript">
+	VideoPlayer.play(
+	    "file:///videofiles/hoyo1.mp4",
+	    {
+	        volume: 0.5,
+	        scalingMode: VideoPlayer.SCALING_MODE.SCALE_TO_FIT_WITH_CROPPING
+	    },
+	    function (err) {
+	        console.log(err);
+	    }
+	);
+ </script>
     
     
     
