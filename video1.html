@@ -29,10 +29,10 @@
 	<!-- AppMachine modules -->
 	<script src="phonegap.js"></script>
 
-	<script src="js/videoplayer.js"></script>
+	<script type="text/javascript" charset="utf-8" src="video.js"></script>
     
 </head>
-<body>
+<body onload="javascript:initv()">
 	<div id="headersection" class="column_1_1">
 		<div class="barratop icontitlehoyo" style="width:30% !important; line-height:3"> Hoyo 1</div>
         <div class="barratopder"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
@@ -42,40 +42,25 @@
         
      </div>
      
-	<div id="hole1">
-    
-    
-    
-    
-
-
- <script type="text/javascript">
-	VideoPlayer.play(
-	    "file:///videofiles/hoyo1.mp4",
-	    {
-	        volume: 0.5,
-	        scalingMode: VideoPlayer.SCALING_MODE.SCALE_TO_FIT_WITH_CROPPING
-	    },
-	    function (err) {
-	        console.log(err);
-	    }
-	);
- </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-		
-
+	<div id="hole1">		
+		<div class="app">
+		    <p><a href="#" onclick="playVideo('https://www.youtube.com/watch?v=gYOLV66XukY')">Play File</a><p/>
+		</div>
 	</div>
    
-    
+    <script type="text/javascript">
+	    app.initialize();
+
+	    function initv()
+	    {
+	        document.addEventListener("deviceready", console.log('ready'), true);
+	    }
+
+	    function playVideo(vidUrl) 
+	    {
+	        window.plugins.videoPlayer.play(vidUrl);
+	    }
+	</script>
     
     
 </body>
