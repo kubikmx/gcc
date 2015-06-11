@@ -43,27 +43,31 @@
      </div>
      
 	<div id="hole1">
+    
+    
+    
+    
+    <video width="100%" height="auto"  autoplay  webkit-playsinline>
+   <source src="videofiles/hoyo1.mp4" type="video/mp4" />
+   <source src="videofiles/hoyo1.webm" type="video/webm"/>
+   <source src="videofiles/hoyo1.ogv" type="video/ogg"/>             
+   <p>Fallback code if video isn't supported</p>/
+ </video>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+		
+
 	</div>
    
-<script type="text/javascript">
-	  var videoUrl = "http://www.k-i.co/cc/videofiles/hoyo1.mp4";
-
-	  // Just play a video
-	  window.plugins.streamingMedia.playVideo(videoUrl);
-
-	  // Play a video with callbacks
-	  var options = {
-	    successCallback: function() {
-	      console.log("Video was closed without error.");
-	    },
-	    errorCallback: function(errMsg) {
-	      console.log("Error! " + errMsg);
-	    }
-	  };
-	  window.plugins.streamingMedia.playVideo(videoUrl, options);
-
-
-</script>    
+    
     
     
 </body>
