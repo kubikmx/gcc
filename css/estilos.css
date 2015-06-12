@@ -184,8 +184,8 @@ html,body{width: 100%;height: 100%;}
 
 
 
-.barratop{position:absolute; width:60px; height:60px; float:left; }
-.barratopder{position:absolute; width:60px; height:60px; right:0; }
+.barratop{position:absolute; width:60px; height:60px; float:left; display:none }
+.barratopder{position:absolute; width:60px; height:60px; right:0; display:none }
 .barratop img{ width:60px !important; height:60px !important; right:0; }
 .barratopder img{ width:60px !important; height:60px !important; right:0; }
 
