@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Noticias</title>
+	
+	<!-- AppMachine Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/bridge/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,300,600,400' rel='stylesheet' type='text/css'>
+    
+    
+    
+
+
+
+  
+  
+  
+  
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.validate.pack.js"></script>
+
+	
+	<!-- AppMachine modules -->
+	<script src="phonegap.js"></script>
+
+	<script src="js/main.js"></script>
+    
+</head>
+<body>
+	<div id="headersection" class="column_1_1">
+		<div class="barratop icontitlehoyo" style="width:30% !important; line-height:3"> Hoyo 3</div>
+        <div class="barratopder"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
+		<div class="clear"> </div>
+        
+        <img class="column_1_1" src="images/headervideo.jpg" >
+        
+     </div>
+     
+	
+    <div id="mediaContainer" style="position: relative; width: 600px; height: 400px; overflow: hidden">
+			<div id="videoContainer" style="position: relative; width: 100%; height: 100%">
+				<video id="video" src="videofiles/hoyo1.mp4" controls="controls" style="width: 100%; height: 100%" />
+			</div>
+			<div id="overlay" style="position: relative; width: 100%; height: 100%; visibility: hidden; background-color: black">
+				<img src="chipmunk.jpg" style="width: 100%; height: 100%" />
+				<div id="overlayElement" style="width: 75px; height: 75px; background-color: green; position: absolute; top: 10px; left: 10px">
+					Play
+				</div>
+			</div>			
+		</div>
+    
+    
+    
+   
+    
+    
+    
+    <script>
+
+    var overlayShown = false;
+
+	function showOverlay() {
+		// Hide video, show poster
+		var overlay = document.getElementById("overlay");
+		overlay.style.visibility = "visible";
+		var videoContainer = document.getElementById("videoContainer");
+		videoContainer.style.position = "absolute";
+		videoContainer.style.top = "-2000px";
+		overlayShown = true;
+	}
+
+	function hideOverlay() {
+		// Hide poster, show video
+		var overlay = document.getElementById("overlay");
+		overlay.style.visibility = "hidden";
+		var videoContainer = document.getElementById("videoContainer");
+		videoContainer.style.position = "relative";
+		videoContainer.style.top = "0px";
+		overlayShown = false;
+	}
+
+	// init
+	(function() {
+		var overlayElement = document.getElementById("overlayElement");
+		overlayElement.onclick = function(e) {
+			var el = e.target;
+			el.style.backgroundColor = "blue";
+			window.setTimeout(function() {
+				// "Play" button clicked
+				el.style.backgroundColor = "green";
+				if (overlayShown) {
+					hideOverlay();
+					var videoElement = document.getElementById("video");
+					videoElement.play();
+				} else {
+					showOverlay();
+				}
+			}, 750);
+		};
+
+		var videoElement = document.getElementById("video");
+		videoElement.addEventListener('pause', function() {
+			// Paused, show poster
+			showOverlay();
+		});
+		videoElement.addEventListener('ended', function() {
+			// Ended, try to close fullscreen if possible
+			if (typeof videoElement.webkitExitFullscreen !== "undefined") {
+				videoElement.webkitExitFullscreen();
+			}
+		});
+
+		showOverlay();
+	})();
+</script>
+    
+   
+    
+    
+    
+</body>
+</html>
