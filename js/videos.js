@@ -48,7 +48,9 @@
 			if (typeof videoElement.webkitExitFullscreen !== "undefined") {
 				videoElement.webkitExitFullscreen();
 			}
+
 		});
 
 		showOverlay();
 	}
+
