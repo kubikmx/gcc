@@ -32,22 +32,25 @@
 	<script src="js/videos.js"></script>
     
 </head>
-<body onload="loadvideo()">
-	<div id="headersection" class="column_1_1">
-		<div class="barratop icontitlehoyo" style="width:30% !important; line-height:3"> Hoyo 3</div>
-        <div class="barratopder"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
-		<div class="clear"> </div>
+<body onload="loadvideo()" style="background-color:#e0e0e0 !important">
+	
         
-        <img class="column_1_1" src="images/headercampo.jpg" >
+       <div id="headersection" class="column_1_1" style="margin-bottom: -5px;">
+
+    	<div class="clear"> </div>
+        <div class="cerrartopder"> <a href="javascript:history.back()"><img src="images/cerrar.png" width="40" height="40"></a></div>
+		<img class="column_1_1" src="images/headervideo.jpg" >
+		
+	</div>
         
      </div>
      
 	<div id="hole1">
     	<div id="mediaContainer">
 			<div id="videoContainer">
-				<video id="video" src="videofiles/hoyo1.mp4" controls="controls"></video>
+				<video id="video" src="videofiles/hoyo1.mp4" controls></video>
 			</div>
-			<div id="overlayvideo">
+			<div id="overlayvideo" style="border:10px solid #e0e0e0;">
 				<img id="postervideo" src="images/hole1poster.jpg" />
 				<div id="overlayElement"></div>
 			</div>			
@@ -55,14 +58,6 @@
     
     </div>   
 
-     <!--FOOTER-->
-    <div class="clear padding" style="height:45px;"></div>
-    <div id="headersection" class="column_1_1" style="bottom:-5px; position:fixed;">
-		<div class="barrafooter"> <a href="javascript:history.back()"><img src="images/backfooter.png" width="40" height="40"></a></div>
-        
-        <div class="barrafooterder"> <a href="index.html"><img src="images/homefooter.png" width="40" height="40"></a></div>
-        <img class="column_1_1" src="images/fondofooter.jpg" >        
-     </div>
-    <!--END FOOTER-->
+     
 </body>
 </html>

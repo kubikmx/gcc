@@ -182,7 +182,10 @@ html,body{width: 100%;height: 100%;}
 
 .icontitlehoyo{font-family: 'Cinzel', serif; color: #fff;display: inline-block;font-size: 1.2em;height: 90px;line-height: 90px;padding-left: 10px;width: 50%; font-weight:600;}
 
-
+.cerrartop{position:absolute; width:30px; height:30px; float:left; }
+.cerrartopder{position:absolute; width:30px; height:30px; right:0; }
+.cerrartop img{ width:30px !important; height:30px !important; right:0; }
+.cerrartopder img{ width:30px !important; height:30px !important; right:0; }
 
 .barratop{position:absolute; width:60px; height:60px; float:left; display:none }
 .barratopder{position:absolute; width:60px; height:60px; right:0; display:none }
@@ -431,6 +434,6 @@ html,body{width: 100%;height: 100%;}
 #mediaContainer{position: relative; width: 100%; height: auto; overflow: hidden}
 #videoContainer{position: relative; width: 100%; height: 100%}
 #video{width: 100%; height: 100%}
-#overlayvideo{position: relative; width: 100%; height: 100%; visibility: hidden;}
+#overlayvideo{position: relative; width: 94%; height: 98%; visibility: hidden;}
 #postervideo{width: 100%; height: 100%}
 #overlayElement{width: 100%; height: 100%; background-image: url(../images/play-circle-outline.png); background-position: center center;background-repeat: no-repeat; position: absolute; top: 0; left: 0}
