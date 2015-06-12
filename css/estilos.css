@@ -426,3 +426,11 @@ html,body{width: 100%;height: 100%;}
 .dorado{
 	color:#b2a326;
 }
+
+/* Videos */
+#mediaContainer{position: relative; width: 100%; height: auto; overflow: hidden}
+#videoContainer{position: relative; width: 100%; height: 100%}
+#video{width: 100%; height: 100%}
+#overlayvideo{position: relative; width: 100%; height: 100%; visibility: hidden;}
+#postervideo{width: 100%; height: 100%}
+#overlayElement{width: 100%; height: 100%; background-image: url(../images/play-circle-outline.png); background-position: center center;background-repeat: no-repeat; position: absolute; top: 0; left: 0}
