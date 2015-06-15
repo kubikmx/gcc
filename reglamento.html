@@ -41,10 +41,18 @@
 <!--TERMINA TEXT RESIZER-->
     
 	<div id="detalle_std">
-       <div class="detallearticulo crecer">
+       <div class="detallereglamento crecer">
        
-       <h3>REGLAMENTO PARA USO DEL CAMPO DE GOLF</h3>
-<ol id="reglamentoromano" >
+       
+       <!--REGLAMENTO 1-->
+       
+       <h3 class="desplegar">USO DEL CAMPO DE GOLF  <img id="on" src="images/desplegar.png"> <img id="off" src="images/desplegar2.png" style="display:none"></h3> 
+
+		<ul class="regla" style="display:none;">
+        
+        
+        
+        	<ol id="reglamentoromano" >
        
        <li>USO DEL CAMPO DE GOLF  
 			<ol id="reglamento">
@@ -158,6 +166,7 @@
 		</li>
         
         
+
         <li>STARTERS Y MARSHALS
 			<ol id="reglamento">
 				<li class="parrafodetalle">
@@ -235,15 +244,31 @@
 
 </ol>
 
+		</ul>
+       <!--END REGLAMENTO 1-->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       <!--REGLAMENTO 2-->
+       
+       
+       
+       
+        <h3 class="desplegar2">HÁNDICAPS  <img id="on2" src="images/desplegar.png"> <img id="off2" src="images/desplegar2.png" style="display:none"></h3> 
 
-
-
-<h3>REGLAMENTO DE HÁNDICAPS</h3>
-
-
-
-
-<ol id="reglamentoromano" >
+		<ul class="regla2" style="display:none;">
+        
+        
+        
+        	<ol id="reglamentoromano" >
 
 		<li>OBJETIVO
 			<ol id="reglamento">
@@ -302,15 +327,29 @@
 
 </ol>
 
+		</ul>    
+       
+  <!--END REGLAMENTO 2--> 
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--REGLAMENTO 3-->
+       
+       
+       
+       
+        <h3 class="desplegar3">CARRITOS DE GOLF  <img id="on3" src="images/desplegar.png"> <img id="off3" src="images/desplegar2.png" style="display:none"></h3> 
 
-
-
-<h3>REGLAMENTO DE CARRITOS DE GOLF</h3>
-
-
-
-
-<ol id="reglamentoromano" >
+		<ul class="regla3" style="display:none;">
+        
+        
+        
+        	<ol id="reglamentoromano" >
 
 		<li>OBJETIVO
 			<ol id="reglamento">
@@ -428,16 +467,30 @@
         
 </ol>
 
+		</ul>    
+       
+  <!--END REGLAMENTO 3-->     
+       
+       
 
 
 
 
-<h3>REGLAMENTO DE PLATAFORMA DE PRÁCTICA DE GOLF</h3>
 
 
 
+ <!--REGLAMENTO 4-->
+       
+       
+       
+       
+        <h3 class="desplegar4">PRÁCTICA DE GOLF  <img id="on4" src="images/desplegar.png"> <img id="off4" src="images/desplegar2.png" style="display:none"></h3> 
 
-<ol id="reglamentoromano" >
+		<ul class="regla4" style="display:none;">
+        
+        
+        
+        	<ol id="reglamentoromano" >
 
 		<li>USUARIOS:
 			<ol id="reglamento">
@@ -493,6 +546,27 @@
         
 </ol>
 
+		</ul>    
+       
+  <!--END REGLAMENTO 4--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -506,6 +580,90 @@
     
     
     
+    
+    <script type="text/javascript">
+
+  	$(document).ready(function(){
+
+		$( ".desplegar" ).click(function() {
+		  $( ".regla" ).toggle(200);
+		  $("#off").toggle();
+		  $("#on").toggle();
+		});
+
+		$( ".cerrar" ).click(function() {
+		  $( ".regla" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
+		});
+
+	});
+
+</script>
+
+<script type="text/javascript">
+
+  	$(document).ready(function(){
+
+		$( ".desplegar2" ).click(function() {
+		  $( ".regla2" ).toggle(200);
+		  $("#off2").toggle();
+		  $("#on2").toggle();
+		});
+
+		$( ".cerrar" ).click(function() {
+		  $( ".regla2" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
+		});
+
+	});
+
+</script>
+
+
+
+<script type="text/javascript">
+
+  	$(document).ready(function(){
+
+		$( ".desplegar3" ).click(function() {
+		  $( ".regla3" ).toggle(200);
+		  $("#off3").toggle();
+		  $("#on3").toggle();
+		});
+
+		$( ".cerrar" ).click(function() {
+		  $( ".regla3" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
+		});
+
+	});
+
+</script>
+
+
+
+<script type="text/javascript">
+
+  	$(document).ready(function(){
+
+		$( ".desplegar4" ).click(function() {
+		  $( ".regla4" ).toggle(200);
+		  $("#off4").toggle();
+		  $("#on4").toggle();
+		});
+
+		$( ".cerrar" ).click(function() {
+		  $( ".regla4" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
+		});
+
+	});
+
+</script>
     
     
     

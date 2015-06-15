@@ -61,19 +61,46 @@
     <div class="clear padding"> </div>
     
     
-   <ul id="menurestaurantes">
-			<li><a href="video1.html" class="btn_nextlist">Ver recorrido virtual</a></li>
-		</ul>
+
         	
 			
+            
+            
+            <h3 style="margin-top: -35px;" id="desplegar">Ver Distancias <img id="on" src="images/desplegar.png"> <img id="off" src="images/desplegar2.png" style="display:none"></h3> 
+
+		<ul class="directorio" style="display:none;">
+        
+        
+        
+        	<li>
+				<div class="zona">Zona</div>
+				<div class="ext">Yardas</div>
+			</li>
+            <li>
+				<div class="zona">Centro del campo</div>
+				<div class="ext">350</div>
+			</li>
+            
+			
+
+		</ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
 			
            
     <div class="clear padding"></div>
-    <div id="detalle_std" style="margin-top:-60px;">
+    <div id="detalle_std">
 
  
-    <div class="clear padding"> </div>
+    <div class="clear"> </div>
     <h3>DESCRIPCIÓN</h3>    
      <!--TEXT RESIZER-->
 <div class="ases">
@@ -86,6 +113,7 @@
     <p>Se presta para hacer un buen score siendo un par 5, es un hoyo que da vuelta a la izquierda. Su salida debe ser bien colocada a la derecha de la trampa del fairway, para buscar tener una oportunidad de ir al green en dos golpes y buscar el águila o el pajarito.<br><br></p>
     <p>El green está rodeado por peligrosas trampas y una profunda barranca en la parte de atrás e izquierda. Este hoyo abre la posibilidad de ser atacado e iniciar la ronda con un birdie.</p>    
     </div>
+    
     </div>
     
 
@@ -102,6 +130,37 @@
 	c2.closePath();
 	c2.fill();
 </script>
+    
+    
+    
+    
+    <script type="text/javascript">
+
+  	$(document).ready(function(){
+
+		$( "#desplegar" ).click(function() {
+		  $( ".directorio" ).toggle(200);
+		  $("#off").toggle();
+		  $("#on").toggle();
+		});
+
+		$( ".cerrar" ).click(function() {
+		  $( ".directorio" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
+		});
+
+	});
+
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 <!--FOOTER-->
