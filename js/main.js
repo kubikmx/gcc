@@ -19,9 +19,9 @@ function loadinfo(){
 function loadtorneos(){
     $.getJSON("http://www.k-i.co/cc/webservices/torneos.php", function(result){
         $.each(result, function(i, field){
-         var bloque=  '<div class="bordelist"><div class="articulo"><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><img src="http://k-i.co/cc/images/torneos/thumbs/'+field.imagen+'" ></a>';
-             bloque+= '<p><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
-             bloque+= '<a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'" class="flechamedio"></a>';
+         var bloque=  '<div class="bordelist"><div class="articulo"><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><img src="http://k-i.co/cc/images/torneos/thumbs/'+field.imagen+'" ></a>';
+             bloque+= '<p><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
+             bloque+= '<a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'" class="flechamedio"></a>';
              bloque+= '</div><div class="clear"></div></div>';  
 
         $("#listado_normal").append(bloque);
