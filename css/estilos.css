@@ -80,7 +80,7 @@ html,body{width: 100%;height: 100%;}
 .articulo{width: 100%; display: inline-block; float: left;background-color: #323230; color:#ffffff;font-size: .8em; position: relative;}
 .articulo img{width: 48%; display: inline-block; float: left;border-right: 10px solid #f8f7f0;}
 .articulo p{display: inline-block;float: right;width: 44%;margin-top: 12px;margin-right: 2%}
-.articulo a{background-image: url("../images/ir.png");background-position: center center;background-repeat: no-repeat;height: 36px;left: 0;margin-top: -18px;position: absolute;top: 50%;width: 97%;}
+.articulo div.flechamedio{background-image: url("../images/ir.png");background-position: center center;background-repeat: no-repeat;height: 36px;left: 0;margin-top: -18px;position: absolute;top: 50%;width: 97%;}
 .articulo span{color:#b2a326; width: 100%; display: inline-block; font-size: 1.1em; font-family: 'Dosis', sans-serif; text-transform:uppercase; font-weight:600; text-align: left; }
 
 
@@ -106,12 +106,12 @@ html,body{width: 100%;height: 100%;}
 #detallehandicap table,#detallehandicap tr,#detallehandicap tbody {width:100%; display:inline-block;}
 #detallehandicap tr td{display:inline-block;float: left;}
 #detallehandicap font{font-size: 10px; font-family: inherit;}
-#detallehandicap tr td:nth-child(1){width: 10%; text-align: center;}
-#detallehandicap tr td:nth-child(2){width: 50%; text-align: center;}
-#detallehandicap tr td:nth-child(3){width: 10%; text-align: center;}
-#detallehandicap tr td:nth-child(4){width: 10%; text-align: center;}
-#detallehandicap tr td:nth-child(5){width: 10%; text-align: center;}
-#detallehandicap tr td:nth-child(6){width: 10%; text-align: center;}
+#detallehandicap tr td:nth-child(1){width: 10%; text-align: left;}
+#detallehandicap tr td:nth-child(2){width: 42%; text-align: left;}
+#detallehandicap tr td:nth-child(3){width: 12%; text-align: center;}
+#detallehandicap tr td:nth-child(4){width: 12%; text-align: center;}
+#detallehandicap tr td:nth-child(5){width: 12%; text-align: center;}
+#detallehandicap tr td:nth-child(6){width: 12%; text-align: center;}
 
 #detallehandicap tr td{ background:none;}
 #detallehandicap tr:first-child{ background-color: #e9e9e9}
@@ -193,8 +193,8 @@ html,body{width: 100%;height: 100%;}
 .barratopder img{ width:60px !important; height:60px !important; right:0; }
 
 
-.barrafooter{position:absolute; width:60px; height:60px; float:left; }
-.barrafooterder{position:absolute; width:60px; height:60px; right:0; }
+.barrafooterder{position:absolute; width:60px; height:60px; float:left; }
+.barrafooter{position:absolute; width:60px; height:60px; right:0;float:left; }
 .barrafooter img{ width:60px !important; height:60px !important; right:0; }
 .barrafooterder img{ width:60px !important; height:60px !important; right:0; }
 /* Detalle Campo */
