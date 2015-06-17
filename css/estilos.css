@@ -316,7 +316,7 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 	height:auto;
 	text-align:center;
 }
-.imgLink img{width:90%;max-width:856px;height:auto;margin:0 auto !important;}
+.imgLink img{width:100%;max-width:856px;height:auto;margin:0 auto !important;}
 /* Reglamento */
 #reglamento {list-style: decimal outside; width:90%; margin:0 auto;}
 #reglamento li {list-style: decimal;margin:7px auto;}
