@@ -215,6 +215,16 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 .teeMark.gold{background-color:#b2a326}
 .teeMark.green{background-color:#55a03e}
 .teeMark.red{background-color:#ff0600}
+
+
+.blue{color:#7898e6}
+.white{color:#fff;border:1px solid #c7c7c7;}
+.gold{color:#b2a326}
+.green{color:#55a03e}
+.red{color:#ff0600}
+.orange{color: #F90}
+
+
 #holeNb{
 	width:45px;
 	height:45px;
