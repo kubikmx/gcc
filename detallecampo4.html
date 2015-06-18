@@ -62,7 +62,53 @@
 
 	</div>
     <div class="clear padding"> </div>
-    
+    <h3 style="margin-top: -35px;" id="desplegar">Ver Distancias <img id="on" src="images/desplegar.png"> <img id="off" src="images/desplegar2.png" style="display:none"></h3> 
+
+		<ul class="directorio" style="display:none;">
+        
+        
+        
+        	<li>
+				<div class="zona">Zona</div>
+				<div class="ext">Yardas</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle green"></i> Fondo del green</div>
+				<div class="ext">209</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle green"></i> Centro del green</div>
+				<div class="ext">195</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle orange"></i> Búnker izquierdo</div>
+				<div class="ext">194</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle orange"></i> Búnker derecha</div>
+				<div class="ext">193</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle green"></i> Entrada del green</div>
+				<div class="ext">177</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle bluelight"></i> Agua</div>
+				<div class="ext">130</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle bluelight"></i> Agua</div>
+				<div class="ext">129</div>
+			</li>
+            <li>
+				<div class="zona"><i class="fa fa-circle bluelight"></i> Agua</div>
+				<div class="ext">102</div>
+			</li>
+            
+            
+			
+
+		</ul>
     <div id="detalle_std" style="margin-top:-60px;">
     <div class="clear padding"> </div>
     <h3>DESCRIPCIÓN</h3>    
@@ -93,6 +139,34 @@
 	c2.closePath();
 	c2.fill();
 </script>
+    
+    
+    
+    
+    
+    <script type="text/javascript">
+
+  	$(document).ready(function(){
+
+		$( "#desplegar" ).click(function() {
+		  $( ".directorio" ).toggle(200);
+		  $("#off").toggle();
+		  $("#on").toggle();
+		});
+
+		$( ".cerrar" ).click(function() {
+		  $( ".directorio" ).toggle(200);
+		  // $("#off").toggle();
+		  // $("#on").toggle();
+		});
+
+	});
+
+</script>
+    
+    
+    
+    
     
     
     
