@@ -70,3 +70,7 @@ function getIds() {
         console.log('getIds: ' + JSON.stringify(ids));
     });
 }
+function register(){
+    window.plugins.OneSignal.registerForPushNotifications();
+    
+}
