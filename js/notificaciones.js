@@ -48,7 +48,7 @@ var app = {
         console.log('Received Event: ' + id);
         
         // Enable to debug issues.
-        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+        window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
@@ -57,6 +57,7 @@ var app = {
     didReceiveRemoteNotificationCallBack : function(jsonData) {
         alert("Notification received:\n" + JSON.stringify(jsonData));
         console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+        $(".log").html(JSON.stringify(jsonData));
     }
 };
 
@@ -72,5 +73,5 @@ function getIds() {
 }
 function register(){
     window.plugins.OneSignal.registerForPushNotifications();
-    
+
 }
