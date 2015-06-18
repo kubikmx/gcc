@@ -51,7 +51,7 @@ var app = {
         // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
-                                        {autoRegister: true},
+                                        {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
