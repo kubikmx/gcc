@@ -56,6 +56,10 @@ function onLoad_torneo(){
 				if (field.liga!=""){
 					$(".parrafodetalle").append('<a onclick="openurl(\''+field.liga+'\')" class="linkexterno">'+field.tituloliga+'</a>');
 				}
+				if (field.imagen_detalle!=""){
+					$("#imagen_torneo").attr("src","http://k-i.co/cc/images/torneos/"+field.imagen_detalle);	
+					$("#imagen_torneo").show();
+				}
 	        });
 	    });
 	}
