@@ -1,0 +1,8 @@
+arreglar subir imagenes
+poner etiquetas de ayuda en el cms
+centrar link en front
+cambiar header de restaurantes
+agregar imagen en torneos
+que las actividades se puedan ocultar
+cambiar boton opiniones enviar opinion
+seleccionar restaurante automaticamente

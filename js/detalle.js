@@ -163,10 +163,30 @@ function loadrestaurant(){
 					$("#aconsultamenu").show();
 				} else 
 					$("#aconsultamenu").hide();
+				$("#ligaopinion").attr("href","opiniones.html?idv="+field.nombre);	
 	        });
 	    });
 	}
 
+
+}
+
+function cargaidrestaurante(){
+	var cadVariables = location.search.substring(1,location.search.length ); // sin ?
+	var arrVariables = cadVariables.split("&"); // array de cadenas de tipo "var1=valor1"
+	var idv=0;
+
+	for (i=0; i<arrVariables.length; i++) {
+	  arrVariableActual = arrVariables[i].split("=");
+	  if (isNaN(parseFloat(arrVariableActual[1])))
+	    eval(arrVariableActual[0]+"='"+unescape(arrVariableActual[1])+"';");
+	  else
+	    eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
+	}
+	
+	if (idv!=0){
+		$("#restaurantes").val(idv);
+	}
 
 }
 

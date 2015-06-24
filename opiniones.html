@@ -19,7 +19,7 @@
 	<!-- AppMachine modules -->
 	<script src="js/phonegap.js"></script>
 
-	<script src="js/main.js"></script>
+	<script src="js/detalle.js"></script>
 <style>
 	.option_enc{
 		height: 40px; background: #fff; float: left; width: 100%;
@@ -78,7 +78,8 @@
 	function realizaProceso(){
 		//Restaurantes
 	    var i;
-	    for (i=0;i<document.opinion_form.restaurante.length;i++){
+	    var restaurantes = $("#restaurantes").val();
+	    /*for (i=0;i<document.opinion_form.restaurante.length;i++){
 	       	if (document.opinion_form.restaurante[i].checked){
 		       	var restaurantes = document.opinion_form.restaurante[i].value;
 		        break;
@@ -200,7 +201,7 @@
 	        });
 	}
 </script>
-<body class="fondocrema section_contacto" >
+<body class="fondocrema section_contacto" onload="cargaidrestaurante()" >
 	<div id="" class="column_1_1 ">
 		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
         <div class="clear"> </div>
@@ -214,32 +215,7 @@
     <h3>ESCRÍBENOS</h3>   
 
      <form class="contact padding_sides" name="opinion_form" action="#" method="POST" id="formopinion">
-     	<h4 class="com">Restaurante</h4>
-		<div class="option_enc">
-			<label>
-				<input name="restaurante" type="radio" value="Terraza principal" style="float: left; width: 15%;" />
-				<span>Terraza principal</span>
-			</label>
-		</div><br >
-		<div class="option_enc">
-			<label>
-				<input name="restaurante" type="radio" value="Terraza alberca" style="float: left; width: 15%;" />
-				<span>Terraza alberca</span>
-			</label>
-		</div><br >
-		<div class="option_enc">
-			<label>
-				<input name="restaurante" type="radio" value="Terraza tenis" style="float: left; width: 15%;" />
-				<span>Terraza tenis</span>
-			</label>
-		</div><br >
-		<div class="option_enc">
-			<label>
-				<input name="restaurante" type="radio" value="Casita hoyo 4" style="float: left; width: 15%;" />
-				<span>Casita hoyo 4</span>
-			</label>
-		</div><br >
-		<div class="clear"></div>
+     	<input type="hidden" name="restaurantes" id="restaurantes" value="">
 		<h4 class="com">Rapidez y exactitud de la cuenta</h4>
 		<div class="option_enc">
 			<label>
@@ -344,7 +320,7 @@
 			<h4 class="com">Comentarios</h4>
 			<textarea id="mensaje" class="input" name="comentarios" rows="5"></textarea><br />
 		</div><br>
-		<input class="btn_enviaremail" id="submit_button" type="button" value="Enviar email"  onclick="realizaProceso();return false;"/><br ><br >
+		<input class="btn_enviaremail" id="submit_button" type="button" value="Enviar comentarios"  onclick="realizaProceso();return false;"/><br ><br >
 	</form>	
     
     
