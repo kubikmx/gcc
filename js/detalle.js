@@ -24,7 +24,7 @@ function loadinfo(){
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/noticias/"+field.imagen);	
 				$(".parrafodetalle").html(field.detalle);
 				if (field.liga!=""){
-					$(".parrafodetalle").append('<a href="'+field.liga+'">'+field.tituloliga+'</a>');
+					$(".parrafodetalle").append('<a href="'+field.liga+'" class="linkexterno" target="_blank">'+field.tituloliga+'</a>');
 				}
 	        });
 	    });
@@ -54,7 +54,7 @@ function onLoad_torneo(){
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/torneos/"+field.imagen);	
 				$(".parrafodetalle").html(field.detalle);
 				if (field.liga!=""){
-					$(".parrafodetalle").append('<a href="'+field.liga+'">'+field.tituloliga+'</a>');
+					$(".parrafodetalle").append('<a href="'+field.liga+'" class="linkexterno" target="_blank">'+field.tituloliga+'</a>');
 				}
 	        });
 	    });
@@ -84,7 +84,7 @@ function loadaviso(){
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/eventos/"+field.imagen);	
 				$(".parrafodetalle").html(field.detalle);
 				if (field.liga!=""){
-					$(".parrafodetalle").append('<a href="'+field.liga+'">'+field.tituloliga+'</a>');
+					$(".parrafodetalle").append('<a href="'+field.liga+'" class="linkexterno" target="_blank">'+field.tituloliga+'</a>');
 				}
 	        });
 	    });
@@ -116,7 +116,7 @@ function loadactivity(){
 				$(".icontitle").html(field.categoria);
 				$("#imagenheader").attr("src","http://www.k-i.co/cc/images/categorias/thumbs/"+field.imagencat);
 				if (field.liga!=""){
-					$(".parrafodetalle").append('<a href="'+field.liga+'">'+field.tituloliga+'</a>');
+					$(".parrafodetalle").append('<a href="'+field.liga+'" class="linkexterno" target="_blank">'+field.tituloliga+'</a>');
 				}
 	        });
 

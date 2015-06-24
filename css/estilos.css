@@ -455,3 +455,6 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 #overlayvideo{position: relative; width: 94%; height: 98%; visibility: hidden;}
 #postervideo{width: 100%; height: 100%}
 #overlayElement{width: 100%; height: 100%; background-image: url(../images/play-circle-outline.png); background-position: center center;background-repeat: no-repeat; position: absolute; top: 0; left: 0}
+
+.articulo p a{display: inline-block;height: 156px}
+.linkexterno{display: inline-block;margin:10px 0; color: #0A94D6 !important; width: 100%; text-align: center; }
