@@ -27,7 +27,7 @@ var app = {
                                         app.didReceiveRemoteNotificationCallBack);
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
-        sendTag();
+        getIds();
     }
 };
 
@@ -36,9 +36,10 @@ function sendTag() {
 }
 function getIds() {
     window.plugins.OneSignal.getIds(function(ids) {
-        document.getElementById("OneSignalUserId").innerHTML = "UserId: " + ids.userId;
-        document.getElementById("OneSignalPushToken").innerHTML = "PushToken: " + ids.pushToken;
-        console.log('getIds: ' + JSON.stringify(ids));
+        var myoneid= ids.userId;
+        var deviceID = device.uuid;
+        alert(myoneid+"||"+deviceID)
+
     });
 }
 function register(){
