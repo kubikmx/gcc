@@ -192,6 +192,13 @@ function cargaidrestaurante(){
 		$("#restaurantes").val(idv);
 	}
 
+	$.ajax({
+            url:   'http://www.k-i.co/cc/webservices/cuestionario.php',
+            success:  function (response) {
+                    $("#contentq").html(response);
+            }
+	});
+
 }
 
 function cargaimagenmenu(){
@@ -244,4 +251,20 @@ function onSuccesshandicap(data)
 
 function openurl(link){
 	var ref = window.open(encodeURI(link), "_blank");
+}
+
+function enviaropinion(){
+	$("#formopinion").hide();
+    $("#messagesprocess").html("Procesando, espere por favor...");
+    $.ajax({
+      type: "POST",
+      url: "http://www.k-i.co/cc/webservices/opiniones.php",
+      data: $("#formopinion").serialize(),
+      success: function( data ) {
+        $("#messagesprocess").html(data.respuesta);
+      },
+      dataType: "json"
+    });
+
+    
 }
