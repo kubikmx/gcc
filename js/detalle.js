@@ -254,17 +254,22 @@ function openurl(link){
 }
 
 function enviaropinion(){
-	$("#formopinion").hide();
-    $("#messagesprocess").html("Procesando, espere por favor...");
-    $.ajax({
-      type: "POST",
-      url: "http://www.k-i.co/cc/webservices/opiniones.php",
-      data: $("#formopinion").serialize(),
-      success: function( data ) {
-        $("#messagesprocess").html(data.respuesta);
-      },
-      dataType: "json"
-    });
+	$("input:radio").each(function(){
+		var name = $(this).attr("name");
+		
 
+	});/*
+		$("#formopinion").hide();
+	    $("#messagesprocess").html("Procesando, espere por favor...");
+	    $.ajax({
+	      type: "POST",
+	      url: "http://www.k-i.co/cc/webservices/opiniones.php",
+	      data: $("#formopinion").serialize(),
+	      success: function( data ) {
+	        $("#messagesprocess").html(data.respuesta);
+	      },
+	      dataType: "json"
+	    });
+	*/
     
 }

@@ -37,35 +37,7 @@
 	}
 </style> 
 </head>
-<script>
 
-	function realizaProceso(){
-			$(".option_enc").each(function(){
-				$(this).find("input[type='checkbox']")
-			});
-		
-	        var parametros = {
-	                "restaurantes" : restaurantes,
-	                "rapidez" : rapidez,
-	                "bebidas" : bebidas,
-	                "menu" : menu,
-	                "atencion" : atencion,
-	                "serviciocapitan" : serviciocapitan,
-	                "comentarios" : comentarios
-	        };
-	        $.ajax({
-	                data:  parametros,
-	                url:   'http://www.k-i.co/cc/webservices/opiniones.php?restaurantes='+restaurantes+'&rapidez='+rapidez+'&bebidas='+bebidas+'&menu='+menu+'&atencion='+atencion+'&serviciocapitan='+serviciocapitan,
-	                type:  'post',
-	                beforeSend: function () {
-	                        $("#formopinion").html("Procesando, espere por favor...");
-	                },
-	                success:  function (response) {
-	                        $("#formopinion").html(response);
-	                }
-	        });
-	}
-</script>
 <body class="fondocrema section_contacto" onload="cargaidrestaurante()" >
 	<div id="" class="column_1_1 ">
 		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
