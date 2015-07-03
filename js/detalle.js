@@ -254,11 +254,21 @@ function openurl(link){
 }
 
 function enviaropinion(){
+	var invalido=false;
 	$("input:radio").each(function(){
 		var name = $(this).attr("name");
+
+		if ($('input[name="'+name+'"]').is(':checked')) {
+	    }
+	    else { 
+	        invalido=true;
+	    }
 		
 
-	});/*
+	});
+	if (invalido){
+		alert("Faltan campos por seleccionar");
+	} else {
 		$("#formopinion").hide();
 	    $("#messagesprocess").html("Procesando, espere por favor...");
 	    $.ajax({
@@ -270,6 +280,6 @@ function enviaropinion(){
 	      },
 	      dataType: "json"
 	    });
-	*/
+	}
     
 }

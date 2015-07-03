@@ -30,6 +30,8 @@
 
     <gap:plugin name="nl.genkgo.inappbrowser" version="0.5.0" />
 
+    <gap:plugin name="io.litehelpers.cordova.sqlite" version="0.7.8" />
+
     <preference name="orientation" value="portrait" />
 
 
