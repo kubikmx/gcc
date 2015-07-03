@@ -28,16 +28,9 @@ var app = {
     openDb : function() {
         if (window.sqlitePlugin !== undefined) {
             app.db = window.sqlitePlugin.openDatabase("GCC",2);
-        } else {
-            alert("no esta definido");
-        }
+        } else { }
     },
     createTable : function() {
-        if (window.sqlitePlugin !== undefined) {
-            app.db = window.sqlitePlugin.openDatabase("GCC",2);
-        } else {
-            alert("no esta definido");
-        }
         app.db.transaction(function(tx) {
             tx.executeSql("CREATE TABLE IF NOT EXISTS MyTable (id INTEGER PRIMARY KEY ASC, text_sample TEXT, date_sample DATETIME)", []);
         });
@@ -87,7 +80,8 @@ function register(){
 function getAllTheData() {
     var render = function (tx, rs) {
         for (var i = 0; i < rs.rows.length; i++) {
-            alert(rs.rows.item(i));
+            var row=(rs.rows.item(i));
+            string = string + row['text_sample'] + row['date_sample']+")\n";
         }
     }
 
@@ -95,5 +89,5 @@ function getAllTheData() {
 }
 function initdb(){
     app.createTable();
-    app.insertRecord();
+    app.insertRecord("prueba");
 }
