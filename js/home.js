@@ -27,9 +27,9 @@ var app = {
     },
     openDb : function() {
         if (window.sqlitePlugin !== undefined) {
-            app.db = window.sqlitePlugin.openDatabase("My Database");
+            app.db = window.sqlitePlugin.openDatabase("GCC",2);
         } else {
-            app.db = window.openDatabase("My Database", "1.0", "Cordova Demo", 200000);
+            alert("no esta definido");
         }
     },
     createTable : function() {
