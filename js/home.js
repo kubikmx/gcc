@@ -20,7 +20,7 @@ var app = {
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
-        app.openDb();
+        this.openDb();
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
         getIds();
@@ -33,6 +33,11 @@ var app = {
         }
     },
     createTable : function() {
+        if (window.sqlitePlugin !== undefined) {
+            app.db = window.sqlitePlugin.openDatabase("GCC",2);
+        } else {
+            alert("no esta definido");
+        }
         app.db.transaction(function(tx) {
             tx.executeSql("CREATE TABLE IF NOT EXISTS MyTable (id INTEGER PRIMARY KEY ASC, text_sample TEXT, date_sample DATETIME)", []);
         });
