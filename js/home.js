@@ -68,7 +68,7 @@ var app = {
 function sendTag() {
     window.plugins.OneSignal.sendTag("TagGeneral", "1");
 }
-function getIds() { alert("entre");
+function getIds() { 
     window.plugins.OneSignal.getIds(function(ids) {
         var myoneid= ids.userId;
         var deviceID = device.uuid;
@@ -111,7 +111,7 @@ function selectkey(variable,key,field){
     function (error) { $("#"+field).val(error); },
     key);
 }
-function selectkey(variable,key,field){
+function removekey(variable,key,field){
     variable.remove(
     function (key) { $("#"+field).val(1); },
     function (error) { $("#"+field).val(error); },
