@@ -1,5 +1,9 @@
 
- 
+var ss = new cordova.plugins.SecureStorage(
+    function () { },
+    function (error) { console.log('Error ' + error); },
+    'gcc');
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -20,7 +24,7 @@ var app = {
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
-        this.openDb();
+        //this.openDb();
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
         getIds();
@@ -68,7 +72,8 @@ function getIds() {
     window.plugins.OneSignal.getIds(function(ids) {
         var myoneid= ids.userId;
         var deviceID = device.uuid;
-        alert(myoneid+"||"+deviceID)
+        insertkey(ss,"onesignal_id",myoneid);
+        insertkey(ss,"device_id",deviceID);
 
     });
 }
@@ -90,4 +95,25 @@ function getAllTheData() {
 function initdb(){
     app.createTable();
     app.insertRecord("prueba");
+}
+
+
+
+function insertkey(variable,key,value){
+    variable.set(
+    function (key) { console.log('Set ' + key); },
+    function (error) { console.log('Error ' + error); },
+    key, value);
+}
+function selectkey(variable,key){
+    variable.get(
+    function (value) { console.log('Success, got ' + value); },
+    function (error) { console.log('Error ' + error); },
+    key);
+}
+function selectkey(variable,key){
+    variable.remove(
+    function (key) { console.log('Removed ' + key); },
+    function (error) { console.log('Error, ' + error); },
+    key);
 }
