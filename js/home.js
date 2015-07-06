@@ -1,5 +1,5 @@
 
-var ss = null;
+/*
 
 var app = {
     // Application Constructor
@@ -13,15 +13,12 @@ var app = {
     },
 
     onDeviceReady: function() {
+
         app.receivedEvent('deviceready');
     },
 
     receivedEvent: function(id) {
-        ss = new cordova.plugins.SecureStorage(
-            function () { $("#salidalog").val("inicializado");  },
-            function (error) { $("#salidalog").val(error); },
-            'gcc');
-        insertkey(ss,"device_id",deviceID);
+        
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
@@ -63,7 +60,7 @@ var app = {
     onError : function(tx, e) {
         alert("SQLite Error: " + e.message);
     }
-};
+};*/
 
 
 function sendTag() {
@@ -117,4 +114,27 @@ function removekey(variable,key,field){
     function (key) { $("#"+field).val(1); },
     function (error) { $("#"+field).val(error); },
     key);
+}
+
+
+
+function onLoadmobile() {
+        document.addEventListener("deviceready", onDeviceReadydispositive, false);
+}
+
+// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+//
+function onDeviceReadydispositive() {
+    var ss = new cordova.plugins.SecureStorage(
+            function () { $("#salidalog").val("inicializado");  },
+            function (error) { $("#salidalog").val(error); },
+            'gcc');
+    ss.set(
+            function (key) { $("#salidalog").val("insertado"); },
+            function (error) { $("#salidalog").val(error); },
+            "key", "valor");
+    ss.get(
+    function (value) { $("#salidalog").val(value); },
+    function (error) { $("#salidalog").val(error); },
+    "key");
 }
