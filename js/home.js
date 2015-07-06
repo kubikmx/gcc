@@ -1,8 +1,5 @@
 
-var ss = new cordova.plugins.SecureStorage(
-    function () { $("#salidalog").val("inicializado");  },
-    function (error) { $("#salidalog").val(error); },
-    'gcc');
+var ss = null;
 
 var app = {
     // Application Constructor
@@ -20,6 +17,10 @@ var app = {
     },
 
     receivedEvent: function(id) {
+        ss = new cordova.plugins.SecureStorage(
+            function () { $("#salidalog").val("inicializado");  },
+            function (error) { $("#salidalog").val(error); },
+            'gcc');
         insertkey(ss,"device_id",deviceID);
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
