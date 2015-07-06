@@ -1,5 +1,4 @@
 
-/*
 
 var app = {
     // Application Constructor
@@ -60,7 +59,7 @@ var app = {
     onError : function(tx, e) {
         alert("SQLite Error: " + e.message);
     }
-};*/
+};
 
 
 function sendTag() {
@@ -97,45 +96,3 @@ function initdb(){
 
 
 
-function insertkey(variable,key,value){
-    variable.set(
-    function (key) { $("#salidalog").val("insertado"); },
-    function (error) { $("#salidalog").val(error); },
-    key, value);
-}
-function selectkey(variable,key,field){
-    variable.get(
-    function (value) { $("#"+field).val(value); },
-    function (error) { $("#"+field).val(error); },
-    key);
-}
-function removekey(variable,key,field){
-    variable.remove(
-    function (key) { $("#"+field).val(1); },
-    function (error) { $("#"+field).val(error); },
-    key);
-}
-
-
-
-function onLoadmobile() {
-        document.addEventListener("deviceready", onDeviceReadydispositive, false);
-}
-
-// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-//
-function onDeviceReadydispositive() {
-    alert ('123');
-    var ss = new cordova.plugins.SecureStorage(
-            function () { $("#salidalog").val("inicializado");  },
-            function (error) { $("#salidalog").val(error); },
-            'gcc');
-    ss.set(
-            function (key) { $("#salidalog").val("insertado"); },
-            function (error) { $("#salidalog").val(error); },
-            "key", "valor");
-    ss.get(
-    function (value) { $("#salidalog").val(value); },
-    function (error) { $("#salidalog").val(error); },
-    "key");
-}

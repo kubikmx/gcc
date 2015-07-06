@@ -31,7 +31,7 @@
     <gap:plugin name="nl.genkgo.inappbrowser" version="0.5.0" />
 
     <gap:plugin name="io.litehelpers.cordova.sqlite" version="0.7.8" />
-    <gap:plugin name="com.m2phear.plugins.securestorage" version="1.1.2" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
 
     <!--<preference name="orientation" value="portrait" />-->
 

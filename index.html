@@ -15,31 +15,10 @@
 	<script src="phonegap.js"></script>
 	<script type="text/javascript" src="js/OneSignal.js"></script>
 	<script src="js/home.js"></script>
-	<script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    function onLoad() {alert("bienvenido");
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Register the event listener
-        
-        document.addEventListener("menubutton", onMenuKeyDown, false);
-    }
-
-    // Handle the menu button
-    //
-    function onMenuKeyDown() {
-    }
-
-    </script>
 
 </head>
-<body onLoad="onLoad()">
+<body >
 	<div id="contenedorhome">
 		<div id="logohome"><img src="images/logo.png" >
 		<input type="text" id="salidalog">
@@ -54,6 +33,8 @@
 			<li><a href="contacto.html" class="bnt_contacto">Contacto</a></li>
 		</ul>
 	</div>
-
+    <script type="text/javascript">
+            app.initialize();
+    </script>
 </body>
 </html>
