@@ -15,10 +15,33 @@
 	<script src="phonegap.js"></script>
 	<script type="text/javascript" src="js/OneSignal.js"></script>
 	<script src="js/home.js"></script>
+	<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        alert("bienvenido");
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+    }
+
+    // Handle the menu button
+    //
+    function onMenuKeyDown() {
+    }
+
+    </script>
+
 </head>
-<body onLoad="onLoadmobile()">
+<body onLoad="onLoad()">
 	<div id="contenedorhome">
-		<div id="logohome"><img src="images/logo.png" ></div><button onclick="selectkey(ss,'onesignal_id','salidalog')" type="button">one</button>
+		<div id="logohome"><img src="images/logo.png" >
 		<input type="text" id="salidalog">
 		<ul id="menuhome">
 			<li><a href="noticias.html" class="bnt_noticias">Noticias</a></li>
