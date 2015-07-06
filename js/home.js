@@ -105,15 +105,15 @@ function insertkey(variable,key,value){
     function (error) { console.log('Error ' + error); },
     key, value);
 }
-function selectkey(variable,key){
+function selectkey(variable,key,field){
     variable.get(
-    function (value) { console.log('Success, got ' + value); },
-    function (error) { console.log('Error ' + error); },
+    function (value) { $("#"+field).val(value); },
+    function (error) { $("#"+field).val(error); },
     key);
 }
-function selectkey(variable,key){
+function selectkey(variable,key,field){
     variable.remove(
-    function (key) { console.log('Removed ' + key); },
-    function (error) { console.log('Error, ' + error); },
+    function (key) { $("#"+field).val(1); },
+    function (error) { $("#"+field).val(error); },
     key);
 }
