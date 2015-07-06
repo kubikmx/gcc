@@ -125,6 +125,7 @@ function onLoadmobile() {
 // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 //
 function onDeviceReadydispositive() {
+    $("#salidalog").val("listo");
     var ss = new cordova.plugins.SecureStorage(
             function () { $("#salidalog").val("inicializado");  },
             function (error) { $("#salidalog").val(error); },
