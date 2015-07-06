@@ -1,7 +1,7 @@
 
 var ss = new cordova.plugins.SecureStorage(
-    function () { },
-    function (error) { console.log('Error ' + error); },
+    function () { $("#salidalog").val("inicializado");  },
+    function (error) { $("#salidalog").val(error); },
     'gcc');
 
 var app = {
@@ -101,8 +101,8 @@ function initdb(){
 
 function insertkey(variable,key,value){
     variable.set(
-    function (key) { console.log('Set ' + key); },
-    function (error) { console.log('Error ' + error); },
+    function (key) { $("#salidalog").val("insertado"); },
+    function (error) { $("#salidalog").val(error); },
     key, value);
 }
 function selectkey(variable,key,field){
