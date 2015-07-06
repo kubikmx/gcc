@@ -68,7 +68,7 @@ var app = {
 function sendTag() {
     window.plugins.OneSignal.sendTag("TagGeneral", "1");
 }
-function getIds() {
+function getIds() { alert("entre");
     window.plugins.OneSignal.getIds(function(ids) {
         var myoneid= ids.userId;
         var deviceID = device.uuid;
