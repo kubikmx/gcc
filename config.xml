@@ -33,7 +33,7 @@
     <gap:plugin name="io.litehelpers.cordova.sqlite" version="0.7.8" />
     <gap:plugin name="com.m2phear.plugins.securestorage" version="1.1.2" />
 
-    <preference name="orientation" value="portrait" />
+    <!--<preference name="orientation" value="portrait" />-->
 
 
     <!-- iOS 7.0+ -->
