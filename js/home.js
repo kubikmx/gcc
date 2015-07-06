@@ -20,7 +20,7 @@ var app = {
     },
 
     receivedEvent: function(id) {
-
+        insertkey(ss,"device_id",deviceID);
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
@@ -73,7 +73,7 @@ function getIds() { alert("entre");
         var myoneid= ids.userId;
         var deviceID = device.uuid;
         insertkey(ss,"onesignal_id",myoneid);
-        insertkey(ss,"device_id",deviceID);
+        
 
     });
 }
