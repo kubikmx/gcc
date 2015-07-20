@@ -33,7 +33,7 @@
     <gap:plugin name="io.litehelpers.cordova.sqlite" version="0.7.8" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
 
-    <!--<preference name="orientation" value="portrait" />-->
+    <preference name="orientation" value="portrait" />
 
 
     <!-- iOS 7.0+ -->

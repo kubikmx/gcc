@@ -24,7 +24,7 @@ var app = {
         //this.openDb();
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
-        getIds();
+        //getIds();
     },
     openDb : function() {
         if (window.sqlitePlugin !== undefined) {
@@ -69,7 +69,7 @@ function getIds() {
     window.plugins.OneSignal.getIds(function(ids) {
         var myoneid= ids.userId;
         var deviceID = device.uuid;
-        insertkey(ss,"onesignal_id",myoneid);
+        /*insertkey(ss,"onesignal_id",myoneid);*/
         
 
     });
