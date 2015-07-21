@@ -27,22 +27,14 @@ var app = {
         var tabla=JSON.stringify(datos.tabla);
         var articulo=JSON.stringify(datos.id_articulo);
 
-            switch(tabla) {
-                case 'kubik_noticias':
+            if(tabla=='kubik_noticias')
                     alert('noticia '+ articulo);
-                    break;
-                case 'kubik_actividades':
+            if(tabla=='kubik_actividades')
                     alert('actividad '+ articulo);
-                    break;
-                case 'kubik_eventos':
+            if(tabla=='kubik_eventos')
                     alert('evento '+ articulo);
-                    break;
-                case 'kubik_torneos':
+            if(tabla=='kubik_torneos')
                     alert('torneo '+ articulo);
-                    break;    
-                default:
-                    default alert('vacio');
-            }
 
         //alert("Notification received:\n" + JSON.stringify(datos.id_articulo));
     }
