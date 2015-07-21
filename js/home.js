@@ -36,7 +36,7 @@ var app = {
             if(tabla=='kubik_torneos')
                     alert('torneo '+ articulo);
 
-        //alert("Notification received:\n" + JSON.stringify(datos.id_articulo));
+        alert("Notification received:\n" + tabla + articulo);
     }
 };
 
