@@ -26,7 +26,7 @@ var app = {
         var datos=jsonData.additionalData;
         var tabla=JSON.stringify(datos.tabla);
         var articulo=JSON.stringify(datos.id_articulo);
-        if (articulo!=undefined){
+
             switch(tabla) {
                 case 'kubik_noticias':
                     alert('noticia '+ articulo);
@@ -42,8 +42,7 @@ var app = {
                     break;    
                 default:
                     default alert('vacio');
-            } 
-        }
+            }
 
         //alert("Notification received:\n" + JSON.stringify(datos.id_articulo));
     }
