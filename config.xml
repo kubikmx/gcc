@@ -30,10 +30,9 @@
 
     <gap:plugin name="nl.genkgo.inappbrowser" version="0.5.0" />
 
-    <gap:plugin name="io.litehelpers.cordova.sqlite" version="0.7.8" />
-    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+    <gap:plugin name="me.apla.cordova.app-preferences" version="0.4.2" />
 
-    <preference name="orientation" value="portrait" />
+    <!-- <preference name="orientation" value="portrait" /> -->
 
 
     <!-- iOS 7.0+ -->
