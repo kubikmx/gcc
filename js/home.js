@@ -43,7 +43,7 @@ var app = {
             } 
       }*/
 
-      alert("Notification received:\n" + JSON.stringify(jsonData));
+      alert("Notification received:\n" + JSON.stringify(jsonData.additionalData));
     }
 };
 
