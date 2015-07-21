@@ -23,8 +23,27 @@ var app = {
                                         app.didReceiveRemoteNotificationCallBack);
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
+      var id,tabla="";
+      if (jsonData.additionalData.id_articulo){
+            switch(jsonData.additionalData.tabla) {
+                case 'kubik_noticias':
+                    alert('noticia '+ jsonData.additionalData.id_articulo);
+                    break;
+                case 'kubik_actividades':
+                    alert('actividad '+ jsonData.additionalData.id_articulo);
+                    break;
+                case 'kubik_eventos':
+                    alert('evento '+ jsonData.additionalData.id_articulo);
+                    break;
+                case 'kubik_torneos':
+                    alert('torneo '+ jsonData.additionalData.id_articulo);
+                    break;    
+                default:
+                    default alert('vacio');
+            } 
+      }
+
       alert("Notification received:\n" + JSON.stringify(jsonData));
-      console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
     }
 };
 
