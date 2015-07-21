@@ -186,7 +186,7 @@
 	<br>
 
 	<h4 class="center">
-		<a onclick="openurl2('http://www.gcc.com.mx')" target="_blank">
+		<a onclick="openurl('http://www.gcc.com.mx')">
 			www.gcc.com.mx
 		</a>
         
@@ -216,6 +216,12 @@
 		});
 
 	});
+
+
+	function openurl(link){
+		var ref = window.open(encodeURI(link), "_blank");
+	}
+
 
 </script>
 
