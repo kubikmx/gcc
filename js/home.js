@@ -23,6 +23,7 @@ var app = {
                                         app.didReceiveRemoteNotificationCallBack);
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
+        var datos=jsonData.additionalData;
         /*
       if (jsonData.additionalData.id_articulo){
             switch(jsonData.additionalData.tabla) {
@@ -43,7 +44,7 @@ var app = {
             } 
       }*/
 
-      alert("Notification received:\n" + JSON.stringify(jsonData.additionalData));
+      alert("Notification received:\n" + JSON.stringify(datos.id_articulo));
     }
 };
 
