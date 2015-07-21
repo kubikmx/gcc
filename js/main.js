@@ -120,3 +120,7 @@ function loadinforestaurants(){
     });
 }
 
+
+function openurl2(link){
+  var ref = window.open(encodeURI(link), "_blank");
+}
