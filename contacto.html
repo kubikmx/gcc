@@ -217,14 +217,11 @@
 
 	});
 
-	document.addEventListener("deviceready", onDeviceReady, false);
-	function onDeviceReady() {
-	    window.open = cordova.InAppBrowser.open;
-	}
+
 
 
 	function openurl(link){
-		var ref = window.open(encodeURI(link), "_blank");
+		/*var ref = window.open(encodeURI(link), "_blank");*/
 	}
 
 
