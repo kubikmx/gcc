@@ -28,15 +28,13 @@ var app = {
         var articulo=(datos.id_articulo);
 
             if(tabla=='kubik_noticias')
-                    alert('noticia '+ articulo);
+                window.location.href="detalle.html?idv="+articulo;
             if(tabla=='kubik_actividades')
-                    alert('actividad '+ articulo);
+                window.location.href="actividad.html?idv="+articulo;
             if(tabla=='kubik_eventos')
-                    alert('evento '+ articulo);
+                window.location.href="detalle_aviso.html?idv="+articulo;
             if(tabla=='kubik_torneos')
-                    alert('torneo '+ articulo);
-
-        alert("Notification received:\n" + tabla + articulo);
+                window.location.href="detalle_torneo.html?idv="+articulo;
     }
 };
 
