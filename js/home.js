@@ -24,8 +24,8 @@ var app = {
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
         var datos=jsonData.additionalData;
-        var tabla=JSON.stringify(datos.tabla);
-        var articulo=JSON.stringify(datos.id_articulo);
+        var tabla=(datos.tabla);
+        var articulo=(datos.id_articulo);
 
             if(tabla=='kubik_noticias')
                     alert('noticia '+ articulo);
