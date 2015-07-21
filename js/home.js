@@ -23,7 +23,7 @@ var app = {
                                         app.didReceiveRemoteNotificationCallBack);
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
-      var id,tabla="";
+        /*
       if (jsonData.additionalData.id_articulo){
             switch(jsonData.additionalData.tabla) {
                 case 'kubik_noticias':
@@ -41,7 +41,7 @@ var app = {
                 default:
                     default alert('vacio');
             } 
-      }
+      }*/
 
       alert("Notification received:\n" + JSON.stringify(jsonData));
     }
