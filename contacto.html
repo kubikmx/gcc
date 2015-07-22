@@ -22,7 +22,7 @@
 	<script src="js/main.js"></script>
     
 </head>
-<body class="fondocrema section_contacto" >
+<body class="fondocrema section_contacto" onLoad="makelinks()">
 	<div id="" class="column_1_1 ">
 		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
         <div class="clear"> </div>
@@ -186,10 +186,7 @@
 	<br>
 
 	<h4 class="center">
-		<a onclick="openurl('http://www.gcc.com.mx')">
-			www.gcc.com.mx
-		</a>
-        
+        <span id="gcclink"></span>
         
         <br>
 <div class="clear" style="height:40px;"></div>
@@ -223,6 +220,11 @@
 	function openurl(link){
 		var ref = window.open(encodeURI(link), '_blank','location=yes');
 		/*var ref = window.open(encodeURI(link), "_blank");*/
+	}
+
+	function makelinks(){
+		$("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">'+www.gcc.com.mx+'</a>');
+
 	}
 
 
