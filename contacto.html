@@ -218,12 +218,11 @@
 
 
 	function openurl(link){
-		var ref = window.open(encodeURI(link), '_blank','location=yes');
-		/*var ref = window.open(encodeURI(link), "_blank");*/
+		var ref = window.open(encodeURI(link), "_blank");
 	}
 
 	function makelinks(){
-		$("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">'+www.gcc.com.mx+'</a>');
+		$("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
 
 	}
 
