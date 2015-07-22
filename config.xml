@@ -32,7 +32,7 @@
 
     <gap:plugin name="me.apla.cordova.app-preferences" version="0.4.2" />
 
-    <!-- <preference name="orientation" value="portrait" /> -->
+    <preference name="orientation" value="portrait" />
 
 
     <!-- iOS 7.0+ -->
