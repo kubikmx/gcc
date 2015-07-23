@@ -250,7 +250,7 @@ function onSuccesshandicap(data)
 }
 
 function openurl(link){
-	var ref = window.open(encodeURI(link), "_blank");
+	var ref = window.open(encodeURI(link), '_system');
 }
 
 function enviaropinion(){
