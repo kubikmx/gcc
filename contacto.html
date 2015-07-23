@@ -222,7 +222,10 @@
 	}
 
 	function makelinks(){
-		$("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
+		setTimeout(function(){ 
+			$("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
+		}, 2000);
+		
 
 	}
 
