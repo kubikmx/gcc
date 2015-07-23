@@ -19,10 +19,10 @@
 	<!-- AppMachine modules -->
 	<script src="js/phonegap.js"></script>
 
-	<script src="js/main.js"></script>
+	<script src="js/detalle.js"></script>
     
 </head>
-<body class="fondocrema section_contacto" onLoad="makelinks()">
+<body class="fondocrema section_contacto" onLoad="loadinfocontact()">
 	<div id="" class="column_1_1 ">
 		<div class="barratop"> <a href="javascript:history.back()"><img src="images/back.png" width="40" height="40"></a></div>
         <div class="clear"> </div>
@@ -217,17 +217,7 @@
 
 
 
-	function openurl(link){
-		var ref = window.open(encodeURI(link), '_system');
-	}
 
-	function makelinks(){
-		setTimeout(function(){ 
-			$("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
-		}, 2000);
-		
-
-	}
 
 
 </script>

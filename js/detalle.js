@@ -33,6 +33,15 @@ function loadinfo(){
 
 }
 
+function loadinfocontact(){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id=1", function(result){
+	        $("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
+	    });
+}
+
+
+
+
 function onLoad_torneo(){
 	var cadVariables = location.search.substring(1,location.search.length ); // sin ?
 	var arrVariables = cadVariables.split("&"); // array de cadenas de tipo "var1=valor1"
@@ -281,5 +290,22 @@ function enviaropinion(){
 	      dataType: "json"
 	    });
 	}
+    
+}
+
+function enviarcontacto(){
+    $("#contact_form").hide();
+    $("#mensajerespuesta").html("Espere un momento...");
+    $.ajax({
+      type: "POST",
+      url: "http://www.k-i.co/cc/webservices/sendcontact.php",
+      data: $("#contact_form").serialize(),
+      success: function( data ) {
+        $("#mensajerespuesta").html("Mensaje Enviado");
+        $("#mensajerespuesta").show();
+      },
+      dataType: "json"
+    });
+
     
 }
