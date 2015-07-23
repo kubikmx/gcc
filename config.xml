@@ -28,7 +28,7 @@
 
     <gap:plugin name="com.onesignal.plugins.onesignal" version="1.6.1" />
 
-    <gap:plugin name="nl.genkgo.inappbrowser" version="0.5.0" />
+    <gap:plugin name="org.apache.cordova.inappbrowser">
 
     <gap:plugin name="me.apla.cordova.app-preferences" version="0.4.2" />
 
