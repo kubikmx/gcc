@@ -21,6 +21,7 @@ var app = {
         window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
+        updatemessages();
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
         var datos=jsonData.additionalData;
@@ -66,12 +67,32 @@ function actualizacirculo(cual){
 }
 
 function insertavar(tabla,articulo){
-    var cuantos="";
-    cuantos+=","+articulo;
-    window.applicationPreferences.set(tabla, cuantos, function() {
-            alert("Successfully saved!");
+    window.applicationPreferences.get(tabla, function(value) {
+            var actual=value;
+            if (actual.indexOf(","+value) ){
+                //Ya existe
+            } else {
+                actual+=","+value;
+            }
+            window.applicationPreferences.set(tabla, actual, function() {},function(error) {});
         }, function(error) {
-            alert("Error! " + JSON.stringify(error));
+            window.applicationPreferences.set(tabla, ","+articulo, function() {},function(error) {});
+    });
+}
+
+function updatemessages(){
+    window.applicationPreferences.get("kubik_noticias", function(value) {
+        var res = str.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            cuantos++;
+        }
+        $("#notificacion_n").html(cuantos);
+        $("#notificacion_n").show();
+    }, function(error) {
+            window.applicationPreferences.set("kubik_noticias", "", function() {},function(error) {});
+            $("#notificacion_n").hide();
     });
 }
 
