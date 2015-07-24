@@ -29,9 +29,9 @@ var app = {
         var articulo=(datos.id_articulo);
 
             if(tabla=='kubik_noticias'){
-                //actualizacirculo("#notificacion_n");
-                prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
-                prefs.fetch (calculanoticia, notexistsnotn, 'notificacion_n');
+                actualizacirculo("#notificacion_n");
+                //prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
+                //prefs.fetch (calculanoticia, notexistsnotn, 'notificacion_n');
                 //window.location.href="detalle.html?idv="+articulo;
             }
             if(tabla=='kubik_actividades'){
