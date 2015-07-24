@@ -33,6 +33,26 @@ function loadinfo(){
 
 }
 
+function onLoadcontact(){
+	var idv=10;
+	
+	if (idv!=0){
+
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
+	        $.each(result, function(i, field){
+				$("#titulo_detalle").html(field.nombre);
+				$(".fotonoticia").attr("src","http://k-i.co/cc/images/noticias/"+field.imagen);	
+				$(".parrafodetalle").html(field.detalle);
+				if (field.liga!=""){
+					$(".parrafodetalle").append('<a onclick="openurl(\''+field.liga+'\')" class="linkexterno">'+field.tituloliga+'</a>');
+				}
+	        });
+	    });
+	}
+
+
+}
+
 function loadinfocontact(){
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id=1", function(result){
 	        $("#gcclink").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
