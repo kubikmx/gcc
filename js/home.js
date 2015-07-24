@@ -1,4 +1,5 @@
 
+var prefs = plugins.appPreferences;
 
 var app = {
     // Application Constructor
@@ -27,14 +28,23 @@ var app = {
         var tabla=(datos.tabla);
         var articulo=(datos.id_articulo);
 
-            if(tabla=='kubik_noticias')
-                window.location.href="detalle.html?idv="+articulo;
-            if(tabla=='kubik_actividades')
-                window.location.href="actividad.html?idv="+articulo;
-            if(tabla=='kubik_eventos')
-                window.location.href="detalle_aviso.html?idv="+articulo;
-            if(tabla=='kubik_torneos')
-                window.location.href="detalle_torneo.html?idv="+articulo;
+            if(tabla=='kubik_noticias'){
+                prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
+                prefs.fetch (calculanoticia, failpreference, 'notificacion_n');
+                //window.location.href="detalle.html?idv="+articulo;
+            }
+            if(tabla=='kubik_actividades'){
+                prefs.store (okpreference, failpreference, 'notificacion_a_'+articulo, '1');
+                //window.location.href="actividad.html?idv="+articulo;
+            }
+            if(tabla=='kubik_eventos'){
+                prefs.store (okpreference, failpreference, 'notificacion_e_'+articulo, '1');
+                //window.location.href="detalle_aviso.html?idv="+articulo;
+            }
+            if(tabla=='kubik_torneos'){
+                prefs.store (okpreference, failpreference, 'notificacion_t_'+articulo, '1');
+                //window.location.href="detalle_torneo.html?idv="+articulo;
+            }
     }
 };
 
@@ -52,6 +62,20 @@ function register(){
     window.plugins.OneSignal.registerForPushNotifications();
 
 }
+
+
+
+
+function okpreference (value) {}
+function failpreference (error) {}
+
+function calculanoticia(value) {
+    var nuevo=value+1
+    prefs.store (okpreference, failpreference, 'notificacion_n', nuevo);
+    $("#notificacion_n").html(nuevo);
+}
+
+
 
 
 
