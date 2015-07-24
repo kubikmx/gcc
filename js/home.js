@@ -71,7 +71,6 @@ function insertavar(tabla,articulo){
             }
             if (existe==0)
                 actual+=","+value;
-            }
             window.applicationPreferences.set(tabla, actual, function() {},function(error) {});
         }, function(error) {
             window.applicationPreferences.set(tabla, ","+articulo, function() {},function(error) {});
