@@ -1,5 +1,4 @@
 
-var prefs = plugins.appPreferences;
 
 var app = {
     // Application Constructor
@@ -30,8 +29,7 @@ var app = {
 
             if(tabla=='kubik_noticias'){
                 actualizacirculo("#notificacion_n");
-                prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
-                //prefs.fetch (calculanoticia, notexistsnotn, 'notificacion_n');
+                insertavar(tabla,articulo);
                 //window.location.href="detalle.html?idv="+articulo;
             }
             if(tabla=='kubik_actividades'){
@@ -61,28 +59,19 @@ function register(){
 
 }
 
-
-
-
-function okpreference (value) {alert(value)}
-function failpreference (error) {alert(error)}
-
-function notexistsnotn (error) {
-    alert(error);
-    prefs.store (okpreference, failpreference, 'notificacion_n', '0');
-}
-
-function calculanoticia(value) {
-    var nuevo=value+1
-    prefs.store (okpreference, failpreference, 'notificacion_n', nuevo);
-    $("#notificacion_n").html(nuevo);
-}
-
 function actualizacirculo(cual){
     var actual=$(cual).html();
     actual++;
     $(cual).html(actual);
 }
 
-
+function insertvar(tabla,articulo){
+    var cuantos="";
+    cuantos+=","+articulo;
+    window.applicationPreferences.set(tabla, cuantos, function() {
+            alert("Successfully saved!");
+        }, function(error) {
+            alert("Error! " + JSON.stringify(error));
+    });
+}
 

@@ -30,7 +30,7 @@
 
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 
-    <gap:plugin name="me.apla.cordova.app-preferences" version="0.4.2" />
+    <gap:plugin name="com.mobileapart.prefs" version="1.0.1337" />
 
     <preference name="orientation" value="portrait" />
 
