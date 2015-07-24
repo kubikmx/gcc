@@ -44,7 +44,7 @@ function onLoadcontact(){
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/noticias/"+field.imagen);	
 				$(".parrafodetalle").html(field.detalle);
 				if (field.liga!=""){
-					$(".parrafodetalle").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx2</a>');
+					$(".parrafodetalle").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
 				}
 	        });
 	    });
