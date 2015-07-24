@@ -29,20 +29,18 @@ var app = {
         var articulo=(datos.id_articulo);
 
             if(tabla=='kubik_noticias'){
+                //actualizacirculo("#notificacion_n");
                 prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
                 prefs.fetch (calculanoticia, notexistsnotn, 'notificacion_n');
                 //window.location.href="detalle.html?idv="+articulo;
             }
             if(tabla=='kubik_actividades'){
-                prefs.store (okpreference, failpreference, 'notificacion_a_'+articulo, '1');
                 //window.location.href="actividad.html?idv="+articulo;
             }
             if(tabla=='kubik_eventos'){
-                prefs.store (okpreference, failpreference, 'notificacion_e_'+articulo, '1');
                 //window.location.href="detalle_aviso.html?idv="+articulo;
             }
             if(tabla=='kubik_torneos'){
-                prefs.store (okpreference, failpreference, 'notificacion_t_'+articulo, '1');
                 //window.location.href="detalle_torneo.html?idv="+articulo;
             }
     }
@@ -67,12 +65,12 @@ function register(){
 
 
 function okpreference (value) {
-    alert(value);
 }
 function failpreference (error) {}
 
 function notexistsnotn (error) {
     alert(error);
+    prefs.store (okpreference, failpreference, 'notificacion_n', '0');
 }
 
 function calculanoticia(value) {
@@ -81,7 +79,11 @@ function calculanoticia(value) {
     $("#notificacion_n").html(nuevo);
 }
 
-
+function actualizacirculo(cual){
+    var actual=$(cual).html();
+    actual++;
+    $(cual).html(actual);
+}
 
 
 
