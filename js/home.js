@@ -30,7 +30,7 @@ var app = {
 
             if(tabla=='kubik_noticias'){
                 actualizacirculo("#notificacion_n");
-                //prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
+                prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
                 //prefs.fetch (calculanoticia, notexistsnotn, 'notificacion_n');
                 //window.location.href="detalle.html?idv="+articulo;
             }
@@ -64,9 +64,8 @@ function register(){
 
 
 
-function okpreference (value) {
-}
-function failpreference (error) {}
+function okpreference (value) {alert(value)}
+function failpreference (error) {alert(error)}
 
 function notexistsnotn (error) {
     alert(error);
