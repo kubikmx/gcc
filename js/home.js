@@ -65,7 +65,7 @@ function actualizacirculo(cual){
     $(cual).html(actual);
 }
 
-function insertvar(tabla,articulo){
+function insertavar(tabla,articulo){
     var cuantos="";
     cuantos+=","+articulo;
     window.applicationPreferences.set(tabla, cuantos, function() {
