@@ -67,10 +67,10 @@ function insertavar(tabla,articulo){
             i=0,
             existe=0; 
             for(i in res){
-                if (i==value) existe=1;
+                if (i==articulo) existe=1;
             }
             if (existe==0)
-                actual+=","+value;
+                actual+=","+articulo;
             window.applicationPreferences.set(tabla, actual, function() {},function(error) {});
         }, function(error) {
             window.applicationPreferences.set(tabla, ","+articulo, function() {},function(error) {});
