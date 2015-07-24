@@ -179,16 +179,17 @@
 		<div id="mensajerespuesta"></div>
 		<br>
 		<div class="clear" style="height:40px;"></div>
+
+		<div id="detalle_std">
+		   <p class="parrafodetalle"></p>
+		</div>
+
+		<div style="width:50%; display:inline-block; float:left; font-size:12px; color:#666;"> ver. 1.0</div>
+       	<div style="width:50%; display:inline-block; float:left; font-size:12px; color:#666;"><a href="http://www.kubik.mx"> by Kubik</a></div>
     
    
 
-	<div id="detalle_std">
-		<h3 id="titulo_detalle"></h3>
-       <div class="detallearticulo crecer"> 
-       <img style="float:right; margin-left:10px; margin-right:0px !important;" class="fotonoticia"  src="" >
-	   <p class="parrafodetalle"></p>
-       </div>
-	</div>
+	
     
     
     <!--FOOTER-->
@@ -200,6 +201,24 @@
         <img class="column_1_1" src="images/fondofooter.jpg" >        
      </div>
     <!--END FOOTER-->
+
+    <script type="text/javascript">
+	  	$(document).ready(function(){
+
+			$( "#desplegar" ).click(function() {
+			  $( ".directorio" ).toggle(200);
+			  $("#off").toggle();
+			  $("#on").toggle();
+			});
+
+			$( ".cerrar" ).click(function() {
+			  $( ".directorio" ).toggle(200);
+			  // $("#off").toggle();
+			  // $("#on").toggle();
+			});
+
+		});
+	</script>
 
 </body>
 </html>
