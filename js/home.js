@@ -66,7 +66,7 @@ function insertavar(tabla,articulo){
             var res = value.split(","),
             i=0,
             existe=0; 
-            for(i in res){
+            for(i in res){ alert(res[i]+"="+articulo);
                 if (res[i]==articulo) existe=1;
             }
             if (existe==0)
