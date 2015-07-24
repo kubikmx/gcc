@@ -30,7 +30,7 @@ var app = {
 
             if(tabla=='kubik_noticias'){
                 prefs.store (okpreference, failpreference, 'notificacion_n_'+articulo, '1');
-                prefs.fetch (calculanoticia, failpreference, 'notificacion_n');
+                prefs.fetch (calculanoticia, notexistsnotn, 'notificacion_n');
                 //window.location.href="detalle.html?idv="+articulo;
             }
             if(tabla=='kubik_actividades'){
@@ -68,6 +68,10 @@ function register(){
 
 function okpreference (value) {}
 function failpreference (error) {}
+
+function notexistsnotn (error) {
+    alert(error);
+}
 
 function calculanoticia(value) {
     var nuevo=value+1
