@@ -42,6 +42,7 @@ function onLoadcontact(){
 	        $.each(result, function(i, field){
 				if (field.liga!=""){
 					$(".parrafodetalle").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
+					$("#linkkubik").append('<a onclick="openurl(\'http://kubik.mx\')" >kubik.mx</a>');
 				}
 	        });
 	    });
