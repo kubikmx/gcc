@@ -66,7 +66,9 @@ function register(){
 
 
 
-function okpreference (value) {}
+function okpreference (value) {
+    alert(value);
+}
 function failpreference (error) {}
 
 function notexistsnotn (error) {
