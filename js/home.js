@@ -29,8 +29,8 @@ var app = {
         var articulo=(datos.id_articulo);
 
             if(tabla=='kubik_noticias'){
-                actualizacirculo("#notificacion_n");
                 insertavar(tabla,articulo);
+                updatemessages();
                 //window.location.href="detalle.html?idv="+articulo;
             }
             if(tabla=='kubik_actividades'){
@@ -60,18 +60,16 @@ function register(){
 
 }
 
-function actualizacirculo(cual){
-    var actual=$(cual).html();
-    actual++;
-    $(cual).html(actual);
-}
-
 function insertavar(tabla,articulo){
     window.applicationPreferences.get(tabla, function(value) {
             var actual=value;
-            if (actual.indexOf(","+value) ){
-                //Ya existe
-            } else {
+            var res = value.split(","),
+            i=0,
+            existe=0; 
+            for(i in res){
+                if (i==value) existe=1;
+            }
+            if (existe==0)
                 actual+=","+value;
             }
             window.applicationPreferences.set(tabla, actual, function() {},function(error) {});
@@ -86,10 +84,15 @@ function updatemessages(){
         i=0,
         cuantos=0; 
         for(i in res){
-            cuantos++;
+            if (i>0)
+                cuantos++;
         }
-        document.getElementById("notificacion_n").innerHTML = cuantos;
-        document.getElementById("notificacion_n").style.display = "block";
+        if (cuantos>0){
+            document.getElementById("notificacion_n").innerHTML = cuantos;
+            document.getElementById("notificacion_n").style.display = "block";
+        } else {
+            document.getElementById("notificacion_n").style.display = "none";
+        }
     }, function(error) {
             window.applicationPreferences.set("kubik_noticias", "", function() {},function(error) {});
             document.getElementById("notificacion_n").style.display = "none";
