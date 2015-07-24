@@ -30,7 +30,6 @@ var app = {
 
             if(tabla=='kubik_noticias'){
                 insertavar(tabla,articulo);
-                updatemessages();
                 //window.location.href="detalle.html?idv="+articulo;
             }
             if(tabla=='kubik_actividades'){
@@ -66,14 +65,14 @@ function insertavar(tabla,articulo){
             var res = value.split(","),
             i=0,
             existe=0; 
-            for(i in res){ alert(res[i]+"="+articulo);
+            for(i in res){ 
                 if (res[i]==articulo) existe=1;
             }
             if (existe==0)
                 actual+=","+articulo;
-            window.applicationPreferences.set(tabla, actual, function() {},function(error) {});
+            window.applicationPreferences.set(tabla, actual, function() {updatemessages();},function(error) {});
         }, function(error) {
-            window.applicationPreferences.set(tabla, ","+articulo, function() {},function(error) {});
+            window.applicationPreferences.set(tabla, ","+articulo, function() {updatemessages();},function(error) {});
     });
 }
 
