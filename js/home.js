@@ -82,7 +82,7 @@ function insertavar(tabla,articulo){
 
 function updatemessages(){
     window.applicationPreferences.get("kubik_noticias", function(value) {
-        var res = str.split(","),
+        var res = value.split(","),
         i=0,
         cuantos=0; 
         for(i in res){
