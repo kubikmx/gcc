@@ -88,11 +88,11 @@ function updatemessages(){
         for(i in res){
             cuantos++;
         }
-        $("#notificacion_n").html(cuantos);
-        $("#notificacion_n").show();
+        document.getElementById("notificacion_n").innerHTML = cuantos;
+        document.getElementById("notificacion_n").style.display = "block";
     }, function(error) {
             window.applicationPreferences.set("kubik_noticias", "", function() {},function(error) {});
-            $("#notificacion_n").hide();
+            document.getElementById("notificacion_n").style.display = "none";
     });
 }
 
