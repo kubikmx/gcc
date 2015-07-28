@@ -27,6 +27,20 @@ function loadinfo(){
 					$(".parrafodetalle").append('<a onclick="openurl(\''+field.liga+'\')" class="linkexterno">'+field.tituloliga+'</a>');
 				}
 	        });
+
+	        window.applicationPreferences.get("kubik_noticias", function(value) {
+	              var actual=value;
+	              var res = value.split(","),
+	              i=0; 
+	              var nuevo="";
+	              for(i in res){ 
+	              		if (res[i]!=idv)
+	              			nuevo+==","+res[i];
+	              }
+	              window.applicationPreferences.set("kubik_noticias", nuevo, function() {},function(error) {});
+	            
+	        }, function(error) {});
+
 	    });
 	}
 
