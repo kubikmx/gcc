@@ -31,7 +31,7 @@ function loadinfo(){
 function loadtorneos(){
     $.getJSON("http://www.k-i.co/cc/webservices/torneos.php", function(result){
         $.each(result, function(i, field){
-         var bloque=  '<div class="bordelist"><div class="articulo"><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><img src="http://k-i.co/cc/images/torneos/thumbs/'+field.imagen+'" ></a>';
+         var bloque=  '<div class="bordelist" id="element_'+field.id_torneo+'"><div class="articulo"><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><img src="http://k-i.co/cc/images/torneos/thumbs/'+field.imagen+'" ></a>';
              bloque+= '<p><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
              bloque+= '<a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'" class="flechamedio"></a>';
              bloque+= '</div><div class="clear"></div></div>';  
@@ -39,6 +39,18 @@ function loadtorneos(){
         $("#listado_normal").append(bloque);
 
         });
+
+        window.applicationPreferences.get("kubik_torneos", function(value) {
+            var actual=value;
+              var res = value.split(","),
+              i=0,
+              existe=0; 
+              for(i in res){ 
+                  $("#element_"+res[i]).append('<div class="alertblock"></div>');
+              }
+
+            
+        }, function(error) {});
     });
 }
 

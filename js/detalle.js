@@ -96,6 +96,19 @@ function onLoad_torneo(){
 					$("#imagen_torneo").show();
 				}
 	        });
+
+	        window.applicationPreferences.get("kubik_torneos", function(value) {
+	              var actual=value;
+	              var res = value.split(","),
+	              i=0; 
+	              var nuevo="";
+	              for(i in res){ 
+	              		if (res[i]!=idv && res[i]!="")
+	              			nuevo+=","+res[i];
+	              } 
+	              window.applicationPreferences.set("kubik_torneos", nuevo, function() {},function(error) {});
+	            
+	        }, function(error) {});
 	    });
 	}
 
