@@ -34,9 +34,9 @@ function loadinfo(){
 	              i=0; 
 	              var nuevo="";
 	              for(i in res){ 
-	              		if (res[i]!=idv)
+	              		if (res[i]!=idv && res[i]!="")
 	              			nuevo+=","+res[i];
-	              } alert(nuevo);
+	              } 
 	              window.applicationPreferences.set("kubik_noticias", nuevo, function() {},function(error) {});
 	            
 	        }, function(error) {});
