@@ -470,3 +470,5 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 .articulo p a{display: inline-block;height: 156px}
 .linkexterno{display: inline-block;margin:10px 0; color: #0A94D6 !important; width: 100%; text-align: center; }
 #imagen_torneo{display: none; width: 100%;}
+
+.alertblock{background-color: #ff0000}

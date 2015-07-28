@@ -30,16 +30,15 @@ var app = {
 
             if(tabla=='kubik_noticias'){
                 insertavar(tabla,articulo);
-                //window.location.href="detalle.html?idv="+articulo;
             }
             if(tabla=='kubik_actividades'){
-                //window.location.href="actividad.html?idv="+articulo;
+                insertavar(tabla,articulo);
             }
             if(tabla=='kubik_eventos'){
-                //window.location.href="detalle_aviso.html?idv="+articulo;
+                insertavar(tabla,articulo);
             }
             if(tabla=='kubik_torneos'){
-                //window.location.href="detalle_torneo.html?idv="+articulo;
+                insertavar(tabla,articulo);
             }
     }
 };
@@ -94,6 +93,63 @@ function updatemessages(){
     }, function(error) {
             window.applicationPreferences.set("kubik_noticias", "", function() {},function(error) {});
             document.getElementById("notificacion_n").style.display = "none";
+    });
+
+    window.applicationPreferences.get("kubik_actividades", function(value) {
+        var res = value.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            if (i>0)
+                cuantos++;
+        }
+        if (cuantos>0){
+            document.getElementById("notificacion_a").innerHTML = cuantos;
+            document.getElementById("notificacion_a").style.display = "block";
+        } else {
+            document.getElementById("notificacion_a").style.display = "none";
+        }
+    }, function(error) {
+            window.applicationPreferences.set("kubik_actividades", "", function() {},function(error) {});
+            document.getElementById("notificacion_a").style.display = "none";
+    });
+
+    window.applicationPreferences.get("kubik_eventos", function(value) {
+        var res = value.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            if (i>0)
+                cuantos++;
+        }
+        if (cuantos>0){
+            document.getElementById("notificacion_e").innerHTML = cuantos;
+            document.getElementById("notificacion_e").style.display = "block";
+        } else {
+            document.getElementById("notificacion_e").style.display = "none";
+        }
+    }, function(error) {
+            window.applicationPreferences.set("kubik_eventos", "", function() {},function(error) {});
+            document.getElementById("notificacion_e").style.display = "none";
+    });
+
+    window.applicationPreferences.get("kubik_torneos", function(value) {
+        var res = value.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            if (i>0)
+                cuantos++;
+        }
+        if (cuantos>0){
+            document.getElementById("notificacion_t").innerHTML = cuantos;
+            document.getElementById("notificacion_t").style.display = "block";
+        } else {
+            document.getElementById("notificacion_t").style.display = "none";
+        }
+    }, function(error) {
+            window.applicationPreferences.set("kubik_torneos", "", function() {},function(error) {});
+            document.getElementById("notificacion_t").style.display = "none";
     });
 }
 

@@ -5,14 +5,26 @@ function onLoad(){
 function loadinfo(){
 	$.getJSON("http://www.k-i.co/cc/webservices/noticias.php", function(result){
         $.each(result, function(i, field){
-         var bloque=  '<div class="bordelist"><div class="articulo"><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><img src="http://k-i.co/cc/images/noticias/thumbs/'+field.imagen+'" ></a>';
+          var bloque=  '<div class="bordelist" id="element_'+field.id_noticia+'"><div class="articulo"><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><img src="http://k-i.co/cc/images/noticias/thumbs/'+field.imagen+'" ></a>';
          	 bloque+= '<p><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
-			 bloque+= '<a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'" class="flechamedio"></a>';
-			 bloque+= '</div><div class="clear"></div></div>';	
+			     bloque+= '<a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'" class="flechamedio"></a>';
+			     bloque+= '</div><div class="clear"></div></div>';	
 
-		$("#listado_normal").append(bloque);
+		        $("#listado_normal").append(bloque);
 
         });
+
+        window.applicationPreferences.get("kubik_noticias", function(value) {
+            var actual=value;
+              var res = value.split(","),
+              i=0,
+              existe=0; 
+              for(i in res){ 
+                  $("#element_"+res[i]).addClass("alertblock");
+              }
+
+            
+        }, function(error) {});
     });
 }
 
