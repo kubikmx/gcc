@@ -59,14 +59,26 @@ function loadtorneos(){
 function loadavisos(){
 	$.getJSON("http://www.k-i.co/cc/webservices/eventos.php", function(result){
         $.each(result, function(i, field){
-         var bloque=  '<div class="bordelist"><div class="articulo"><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><img src="http://k-i.co/cc/images/eventos/thumbs/'+field.imagen+'" ></a>';
+         var bloque=  '<div class="bordelist" id="element_'+field.id_evento+'"><div class="articulo"><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><img src="http://k-i.co/cc/images/eventos/thumbs/'+field.imagen+'" ></a>';
          	 bloque+= '<p><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
-			 bloque+= '<a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'" class="flechamedio"></a>';
-			 bloque+= '</div><div class="clear"></div></div>';	
+    			 bloque+= '<a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'" class="flechamedio"></a>';
+    			 bloque+= '</div><div class="clear"></div></div>';	
 
-		$(".listado_eventos").append(bloque);
+    		  $(".listado_eventos").append(bloque);
 
         });
+
+        window.applicationPreferences.get("kubik_eventos", function(value) {
+            var actual=value;
+              var res = value.split(","),
+              i=0,
+              existe=0; 
+              for(i in res){ 
+                  $("#element_"+res[i]).append('<div class="alertblock"></div>');
+              }
+
+            
+        }, function(error) {});
     });
 }
 

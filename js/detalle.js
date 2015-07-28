@@ -139,6 +139,19 @@ function loadaviso(){
 					$(".parrafodetalle").append('<a onclick="openurl(\''+field.liga+'\')" class="linkexterno">'+field.tituloliga+'</a>');
 				}
 	        });
+
+	        window.applicationPreferences.get("kubik_eventos", function(value) {
+	              var actual=value;
+	              var res = value.split(","),
+	              i=0; 
+	              var nuevo="";
+	              for(i in res){ 
+	              		if (res[i]!=idv && res[i]!="")
+	              			nuevo+=","+res[i];
+	              } 
+	              window.applicationPreferences.set("kubik_eventos", nuevo, function() {},function(error) {});
+	            
+	        }, function(error) {});
 	    });
 	}
 
