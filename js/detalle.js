@@ -185,6 +185,19 @@ function loadactivity(){
 				}
 	        });
 
+	        window.applicationPreferences.get("kubik_actividades", function(value) {
+	              var actual=value;
+	              var res = value.split(","),
+	              i=0; 
+	              var nuevo="";
+	              for(i in res){ 
+	              		if (res[i]!=idv && res[i]!="")
+	              			nuevo+=","+res[i];
+	              } 
+	              window.applicationPreferences.set("kubik_actividades", nuevo, function() {},function(error) {});
+	            
+	        }, function(error) {});
+
 	    });
 	}
 

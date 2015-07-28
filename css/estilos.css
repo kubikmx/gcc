@@ -472,3 +472,4 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 #imagen_torneo{display: none; width: 100%;}
 
 .alertblock{display: inline-block;position: absolute;right: 2px;top: -10px;width: 32px;height: 32px;background-image: url(../images/notificationico.png);}
+.alertlistblock{display: inline-block;width: 32px;height: 32px;background-image: url(../images/notificationico.png);}

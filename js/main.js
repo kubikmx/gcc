@@ -89,10 +89,22 @@ function loadmenuactivities(){
             $("#listadeactividades").append(bloque);
             var bloque2 =""; 
             $.each(field.hijos, function(subi, subfield){ 
-                bloque2+='<li><a href="actividades.html?idv='+subfield.id_categoria+'" class="btn_nextlist">'+subfield.nombre+'</a></li>';
+                bloque2+='<li><a href="actividades.html?idv='+subfield.id_categoria+'" class="btn_nextlist" id="element_'+subfield.id_categoria+'">'+subfield.nombre+'</a></li>';
             });
             $("#listadeactividades").append('<ul id="menuactividades">'+bloque2+'</ul>');
         });
+
+        window.applicationPreferences.get("kubik_actividades", function(value) {
+            var actual=value;
+              var res = value.split(","),
+              i=0,
+              existe=0; 
+              for(i in res){ 
+                  $("#element_"+res[i]).append('<div class="alertlistblock"></div>');
+              }
+
+            
+        }, function(error) {});
     });
 
 }
