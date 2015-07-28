@@ -20,7 +20,7 @@ function loadinfo(){
               i=0,
               existe=0; 
               for(i in res){ 
-                  $("#element_"+res[i]).addClass("alertblock");
+                  $("#element_"+res[i]).append('<div class="alertblock"></div>');
               }
 
             

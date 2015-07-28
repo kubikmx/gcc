@@ -471,4 +471,4 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 .linkexterno{display: inline-block;margin:10px 0; color: #0A94D6 !important; width: 100%; text-align: center; }
 #imagen_torneo{display: none; width: 100%;}
 
-.alertblock{background-color: #ff0000}
+.alertblock{display: inline-block;position: absolute;right: 2px;top: 2px;width: 32px;height: 32px;background-image: url(../images/notificationico.png);}
