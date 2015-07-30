@@ -89,7 +89,7 @@ function loadmenuactivities(){
             $("#listadeactividades").append(bloque);
             var bloque2 =""; 
             $.each(field.hijos, function(subi, subfield){ 
-                bloque2+='<li><a href="actividades.html?idv='+subfield.id_categoria+'" class="btn_nextlist" id="element_'+subfield.id_categoria+'">'+subfield.nombre+'</a></li>';
+                bloque2+='<li><a href="actividades.html?idv='+subfield.id_categoria+'" class="btn_nextlist" data-actividades="'+subfield.actividades+'">'+subfield.nombre+'</a></li>';
             });
             $("#listadeactividades").append('<ul id="menuactividades">'+bloque2+'</ul>');
         });
@@ -100,7 +100,12 @@ function loadmenuactivities(){
               i=0,
               existe=0; 
               for(i in res){ 
-                  $("#element_"+res[i]).append('<div class="alertlistblock"></div>');
+                  $(".btn_nextlist").each(function() {
+                      var actuales=$(this).data("actividades");
+                      if (actuales.indexOf("|"+res[i]+"|")!=-1 && res[i]!=""){
+                          $(this).append('<div class="alertlistblock"></div>');
+                      }
+                  });
               }
 
             
@@ -124,7 +129,7 @@ function loadinfoactivities(){
     if (idv!=0){
         $.getJSON("http://www.k-i.co/cc/webservices/actividades.php?id="+idv, function(result){
             $.each(result, function(i, field){
-             var bloque=  '<div class="bordelist"><div class="articulo"><a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"><img src="http://k-i.co/cc/images/actividades/thumbs/'+field.imagen+'" ></a>';
+             var bloque=  '<div class="bordelist" id="element_'+field.id_actividad+'"><div class="articulo"><a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"><img src="http://k-i.co/cc/images/actividades/thumbs/'+field.imagen+'" ></a>';
                  bloque+= '<p><a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
                  bloque+= '<a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'" class="flechamedio"></a>';
                  bloque+= '</div><div class="clear"></div></div>';  
@@ -136,6 +141,19 @@ function loadinfoactivities(){
             }
 
             });
+
+            window.applicationPreferences.get("kubik_actividades", function(value) {
+                var actual=value;
+                  var res = value.split(","),
+                  i=0,
+                  existe=0; 
+                  for(i in res){ 
+                      $("#element_"+res[i]).append('<div class="alertblock"></div>');
+                  }
+
+                
+            }, function(error) {});
+
         });
     }
 }
