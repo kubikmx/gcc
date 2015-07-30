@@ -71,6 +71,7 @@ function insertavar(tabla,articulo){
                 actual+=","+articulo;
 
     localStorage.setItem(tabla, actual);
+    updatemessages();
     /*
     window.applicationPreferences.get(tabla, function(value) {
             var actual=value;
@@ -104,6 +105,52 @@ function updatemessages(){
         } else {
             document.getElementById("notificacion_n").style.display = "none";
         }
+
+    ////////////////////////
+    var value = localStorage.getItem('kubik_actividades');
+    var res = value.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            if (i>0)
+                cuantos++;
+        }
+        if (cuantos>0){
+            document.getElementById("notificacion_a").innerHTML = cuantos;
+            document.getElementById("notificacion_a").style.display = "block";
+        } else {
+            document.getElementById("notificacion_a").style.display = "none";
+        }
+    //////////////////////////
+    var value = localStorage.getItem('kubik_eventos');
+    var res = value.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            if (i>0)
+                cuantos++;
+        }
+        if (cuantos>0){
+            document.getElementById("notificacion_e").innerHTML = cuantos;
+            document.getElementById("notificacion_e").style.display = "block";
+        } else {
+            document.getElementById("notificacion_e").style.display = "none";
+        }
+    ///////////////////////
+    var value = localStorage.getItem('kubik_torneos');
+    var res = value.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            if (i>0)
+                cuantos++;
+        }
+        if (cuantos>0){
+            document.getElementById("notificacion_t").innerHTML = cuantos;
+            document.getElementById("notificacion_t").style.display = "block";
+        } else {
+            document.getElementById("notificacion_t").style.display = "none";
+        }            
     /*
     window.applicationPreferences.get("kubik_noticias", function(value) {
         var res = value.split(","),
