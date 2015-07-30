@@ -318,6 +318,30 @@ function loadhadicap(){
         });
         
 }
+function loadhadicap_damas(){
+
+        $.ajax({
+          type: "POST",
+          url: "http://www.k-i.co/cc/webservices/handicap_damas.php",
+          data: ({date: "last"}),
+          cache: false,
+          dataType: "text",
+          success: onSuccesshandicap
+        });
+        
+}
+function loadhadicap_juniors(){
+
+        $.ajax({
+          type: "POST",
+          url: "http://www.k-i.co/cc/webservices/handicap_juniors.php",
+          data: ({date: "last"}),
+          cache: false,
+          dataType: "text",
+          success: onSuccesshandicap
+        });
+        
+}
 function onSuccesshandicap(data)
 {
     $("#detallehandicap").html( data);
