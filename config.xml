@@ -59,6 +59,9 @@
     <icon src="icons/xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
     <icon src="icons/xxhdpi.png" gap:platform="android" gap:qualifier="xxhdpi" />
 
+    <!-- Splash -->
+    <gap:splash src="splash/default.png" />
+
 
 
 
