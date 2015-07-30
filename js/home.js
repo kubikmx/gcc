@@ -59,26 +59,6 @@ function register(){
 }
 
 function insertavar(tabla,articulo){
-    var ss = new cordova.plugins.SecureStorage(function(){},function(erro){},'gcc');
-    ss.get(
-    function (value) { 
-            var actual=value;
-            var res = value.split(","),
-            i=0,
-            existe=0; 
-            for(i in res){ 
-                if (res[i]==articulo) existe=1;
-            }
-            if (existe==0)
-                actual+=","+articulo; 
-            ss.set(
-            function (key) { updatemessages(); },
-            function (error) {  },
-            tabla, actual);
-        },
-    function (error) { },
-    tabla);
-    /*
     var value = localStorage.getItem('kubik_noticias') || '';
     var actual=value;
             var res = value.split(","),
@@ -92,7 +72,7 @@ function insertavar(tabla,articulo){
 
     localStorage.setItem(tabla, actual);
     updatemessages();
-    */
+
     /*
     window.applicationPreferences.get(tabla, function(value) {
             var actual=value;
@@ -112,29 +92,8 @@ function insertavar(tabla,articulo){
 }
 
 function updatemessages(){
-    var ss = new cordova.plugins.SecureStorage(function(){},function(erro){},'gcc');
-    ss.get(
-    function (value) {  
-        var res = value.split(","),
-        i=0,
-        cuantos=0; 
-        for(i in res){
-            if (i>0)
-                cuantos++;
-        }
-        if (cuantos>0){
-            document.getElementById("notificacion_n").innerHTML = cuantos;
-            document.getElementById("notificacion_n").style.display = "block";
-        } else {
-            document.getElementById("notificacion_n").style.display = "none";
-        }
-    },
-    function (error) { document.getElementById("notificacion_n").style.display = "none"; },
-    'kubik_noticias');
 
-
-
-    /*
+    
     var value = localStorage.getItem('kubik_noticias') || '';
     var res = value.split(","),
         i=0,
@@ -195,7 +154,7 @@ function updatemessages(){
         } else {
             document.getElementById("notificacion_t").style.display = "none";
         }  
-    */              
+                
     /*
     window.applicationPreferences.get("kubik_noticias", function(value) {
         var res = value.split(","),
