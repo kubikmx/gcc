@@ -96,7 +96,7 @@ function updatemessages(){
         i=0,
         cuantos=0; 
         for(i in res){
-            if (i>0)
+            if (res[i]!="")
                 cuantos++;
         }
         if (cuantos>0){
@@ -112,7 +112,7 @@ function updatemessages(){
         i=0,
         cuantos=0; 
         for(i in res){
-            if (i>0)
+            if (res[i]!="")
                 cuantos++;
         }
         if (cuantos>0){
@@ -127,7 +127,7 @@ function updatemessages(){
         i=0,
         cuantos=0; 
         for(i in res){
-            if (i>0)
+            if (res[i]!="")
                 cuantos++;
         }
         if (cuantos>0){
@@ -142,7 +142,7 @@ function updatemessages(){
         i=0,
         cuantos=0; 
         for(i in res){
-            if (i>0)
+            if (res[i]!="")
                 cuantos++;
         }
         if (cuantos>0){
