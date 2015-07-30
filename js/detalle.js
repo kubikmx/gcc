@@ -344,7 +344,41 @@ function loadhadicap_juniors(){
 }
 function onSuccesshandicap(data)
 {
+
     $("#detallehandicap").html( data);
+    $(".botonbusquedahadi").click(function(){
+    	var busqueda=formatea($("#nombretxt").val()); 
+    	$("#detallehandicap table tr").each(function(){
+    		var row=formatea($(this).find('td:eq(1)').text()); 
+    		if (row.indexOf(busqueda)!=-1)
+    			$(this).removeClass("troculto");
+    		else
+    			$(this).addClass("troculto");
+    	});
+    });
+}
+function formatea(cadena){
+
+	  var from = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç", 
+	      to   = "AAAAAEEEEIIIIOOOOUUUUAAAAAEEEEIIIIOOOOUUUUNNCC",
+	      mapping = {};
+	 
+	  for(var i = 0, j = from.length; i < j; i++ )
+	      mapping[ from.charAt( i ) ] = to.charAt( i );
+
+	  var str =(cadena.toUpperCase());
+	 
+
+	      var ret = [];
+	      for( var i = 0, j = str.length; i < j; i++ ) {
+	          var c = str.charAt( i );
+	          if( mapping.hasOwnProperty( str.charAt( i ) ) )
+	              ret.push( mapping[ c ] );
+	          else
+	              ret.push( c );
+	      }      
+	  var regresa=ret.join( '' );
+	return regresa;
 }
 
 function openurl(link){
