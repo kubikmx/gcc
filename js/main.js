@@ -14,17 +14,15 @@ function loadinfo(){
 
         });
 
-        window.applicationPreferences.get("kubik_noticias", function(value) {
-            var actual=value;
-              var res = value.split(","),
-              i=0,
-              existe=0; 
-              for(i in res){ 
-                  $("#element_"+res[i]).append('<div class="alertblock"></div>');
-              }
+        var value = localStorage.getItem('kubik_noticias') || '';
+        var actual=value;
+          var res = value.split(","),
+          i=0,
+          existe=0; 
+          for(i in res){ 
+              $("#element_"+res[i]).append('<div class="alertblock"></div>');
+          }
 
-            
-        }, function(error) {});
     });
 }
 
@@ -39,8 +37,8 @@ function loadtorneos(){
         $("#listado_normal").append(bloque);
 
         });
+        var value = localStorage.getItem('kubik_torneos') || '';
 
-        window.applicationPreferences.get("kubik_torneos", function(value) {
             var actual=value;
               var res = value.split(","),
               i=0,
@@ -49,8 +47,7 @@ function loadtorneos(){
                   $("#element_"+res[i]).append('<div class="alertblock"></div>');
               }
 
-            
-        }, function(error) {});
+
     });
 }
 
@@ -68,7 +65,7 @@ function loadavisos(){
 
         });
 
-        window.applicationPreferences.get("kubik_eventos", function(value) {
+        var value = localStorage.getItem('kubik_eventos') || '';
             var actual=value;
               var res = value.split(","),
               i=0,
@@ -77,8 +74,6 @@ function loadavisos(){
                   $("#element_"+res[i]).append('<div class="alertblock"></div>');
               }
 
-            
-        }, function(error) {});
     });
 }
 
@@ -94,7 +89,7 @@ function loadmenuactivities(){
             $("#listadeactividades").append('<ul id="menuactividades">'+bloque2+'</ul>');
         });
 
-        window.applicationPreferences.get("kubik_actividades", function(value) {
+        var value = localStorage.getItem('kubik_actividades') || '';
             var actual=value;
               var res = value.split(","),
               i=0,
@@ -107,9 +102,6 @@ function loadmenuactivities(){
                       }
                   });
               }
-
-            
-        }, function(error) {});
     });
 
 }
@@ -142,7 +134,7 @@ function loadinfoactivities(){
 
             });
 
-            window.applicationPreferences.get("kubik_actividades", function(value) {
+            var value = localStorage.getItem('kubik_actividades') || '';
                 var actual=value;
                   var res = value.split(","),
                   i=0,
@@ -151,8 +143,6 @@ function loadinfoactivities(){
                       $("#element_"+res[i]).append('<div class="alertblock"></div>');
                   }
 
-                
-            }, function(error) {});
 
         });
     }

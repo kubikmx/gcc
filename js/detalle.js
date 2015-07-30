@@ -28,7 +28,18 @@ function loadinfo(){
 				}
 	        });
 
-	        window.applicationPreferences.get("kubik_noticias", function(value) {
+	        var value = localStorage.getItem('kubik_noticias') || '';
+			var actual=value;
+			var res = value.split(","),
+			i=0; 
+			var nuevo="";
+			for(i in res){ 
+					if (res[i]!=idv && res[i]!="")
+						nuevo+=","+res[i];
+			} 
+			localStorage.setItem("kubik_noticias", nuevo);
+
+	        /*window.applicationPreferences.get("kubik_noticias", function(value) {
 	              var actual=value;
 	              var res = value.split(","),
 	              i=0; 
@@ -39,7 +50,7 @@ function loadinfo(){
 	              } 
 	              window.applicationPreferences.set("kubik_noticias", nuevo, function() {},function(error) {});
 	            
-	        }, function(error) {});
+	        }, function(error) {});*/
 
 	    });
 	}
@@ -97,7 +108,18 @@ function onLoad_torneo(){
 				}
 	        });
 
-	        window.applicationPreferences.get("kubik_torneos", function(value) {
+	        var value = localStorage.getItem('kubik_torneos') || '';
+			var actual=value;
+			var res = value.split(","),
+			i=0; 
+			var nuevo="";
+			for(i in res){ 
+					if (res[i]!=idv && res[i]!="")
+						nuevo+=","+res[i];
+			} 
+			localStorage.setItem("kubik_torneos", nuevo);
+
+	        /*window.applicationPreferences.get("kubik_torneos", function(value) {
 	              var actual=value;
 	              var res = value.split(","),
 	              i=0; 
@@ -108,7 +130,7 @@ function onLoad_torneo(){
 	              } 
 	              window.applicationPreferences.set("kubik_torneos", nuevo, function() {},function(error) {});
 	            
-	        }, function(error) {});
+	        }, function(error) {});*/
 	    });
 	}
 
@@ -140,7 +162,18 @@ function loadaviso(){
 				}
 	        });
 
-	        window.applicationPreferences.get("kubik_eventos", function(value) {
+	        var value = localStorage.getItem('kubik_eventos') || '';
+			var actual=value;
+			var res = value.split(","),
+			i=0; 
+			var nuevo="";
+			for(i in res){ 
+					if (res[i]!=idv && res[i]!="")
+						nuevo+=","+res[i];
+			} 
+			localStorage.setItem("kubik_eventos", nuevo);
+
+	        /*window.applicationPreferences.get("kubik_eventos", function(value) {
 	              var actual=value;
 	              var res = value.split(","),
 	              i=0; 
@@ -151,7 +184,7 @@ function loadaviso(){
 	              } 
 	              window.applicationPreferences.set("kubik_eventos", nuevo, function() {},function(error) {});
 	            
-	        }, function(error) {});
+	        }, function(error) {});*/
 	    });
 	}
 
@@ -185,7 +218,18 @@ function loadactivity(){
 				}
 	        });
 
-	        window.applicationPreferences.get("kubik_actividades", function(value) {
+	        var value = localStorage.getItem('kubik_actividades') || '';
+			var actual=value;
+			var res = value.split(","),
+			i=0; 
+			var nuevo="";
+			for(i in res){ 
+					if (res[i]!=idv && res[i]!="")
+						nuevo+=","+res[i];
+			} 
+			localStorage.setItem("kubik_actividades", nuevo);
+
+	        /*window.applicationPreferences.get("kubik_actividades", function(value) {
 	              var actual=value;
 	              var res = value.split(","),
 	              i=0; 
@@ -196,7 +240,7 @@ function loadactivity(){
 	              } 
 	              window.applicationPreferences.set("kubik_actividades", nuevo, function() {},function(error) {});
 	            
-	        }, function(error) {});
+	        }, function(error) {});*/
 
 	    });
 	}
