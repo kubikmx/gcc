@@ -59,6 +59,19 @@ function register(){
 }
 
 function insertavar(tabla,articulo){
+    var value = localStorage.getItem('kubik_noticias') || '';
+    var actual=value;
+            var res = value.split(","),
+            i=0,
+            existe=0; 
+            for(i in res){ 
+                if (res[i]==articulo) existe=1;
+            }
+            if (existe==0)
+                actual+=","+articulo;
+
+    localStorage.setItem(tabla, actual);
+    /*
     window.applicationPreferences.get(tabla, function(value) {
             var actual=value;
             var res = value.split(","),
@@ -73,9 +86,25 @@ function insertavar(tabla,articulo){
         }, function(error) {
             window.applicationPreferences.set(tabla, ","+articulo, function() {updatemessages();},function(error) {});
     });
+    */
 }
 
 function updatemessages(){
+    var value = localStorage.getItem('kubik_noticias');
+    var res = value.split(","),
+        i=0,
+        cuantos=0; 
+        for(i in res){
+            if (i>0)
+                cuantos++;
+        }
+        if (cuantos>0){
+            document.getElementById("notificacion_n").innerHTML = cuantos;
+            document.getElementById("notificacion_n").style.display = "block";
+        } else {
+            document.getElementById("notificacion_n").style.display = "none";
+        }
+    /*
     window.applicationPreferences.get("kubik_noticias", function(value) {
         var res = value.split(","),
         i=0,
@@ -151,5 +180,6 @@ function updatemessages(){
             window.applicationPreferences.set("kubik_torneos", "", function() {},function(error) {});
             document.getElementById("notificacion_t").style.display = "none";
     });
+    */
 }
 
