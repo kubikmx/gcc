@@ -37,15 +37,7 @@ function loadinfo(){
 					if (res[i]!=idv && res[i]!="")
 						nuevo+=","+res[i];
 			} 
-<<<<<<< HEAD
-<<<<<<< HEAD
-			localStorage.setItem("kubik_noticias", nuevo); $(".parrafodetalle").append('<div class="oculto">'+nuevo+'</div>');
-=======
-			localStorage.setItem("kubik_noticias", nuevo); alert(nuevo);
->>>>>>> parent of ddbe0b7... estilos
-=======
-			localStorage.setItem("kubik_noticias", nuevo); alert(nuevo);
->>>>>>> parent of ddbe0b7... estilos
+			localStorage.setItem("kubik_noticias", nuevo); 
 
 	        /*window.applicationPreferences.get("kubik_noticias", function(value) {
 	              var actual=value;

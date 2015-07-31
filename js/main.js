@@ -1,16 +1,16 @@
 function onLoad(){
-	loadinfo();
+  loadinfo();
 }
 
 function loadinfo(){
-	$.getJSON("http://www.k-i.co/cc/webservices/noticias.php", function(result){
+  $.getJSON("http://www.k-i.co/cc/webservices/noticias.php", function(result){
         $.each(result, function(i, field){
           var bloque=  '<div class="bordelist" id="element_'+field.id_noticia+'"><div class="articulo"><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><img src="http://k-i.co/cc/images/noticias/thumbs/'+field.imagen+'" ></a>';
-         	 bloque+= '<p><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
-			     bloque+= '<a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'" class="flechamedio"></a>';
-			     bloque+= '</div><div class="clear"></div></div>';	
+           bloque+= '<p><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
+           bloque+= '<a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'" class="flechamedio"></a>';
+           bloque+= '</div><div class="clear"></div></div>';  
 
-		        $("#listado_normal").append(bloque);
+            $("#listado_normal").append(bloque);
 
         });
 
@@ -54,14 +54,14 @@ function loadtorneos(){
 
 
 function loadavisos(){
-	$.getJSON("http://www.k-i.co/cc/webservices/eventos.php", function(result){
+  $.getJSON("http://www.k-i.co/cc/webservices/eventos.php", function(result){
         $.each(result, function(i, field){
          var bloque=  '<div class="bordelist" id="element_'+field.id_evento+'"><div class="articulo"><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><img src="http://k-i.co/cc/images/eventos/thumbs/'+field.imagen+'" ></a>';
-         	 bloque+= '<p><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
-    			 bloque+= '<a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'" class="flechamedio"></a>';
-    			 bloque+= '</div><div class="clear"></div></div>';	
+           bloque+= '<p><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
+           bloque+= '<a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'" class="flechamedio"></a>';
+           bloque+= '</div><div class="clear"></div></div>';  
 
-    		  $(".listado_eventos").append(bloque);
+          $(".listado_eventos").append(bloque);
 
         });
 

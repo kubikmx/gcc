@@ -134,6 +134,7 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
     right: -5px;
     top: -7px;
     width: auto;
+    display: none;
 }
 
 .cinta{width: 100%; margin-top: -36px; background:url(../images/cinta.png) center top repeat-x; background-size:contain; height:100px; position:relative;}

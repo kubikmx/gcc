@@ -72,7 +72,6 @@ function insertavar(tabla,articulo){
 
     localStorage.setItem(tabla, actual);
     updatemessages();
-
     /*
     window.applicationPreferences.get(tabla, function(value) {
             var actual=value;
@@ -92,9 +91,7 @@ function insertavar(tabla,articulo){
 }
 
 function updatemessages(){
-
-    
-    var value = localStorage.getItem('kubik_noticias') || ''; 
+    var value = localStorage.getItem('kubik_noticias') || '';
     var res = value.split(","),
         i=0,
         cuantos=0; 
@@ -103,7 +100,7 @@ function updatemessages(){
                 cuantos++;
         }
         if (cuantos>0){
-            document.getElementById("notificacion_n").innerHTML = cuantos; 
+            document.getElementById("notificacion_n").innerHTML = cuantos;
             document.getElementById("notificacion_n").style.display = "block";
         } else {
             document.getElementById("notificacion_n").style.display = "none";
@@ -153,8 +150,7 @@ function updatemessages(){
             document.getElementById("notificacion_t").style.display = "block";
         } else {
             document.getElementById("notificacion_t").style.display = "none";
-        }  
-                
+        }            
     /*
     window.applicationPreferences.get("kubik_noticias", function(value) {
         var res = value.split(","),
