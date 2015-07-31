@@ -94,7 +94,7 @@ function insertavar(tabla,articulo){
 function updatemessages(){
 
     
-    var value = localStorage.getItem('kubik_noticias') || '';
+    var value = localStorage.getItem('kubik_noticias') || ''; alert(value);
     var res = value.split(","),
         i=0,
         cuantos=0; 
@@ -103,7 +103,7 @@ function updatemessages(){
                 cuantos++;
         }
         if (cuantos>0){
-            document.getElementById("notificacion_n").innerHTML = cuantos;
+            document.getElementById("notificacion_n").innerHTML = cuantos; alert(cuantos);
             document.getElementById("notificacion_n").style.display = "block";
         } else {
             document.getElementById("notificacion_n").style.display = "none";
