@@ -59,7 +59,7 @@ function register(){
 }
 
 function insertavar(tabla,articulo){
-    var value = localStorage.getItem(tabla) || ''; alert(tabla);
+    var value = localStorage.getItem(tabla) || ''; alert("Notificaci\u00f3n Recibida");
     var actual=value;
             var res = value.split(","),
             i=0,
@@ -70,7 +70,7 @@ function insertavar(tabla,articulo){
             if (existe==0)
                 actual+=","+articulo;
 
-    localStorage.setItem(tabla, actual); alert(actual);
+    localStorage.setItem(tabla, actual); 
     updatemessages();
     /*
     window.applicationPreferences.get(tabla, function(value) {
