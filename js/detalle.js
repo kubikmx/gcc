@@ -37,7 +37,7 @@ function loadinfo(){
 					if (res[i]!=idv && res[i]!="")
 						nuevo+=","+res[i];
 			} 
-			localStorage.setItem("kubik_noticias", nuevo); alert("Leer Notificaci\u00f3n");
+			localStorage.setItem("kubik_noticias", nuevo); $(".parrafodetalle").append('<span class="blanco">'+nuevo+'</span>');
 
 	        /*window.applicationPreferences.get("kubik_noticias", function(value) {
 	              var actual=value;
