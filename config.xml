@@ -69,18 +69,14 @@
     <gap:splash src="splash/Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
     <gap:splash src="splash/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
     <!-- Android -->
-    <gap:splash src="ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
-    <gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
-    <gap:splash src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
-    <gap:splash src="xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
-    <gap:splash src="portrait-xxhdpi.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
-    <gap:splash src="landscape-xxhdpi.png" gap:platform="android" gap:qualifier="land-xxhdpi" />
+    <gap:splash src="splash/ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+    <gap:splash src="splash/mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+    <gap:splash src="splash/hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+    <gap:splash src="splash/xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
+    <gap:splash src="splash/portrait-xxhdpi.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
+    <gap:splash src="splash/landscape-xxhdpi.png" gap:platform="android" gap:qualifier="land-xxhdpi" />
 
-
-
-
-
-
-
+    <!-- Iphone 5 -->
+    <gap:splash src="splash/xhdpi.png" width="640" height="960" />
     
 </widget>
