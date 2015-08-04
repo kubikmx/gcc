@@ -78,5 +78,7 @@
 
     <!-- Iphone 5 -->
     <gap:splash src="splash/xhdpi.png" width="640" height="960" />
+    <gap:splash src="splash/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
+    <gap:splash src="splash/Default_iphone5_lan.png" gap:platform="ios" width="1136" height="640" />
     
 </widget>
