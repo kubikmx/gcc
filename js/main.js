@@ -4,7 +4,7 @@ function onLoad(){
 
 function loadinfo(){
   window.analytics.startTrackerWithId('UA-65940888-1');
-  window.analytics.trackView('Noticias');
+  //window.analytics.trackView('Noticias');
 
   
   $.getJSON("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
@@ -32,7 +32,7 @@ function loadinfo(){
 
 function loadtorneos(){
     window.analytics.startTrackerWithId('UA-65940888-1');
-    window.analytics.trackView('Torneos');
+    //window.analytics.trackView('Torneos');
 
     
     $.getJSON("http://www.k-i.co/cc/webservices/torneos.php"+'?r='+Math.random(), function(result){
@@ -63,7 +63,7 @@ function loadtorneos(){
 
 function loadavisos(){
   window.analytics.startTrackerWithId('UA-65940888-1');
-  window.analytics.trackView('Avisos');
+  //window.analytics.trackView('Avisos');
 
   
   $.getJSON("http://www.k-i.co/cc/webservices/eventos.php"+'?r='+Math.random(), function(result){
@@ -91,7 +91,7 @@ function loadavisos(){
 
 function loadmenuactivities(){
   window.analytics.startTrackerWithId('UA-65940888-1');
-  window.analytics.trackView('Actividades');
+  //window.analytics.trackView('Actividades');
 
     
     $.getJSON("http://www.k-i.co/cc/webservices/actividadeslist.php"+'?r='+Math.random(), function(result){
