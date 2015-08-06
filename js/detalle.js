@@ -19,7 +19,7 @@ function loadinfo(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/noticias/"+field.imagen);	
@@ -66,10 +66,10 @@ function onLoadcontact(){
 
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
-				if (field.liga!=""){
+				//if (field.liga!=""){
 					$(".parrafodetalle").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
 					$("#linkkubik").append('<a onclick="openurl(\'http://kubik.mx\')" >kubik.mx</a>');
-				}
+				//}
 	        });
 	    });
 	}
@@ -96,7 +96,7 @@ function onLoad_torneo(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_torneo.php?id="+idv, function(result){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_torneo.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/torneos/"+field.imagen);	
@@ -155,7 +155,7 @@ function loadaviso(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv, function(result){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/eventos/"+field.imagen);	
@@ -210,7 +210,7 @@ function loadactivity(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_actividad.php?id="+idv, function(result){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_actividad.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/actividades/"+field.imagen);	
@@ -259,7 +259,7 @@ function comparte(){
 	var titulo=$("#titulo_detalle").html();
 	var imagen=$(".fotonoticia").attr("src");
 	var subject=$("#titulo_detalle").html();
-	var url="http://k-i.co/cc/share.php";
+	var url="http://k-i.co/cc/share.php"+'?r='+Math.random();
 	window.plugins.socialsharing.share(mensaje+', '+titulo+', '+imagen, titulo, imagen, null);
 }
 
@@ -280,7 +280,7 @@ function loadrestaurant(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv, function(result){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#namerestaurant").html(field.nombre);
 				$("#imagerestaurant").attr("src","http://k-i.co/cc/images/restaurantes/"+field.imagen);	
@@ -341,7 +341,7 @@ function cargaimagenmenu(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv, function(result){
+		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#imagenzoom").attr("src","http://k-i.co/cc/images/restaurantes/"+field.menu);	
 				zoomactive();
@@ -362,7 +362,7 @@ function loadhadicap(){
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
-          url: "http://www.k-i.co/cc/webservices/handicap.php",
+          url: "http://www.k-i.co/cc/webservices/handicap.php"+'?r='+Math.random(),
           data: ({date: "last"}),
           cache: false,
           dataType: "text",
@@ -375,7 +375,7 @@ function loadhadicap_damas(){
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
-          url: "http://www.k-i.co/cc/webservices/handicap_damas.php",
+          url: "http://www.k-i.co/cc/webservices/handicap_damas.php"+'?r='+Math.random(),
           data: ({date: "last"}),
           cache: false,
           dataType: "text",
@@ -388,7 +388,7 @@ function loadhadicap_juniors(){
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
-          url: "http://www.k-i.co/cc/webservices/handicap_juniors.php",
+          url: "http://www.k-i.co/cc/webservices/handicap_juniors.php"+'?r='+Math.random(),
           data: ({date: "last"}),
           cache: false,
           dataType: "text",
@@ -459,7 +459,7 @@ function enviaropinion(){
 	    $("#messagesprocess").html("Procesando, espere por favor...");
 	    $.ajax({
 	      type: "POST",
-	      url: "http://www.k-i.co/cc/webservices/opiniones.php",
+	      url: "http://www.k-i.co/cc/webservices/opiniones.php"+'?r='+Math.random(),
 	      data: $("#formopinion").serialize(),
 	      success: function( data ) {
 	        $("#messagesprocess").html(data.respuesta);
@@ -475,7 +475,7 @@ function enviarcontacto(){
     $("#mensajerespuesta").html("Espere un momento...");
     $.ajax({
       type: "POST",
-      url: "http://www.k-i.co/cc/webservices/sendcontact.php",
+      url: "http://www.k-i.co/cc/webservices/sendcontact.php"+'?r='+Math.random(),
       data: $("#contact_form").serialize(),
       success: function( data ) {
         $("#mensajerespuesta").html("Mensaje Enviado");
