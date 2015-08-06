@@ -22,6 +22,8 @@ var app = {
                                         {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
         updatemessages();
+
+        window.analytics.startTrackerWithId('UA-65940888-1');
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
         var datos=jsonData.additionalData;

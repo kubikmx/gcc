@@ -3,6 +3,10 @@ function onLoad(){
 }
 
 function loadinfo(){
+  window.analytics.startTrackerWithId('UA-65940888-1');
+  window.analytics.trackView('Noticias');
+
+  $.ajaxSetup({ cache: false });
   $.getJSON("http://www.k-i.co/cc/webservices/noticias.php", function(result){
         $.each(result, function(i, field){
           var bloque=  '<div class="bordelist" id="element_'+field.id_noticia+'"><div class="articulo"><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><img src="http://k-i.co/cc/images/noticias/thumbs/'+field.imagen+'" ></a>';
@@ -27,6 +31,10 @@ function loadinfo(){
 }
 
 function loadtorneos(){
+    window.analytics.startTrackerWithId('UA-65940888-1');
+    window.analytics.trackView('Torneos');
+
+    $.ajaxSetup({ cache: false });
     $.getJSON("http://www.k-i.co/cc/webservices/torneos.php", function(result){
         $.each(result, function(i, field){
          var bloque=  '<div class="bordelist" id="element_'+field.id_torneo+'"><div class="articulo"><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><img src="http://k-i.co/cc/images/torneos/thumbs/'+field.imagen+'" ></a>';
@@ -54,6 +62,10 @@ function loadtorneos(){
 
 
 function loadavisos(){
+  window.analytics.startTrackerWithId('UA-65940888-1');
+  window.analytics.trackView('Avisos');
+
+  $.ajaxSetup({ cache: false });
   $.getJSON("http://www.k-i.co/cc/webservices/eventos.php", function(result){
         $.each(result, function(i, field){
          var bloque=  '<div class="bordelist" id="element_'+field.id_evento+'"><div class="articulo"><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><img src="http://k-i.co/cc/images/eventos/thumbs/'+field.imagen+'" ></a>';
@@ -78,6 +90,10 @@ function loadavisos(){
 }
 
 function loadmenuactivities(){
+  window.analytics.startTrackerWithId('UA-65940888-1');
+  window.analytics.trackView('Actividades');
+
+    $.ajaxSetup({ cache: false });
     $.getJSON("http://www.k-i.co/cc/webservices/actividadeslist.php", function(result){
         $.each(result, function(i, field){
             var bloque='<span><h3>'+field.padre.nombre+'</h3></span>';
@@ -119,6 +135,7 @@ function loadinfoactivities(){
         eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
     }
     if (idv!=0){
+        $.ajaxSetup({ cache: false });
         $.getJSON("http://www.k-i.co/cc/webservices/actividades.php?id="+idv, function(result){
             $.each(result, function(i, field){
              var bloque=  '<div class="bordelist" id="element_'+field.id_actividad+'"><div class="articulo"><a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"><img src="http://k-i.co/cc/images/actividades/thumbs/'+field.imagen+'" ></a>';

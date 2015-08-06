@@ -18,6 +18,7 @@ function loadinfo(){
 	
 	if (idv!=0){
 
+		$.ajaxSetup({ cache: false });
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
@@ -94,6 +95,7 @@ function onLoad_torneo(){
 	
 	if (idv!=0){
 
+		$.ajaxSetup({ cache: false });
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_torneo.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
@@ -152,6 +154,7 @@ function loadaviso(){
 	
 	if (idv!=0){
 
+		$.ajaxSetup({ cache: false });
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
@@ -206,6 +209,7 @@ function loadactivity(){
 	
 	if (idv!=0){
 
+		$.ajaxSetup({ cache: false });
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_actividad.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
@@ -275,6 +279,7 @@ function loadrestaurant(){
 	
 	if (idv!=0){
 
+		$.ajaxSetup({ cache: false });
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#namerestaurant").html(field.nombre);
@@ -310,6 +315,7 @@ function cargaidrestaurante(){
 		$("#restaurantes").val(idv);
 	}
 
+	$.ajaxSetup({ cache: false });
 	$.ajax({
             url:   'http://www.k-i.co/cc/webservices/cuestionario.php',
             success:  function (response) {
@@ -334,6 +340,7 @@ function cargaimagenmenu(){
 	
 	if (idv!=0){
 
+		$.ajaxSetup({ cache: false });
 		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				$("#imagenzoom").attr("src","http://k-i.co/cc/images/restaurantes/"+field.menu);	
@@ -352,6 +359,7 @@ function zoomactive(){
 
 function loadhadicap(){
 
+        $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
           url: "http://www.k-i.co/cc/webservices/handicap.php",
@@ -364,6 +372,7 @@ function loadhadicap(){
 }
 function loadhadicap_damas(){
 
+        $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
           url: "http://www.k-i.co/cc/webservices/handicap_damas.php",
@@ -376,6 +385,7 @@ function loadhadicap_damas(){
 }
 function loadhadicap_juniors(){
 
+        $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
           url: "http://www.k-i.co/cc/webservices/handicap_juniors.php",
