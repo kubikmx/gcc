@@ -3,7 +3,7 @@ function onLoad(){
 }
 
 function loadinfo(){
-  window.analytics.startTrackerWithId('UA-65940888-1');
+  //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
 
   
@@ -31,7 +31,7 @@ function loadinfo(){
 }
 
 function loadtorneos(){
-    window.analytics.startTrackerWithId('UA-65940888-1');
+    //window.analytics.startTrackerWithId('UA-65940888-1');
     //window.analytics.trackView('Torneos');
 
     
@@ -62,7 +62,7 @@ function loadtorneos(){
 
 
 function loadavisos(){
-  window.analytics.startTrackerWithId('UA-65940888-1');
+  //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Avisos');
 
   
@@ -90,7 +90,7 @@ function loadavisos(){
 }
 
 function loadmenuactivities(){
-  window.analytics.startTrackerWithId('UA-65940888-1');
+  //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Actividades');
 
     
