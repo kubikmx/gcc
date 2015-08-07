@@ -19,7 +19,7 @@ function loadinfo(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv+'&r='+Math.random(), function(result){
+		$.post("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/noticias/"+field.imagen);	
@@ -53,7 +53,7 @@ function loadinfo(){
 	            
 	        }, function(error) {});*/
 
-	    });
+	    },'json');
 	}
 
 
@@ -64,14 +64,14 @@ function onLoadcontact(){
 	
 	if (idv!=0){
 
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
+		$.post("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
 	        $.each(result, function(i, field){
 				//if (field.liga!=""){
 					$(".parrafodetalle").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
 					$("#linkkubik").append('<a onclick="openurl(\'http://kubik.mx\')" >kubik.mx</a>');
 				//}
 	        });
-	    });
+	    },'json');
 	}
 
 
@@ -96,7 +96,7 @@ function onLoad_torneo(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_torneo.php?id="+idv+'&r='+Math.random(), function(result){
+		$.post("http://www.k-i.co/cc/webservices/detalle_torneo.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/torneos/"+field.imagen);	
@@ -133,7 +133,7 @@ function onLoad_torneo(){
 	              window.applicationPreferences.set("kubik_torneos", nuevo, function() {},function(error) {});
 	            
 	        }, function(error) {});*/
-	    });
+	    },'json');
 	}
 
 
@@ -155,7 +155,7 @@ function loadaviso(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv+'&r='+Math.random(), function(result){
+		$.post("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/eventos/"+field.imagen);	
@@ -188,7 +188,7 @@ function loadaviso(){
 	              window.applicationPreferences.set("kubik_eventos", nuevo, function() {},function(error) {});
 	            
 	        }, function(error) {});*/
-	    });
+	    },'json');
 	}
 
 
@@ -210,7 +210,7 @@ function loadactivity(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_actividad.php?id="+idv+'&r='+Math.random(), function(result){
+		$.post("http://www.k-i.co/cc/webservices/detalle_actividad.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#titulo_detalle").html(field.nombre);
 				$(".fotonoticia").attr("src","http://k-i.co/cc/images/actividades/"+field.imagen);	
@@ -246,7 +246,7 @@ function loadactivity(){
 	            
 	        }, function(error) {});*/
 
-	    });
+	    },'json');
 	}
 
 
@@ -280,7 +280,7 @@ function loadrestaurant(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
+		$.post("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#namerestaurant").html(field.nombre);
 				$("#imagerestaurant").attr("src","http://k-i.co/cc/images/restaurantes/"+field.imagen);	
@@ -292,7 +292,7 @@ function loadrestaurant(){
 					$("#aconsultamenu").hide();
 				$("#ligaopinion").attr("href","opiniones.html?idv="+field.nombre);	
 	        });
-	    });
+	    },'json');
 	}
 
 
@@ -317,6 +317,7 @@ function cargaidrestaurante(){
 
 	$.ajaxSetup({ cache: false });
 	$.ajax({
+            type: "POST",
             url:   'http://www.k-i.co/cc/webservices/cuestionario.php',
             success:  function (response) {
                     $("#contentq").html(response);
@@ -341,12 +342,12 @@ function cargaimagenmenu(){
 	if (idv!=0){
 
 		$.ajaxSetup({ cache: false });
-		$.getJSON("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
+		$.post("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
 				$("#imagenzoom").attr("src","http://k-i.co/cc/images/restaurantes/"+field.menu);	
 				zoomactive();
 	        });
-	    });
+	    },'json');
 	}
 
 	
