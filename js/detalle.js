@@ -17,7 +17,7 @@ function loadinfo(){
 	}
 	
 	if (idv!=0){
-
+		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -78,6 +78,22 @@ function onLoadcontact(){
 }
 
 
+function onLoadfundacion(){
+	var idv=10;
+	
+	if (idv!=0){
+
+		$.post("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
+					$("#linkpresentacion").append('<a onclick="openurl(\'http://gcc.com.mx/presentacion.php\')" >Ver nuestra presentaci&oacute;n</a>');
+					$("#linkinforme").append('<a onclick="openurl(\'http://gcc.com.mx/brochure.html\')" >Informe 2014</a>');
+					$("#linkvideo").append('<a onclick="openurl(\'https://vimeo.com/80077029\')" ><img src="images/videofundacion.jpg" style="width:100%"></a>');
+	    },'json');
+	}
+
+
+}
+
+
 
 
 function onLoad_torneo(){
@@ -94,7 +110,7 @@ function onLoad_torneo(){
 	}
 	
 	if (idv!=0){
-
+		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_torneo.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -153,7 +169,7 @@ function loadaviso(){
 	}
 	
 	if (idv!=0){
-
+		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -208,7 +224,7 @@ function loadactivity(){
 	}
 	
 	if (idv!=0){
-
+		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_actividad.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -278,7 +294,7 @@ function loadrestaurant(){
 	}
 	
 	if (idv!=0){
-
+		$("#namerestaurant").html("<img src='images/loadercircle.gif'>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -314,7 +330,7 @@ function cargaidrestaurante(){
 	if (idv!=0){
 		$("#restaurantes").val(idv);
 	}
-
+	$("#contentq").html("<img src='images/loadercircle.gif'>");
 	$.ajaxSetup({ cache: false });
 	$.ajax({
             type: "POST",
@@ -359,7 +375,7 @@ function zoomactive(){
 }
 
 function loadhadicap(){
-
+		$("#detallehandicap").html("<img src='images/loadercircle.gif'>");
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
@@ -372,7 +388,7 @@ function loadhadicap(){
         
 }
 function loadhadicap_damas(){
-
+		$("#detallehandicap").html("<img src='images/loadercircle.gif'>");
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
@@ -385,7 +401,7 @@ function loadhadicap_damas(){
         
 }
 function loadhadicap_juniors(){
-
+		$("#detallehandicap").html("<img src='images/loadercircle.gif'>");
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",

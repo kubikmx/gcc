@@ -5,9 +5,10 @@ function onLoad(){
 function loadinfo(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-
+$("#listado_normal").html("<img src='images/loadercircle.gif'>");
   
   $.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
+        $("#listado_normal").html("");
         $.each(result, function(i, field){
           var bloque=  '<div class="bordelist" id="element_'+field.id_noticia+'"><div class="articulo"><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><img src="http://k-i.co/cc/images/noticias/thumbs/'+field.imagen+'" ></a>';
            bloque+= '<p><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
@@ -34,8 +35,9 @@ function loadtorneos(){
     //window.analytics.startTrackerWithId('UA-65940888-1');
     //window.analytics.trackView('Torneos');
 
-    
+    $("#listado_normal").html("<img src='images/loadercircle.gif'>");
     $.post("http://www.k-i.co/cc/webservices/torneos.php"+'?r='+Math.random(), function(result){
+        $("#listado_normal").html("");
         $.each(result, function(i, field){
          var bloque=  '<div class="bordelist" id="element_'+field.id_torneo+'"><div class="articulo"><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><img src="http://k-i.co/cc/images/torneos/thumbs/'+field.imagen+'" ></a>';
              bloque+= '<p><a href="detalle_torneo.html?idv='+field.id_torneo+'" data-id="'+field.id_torneo+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
@@ -65,8 +67,9 @@ function loadavisos(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Avisos');
 
-  
+  $(".listado_eventos").html("<img src='images/loadercircle.gif'>");
   $.post("http://www.k-i.co/cc/webservices/eventos.php"+'?r='+Math.random(), function(result){
+        $(".listado_eventos").html("");
         $.each(result, function(i, field){
          var bloque=  '<div class="bordelist" id="element_'+field.id_evento+'"><div class="articulo"><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><img src="http://k-i.co/cc/images/eventos/thumbs/'+field.imagen+'" ></a>';
            bloque+= '<p><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
@@ -93,8 +96,9 @@ function loadmenuactivities(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Actividades');
 
-    
+    $("#listadeactividades").html("<img src='images/loadercircle.gif'>");
     $.post("http://www.k-i.co/cc/webservices/actividadeslist.php"+'?r='+Math.random(), function(result){
+        $("#listadeactividades").html("");
         $.each(result, function(i, field){
             var bloque='<span><h3>'+field.padre.nombre+'</h3></span>';
             $("#listadeactividades").append(bloque);
@@ -123,6 +127,7 @@ function loadmenuactivities(){
 }
 
 function loadinfoactivities(){
+    $("#listado_normal").html("<img src='images/loadercircle.gif'>");
     var cadVariables = location.search.substring(1,location.search.length ); // sin ?
     var arrVariables = cadVariables.split("&"); // array de cadenas de tipo "var1=valor1"
     var idv=0;
@@ -137,6 +142,7 @@ function loadinfoactivities(){
     if (idv!=0){
         
         $.post("http://www.k-i.co/cc/webservices/actividades.php?id="+idv, function(result){
+            $("#listado_normal").html("");
             $.each(result, function(i, field){
              var bloque=  '<div class="bordelist" id="element_'+field.id_actividad+'"><div class="articulo"><a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"><img src="http://k-i.co/cc/images/actividades/thumbs/'+field.imagen+'" ></a>';
                  bloque+= '<p><a href="actividad.html?idv='+field.id_actividad+'" data-id="'+field.id_actividad+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
@@ -183,7 +189,9 @@ function enviarcontacto(){
 }
 
 function loadinforestaurants(){
+    $("#listado_restaurants").html("<img src='images/loadercircle.gif'>");
     $.post("http://www.k-i.co/cc/webservices/restaurantes.php"+'?r='+Math.random(), function(result){
+        $("#listado_restaurants").html("");
         $.each(result, function(i, field){
          var bloque=  '<div class="column_1_1 center"><a href="restaurantdetalle.html?idv='+field.id_restaurante+'"><img class="column_5_6 padding_sides" src="http://k-i.co/cc/images/restaurantes/'+field.imagen+'" ></a><ul id="menurestaurantes"><li><a href="restaurantdetalle.html?idv='+field.id_restaurante+'" class="btn_nextlist">'+field.nombre+'</a></li> </ul></div><div class="clear padding"></div>';  
 
