@@ -65,12 +65,12 @@ function onLoadcontact(){
 	if (idv!=0){
 
 		$.post("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv, function(result){
-	        $.each(result, function(i, field){
+	        //$.each(result, function(i, field){
 				//if (field.liga!=""){
 					$(".parrafodetalle").append('<a onclick="openurl(\'http://www.gcc.com.mx\')" class="linkexterno">www.gcc.com.mx</a>');
 					$("#linkkubik").append('<a onclick="openurl(\'http://kubik.mx\')" >kubik.mx</a>');
 				//}
-	        });
+	        //});
 	    },'json');
 	}
 
@@ -403,12 +403,14 @@ function onSuccesshandicap(data)
     $("#detallehandicap").html( data);
     $(".botonbusquedahadi").click(function(){
     	var busqueda=formatea($("#nombretxt").val()); 
-    	$("#detallehandicap table tr").each(function(){
-    		var row=formatea($(this).find('td:eq(1)').text()); 
-    		if (row.indexOf(busqueda)!=-1)
-    			$(this).removeClass("troculto");
-    		else
-    			$(this).addClass("troculto");
+    	$("#detallehandicap table tr").each(function(index, value){ 
+    		if (index>0){
+	    		var row=formatea($(this).find('td:eq(1)').text()); 
+	    		if (row.indexOf(busqueda)!=-1)
+	    			$(this).removeClass("troculto");
+	    		else
+	    			$(this).addClass("troculto");
+	    	}
     	});
     });
 }

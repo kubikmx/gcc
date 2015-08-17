@@ -296,6 +296,7 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 	width: 98%;
 	border: none;
 	padding: 1%;
+	background-color: #eeeeee;
 }
 .btn_enviaremail{
 	border: none;
@@ -479,3 +480,16 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 .botonbusquedahadi{width: 22%;margin-right: 2%;border: none;display: inline-block;}
 .troculto{display: none !important;}
 .blanco{color:#fff;}
+
+#detalle_std{
+	display: inline-block;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+#fechahandi{
+	display: inline-block;
+    margin: 10px 0;
+    text-align: left;
+    width: 90%;
+}
