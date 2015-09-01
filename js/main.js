@@ -5,7 +5,7 @@ function onLoad(){
 function loadinfo(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<img src='images/loadercircle.gif'>");
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
   
   $.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
         $("#listado_normal").html("");
@@ -35,7 +35,7 @@ function loadtorneos(){
     //window.analytics.startTrackerWithId('UA-65940888-1');
     //window.analytics.trackView('Torneos');
 
-    $("#listado_normal").html("<img src='images/loadercircle.gif'>");
+    $("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
     $.post("http://www.k-i.co/cc/webservices/torneos.php"+'?r='+Math.random(), function(result){
         $("#listado_normal").html("");
         $.each(result, function(i, field){
@@ -67,7 +67,7 @@ function loadavisos(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Avisos');
 
-  $(".listado_eventos").html("<img src='images/loadercircle.gif'>");
+  $(".listado_eventos").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
   $.post("http://www.k-i.co/cc/webservices/eventos.php"+'?r='+Math.random(), function(result){
         $(".listado_eventos").html("");
         $.each(result, function(i, field){
@@ -96,7 +96,7 @@ function loadmenuactivities(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Actividades');
 
-    $("#listadeactividades").html("<img src='images/loadercircle.gif'>");
+    $("#listadeactividades").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
     $.post("http://www.k-i.co/cc/webservices/actividadeslist.php"+'?r='+Math.random(), function(result){
         $("#listadeactividades").html("");
         $.each(result, function(i, field){
@@ -127,7 +127,7 @@ function loadmenuactivities(){
 }
 
 function loadinfoactivities(){
-    $("#listado_normal").html("<img src='images/loadercircle.gif'>");
+    $("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
     var cadVariables = location.search.substring(1,location.search.length ); // sin ?
     var arrVariables = cadVariables.split("&"); // array de cadenas de tipo "var1=valor1"
     var idv=0;
@@ -189,7 +189,7 @@ function enviarcontacto(){
 }
 
 function loadinforestaurants(){
-    $("#listado_restaurants").html("<img src='images/loadercircle.gif'>");
+    $("#listado_restaurants").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
     $.post("http://www.k-i.co/cc/webservices/restaurantes.php"+'?r='+Math.random(), function(result){
         $("#listado_restaurants").html("");
         $.each(result, function(i, field){

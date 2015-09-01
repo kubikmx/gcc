@@ -17,7 +17,7 @@ function loadinfo(){
 	}
 	
 	if (idv!=0){
-		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
+		$("#titulo_detalle").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_noticias.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -110,7 +110,7 @@ function onLoad_torneo(){
 	}
 	
 	if (idv!=0){
-		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
+		$("#titulo_detalle").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_torneo.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -169,7 +169,7 @@ function loadaviso(){
 	}
 	
 	if (idv!=0){
-		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
+		$("#titulo_detalle").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_eventos.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -224,7 +224,7 @@ function loadactivity(){
 	}
 	
 	if (idv!=0){
-		$("#titulo_detalle").html("<img src='images/loadercircle.gif'>");
+		$("#titulo_detalle").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_actividad.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -294,7 +294,7 @@ function loadrestaurant(){
 	}
 	
 	if (idv!=0){
-		$("#namerestaurant").html("<img src='images/loadercircle.gif'>");
+		$("#namerestaurant").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
 		$.ajaxSetup({ cache: false });
 		$.post("http://www.k-i.co/cc/webservices/detalle_restaurant.php?id="+idv+'&r='+Math.random(), function(result){
 	        $.each(result, function(i, field){
@@ -330,7 +330,7 @@ function cargaidrestaurante(){
 	if (idv!=0){
 		$("#restaurantes").val(idv);
 	}
-	$("#contentq").html("<img src='images/loadercircle.gif'>");
+	$("#contentq").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
 	$.ajaxSetup({ cache: false });
 	$.ajax({
             type: "POST",
@@ -375,7 +375,7 @@ function zoomactive(){
 }
 
 function loadhadicap(){
-		$("#detallehandicap").html("<img src='images/loadercircle.gif'>");
+		$("#detallehandicap").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
@@ -388,7 +388,7 @@ function loadhadicap(){
         
 }
 function loadhadicap_damas(){
-		$("#detallehandicap").html("<img src='images/loadercircle.gif'>");
+		$("#detallehandicap").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
@@ -401,7 +401,7 @@ function loadhadicap_damas(){
         
 }
 function loadhadicap_juniors(){
-		$("#detallehandicap").html("<img src='images/loadercircle.gif'>");
+		$("#detallehandicap").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
         $.ajaxSetup({ cache: false });
         $.ajax({
           type: "POST",
@@ -417,12 +417,24 @@ function onSuccesshandicap(data)
 {
 
     $("#detallehandicap").html( data);
+    var columnas=0;
+    $("#detallehandicap table tr").each(function(index, value){ 
+    	$(this).find('td:eq(1)').css("display","none");
+    	columnas=$(this).find("td").length;
+    	var porcentaje =Math.floor(100/(columnas-1));
+    	$("td",this).each(function(){
+    		$(this).addClass("porcentaje"+porcentaje);
+    	})
+    });
+
     $(".botonbusquedahadi").click(function(){
-    	var busqueda=formatea($("#nombretxt").val()); 
+    	var busqueda=formatea($("#nombretxt").val());
+    	busqueda = busqueda.replace(/\s/g, ''); 
     	$("#detallehandicap table tr").each(function(index, value){ 
     		if (index>0){
-	    		var row=formatea($(this).find('td:eq(1)').text()); 
-	    		if (row.indexOf(busqueda)!=-1)
+	    		var row=formatea($(this).find('td:eq(0)').text());
+	    		row = row.replace(/\s/g, ''); 
+	    		if (row==busqueda || busqueda=="")
 	    			$(this).removeClass("troculto");
 	    		else
 	    			$(this).addClass("troculto");

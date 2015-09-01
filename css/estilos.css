@@ -109,7 +109,7 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
 #detallehandicap table,#detallehandicap tr,#detallehandicap tbody {width:100%; display:inline-block;}
 #detallehandicap tr td{display:inline-block;float: left;}
 #detallehandicap font{font-size: 10px; font-family: inherit;}
-#detallehandicap tr td:nth-child(1){width: 10%; text-align: left;}
+#detallehandicap tr td:nth-child(1){width: 10%; text-align: left; text-indent: 15px}
 #detallehandicap tr td:nth-child(2){width: 42%; text-align: left;}
 #detallehandicap tr td:nth-child(3){width: 12%; text-align: center;}
 #detallehandicap tr td:nth-child(4){width: 12%; text-align: center;}
@@ -493,3 +493,9 @@ a.flechamedio{background-image: url("../images/ir.png");background-position: cen
     text-align: left;
     width: 90%;
 }
+
+.porcentaje20{width: 20% !important;}
+.porcentaje25{width: 25% !important;}
+.porcentaje33{width: 33% !important;}
+
+.loading{display: inline-block;width: 100%;text-align: center;height: auto;margin:40px 0;}
