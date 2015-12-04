@@ -418,27 +418,28 @@ function onSuccesshandicap(data)
 
     $("#detallehandicap").html( data);
     var columnas=0;
-    $("#detallehandicap table tr").each(function(index, value){ 
+    $("#detallehandicap table tr:first").find("td:first").each(function(index, value){ 
+    	$(this).html("#");
+    });
+    /*$("#detallehandicap table tr").each(function(index, value){ 
     	$(this).find('td:eq(1)').css("display","none");
     	columnas=$(this).find("td").length;
     	var porcentaje =Math.floor(100/(columnas-1));
     	$("td",this).each(function(){
     		$(this).addClass("porcentaje"+porcentaje);
     	})
-    });
+    });*/
 
     $(".botonbusquedahadi").click(function(){
     	var busqueda=formatea($("#nombretxt").val());
-    	busqueda = busqueda.replace(/\s/g, ''); 
-    	$("#detallehandicap table tr").each(function(index, value){ 
-    		if (index>0){
-	    		var row=formatea($(this).find('td:eq(0)').text());
-	    		row = row.replace(/\s/g, ''); 
-	    		if (row==busqueda || busqueda=="")
-	    			$(this).removeClass("troculto");
-	    		else
-	    			$(this).addClass("troculto");
-	    	}
+    	//busqueda = busqueda.replace(/\s/g, ''); 
+
+    	$("#detallehandicap table tr").each(function(){
+    		var row=formatea($(this).find('td:eq(1)').text()); 
+    		if (row.indexOf(busqueda)!=-1)
+    			$(this).removeClass("troculto");
+    		else
+    			$(this).addClass("troculto");
     	});
     });
 }

@@ -9,6 +9,7 @@ $("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gi
   
   $.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
         $("#listado_normal").html("");
+        var newlist="";
         $.each(result, function(i, field){
           var bloque=  '<div class="bordelist" id="element_'+field.id_noticia+'"><div class="articulo"><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><img src="http://k-i.co/cc/images/noticias/thumbs/'+field.imagen+'" ></a>';
            bloque+= '<p><a href="detalle.html?idv='+field.id_noticia+'" data-id="'+field.id_noticia+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
@@ -16,8 +17,11 @@ $("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gi
            bloque+= '</div><div class="clear"></div></div>';  
 
             $("#listado_normal").append(bloque);
+            newlist+=((i>0)?",":"")+field.id_noticia;
 
         });
+
+        restore("kubik_noticias",newlist);
 
         var value = localStorage.getItem('kubik_noticias') || '';
         var actual=value;
@@ -70,6 +74,7 @@ function loadavisos(){
   $(".listado_eventos").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
   $.post("http://www.k-i.co/cc/webservices/eventos.php"+'?r='+Math.random(), function(result){
         $(".listado_eventos").html("");
+        var newlist="";
         $.each(result, function(i, field){
          var bloque=  '<div class="bordelist" id="element_'+field.id_evento+'"><div class="articulo"><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><img src="http://k-i.co/cc/images/eventos/thumbs/'+field.imagen+'" ></a>';
            bloque+= '<p><a href="detalle_aviso.html?idv='+field.id_evento+'" data-id="'+field.id_evento+'"><span>'+ field.nombre +' </span>'+field.intro+'</a></p>';
@@ -77,8 +82,11 @@ function loadavisos(){
            bloque+= '</div><div class="clear"></div></div>';  
 
           $(".listado_eventos").append(bloque);
+          newlist+=((i>0)?",":"")+field.id_evento;
 
         });
+
+        restore("kubik_eventos",newlist);
 
         var value = localStorage.getItem('kubik_eventos') || '';
             var actual=value;
@@ -201,3 +209,23 @@ function loadinforestaurants(){
     },'json');
 }
 
+
+function restore(tabla,valores){
+    var value = localStorage.getItem(tabla) || ''; 
+    var nuevo = "";
+
+    var res = value.split(","),
+    dbvalores = valores.split(","),
+    i=0,
+    j=0;
+    
+    for(i in res){ 
+        var existe=0; 
+        for(j in dbvalores){
+          if (res[i]==dbvalores[j]) existe=1;
+        }
+        if (existe)
+          nuevo+=((nuevo!="")?",":"")+res[i];
+    }
+    localStorage.setItem(tabla, nuevo); 
+}

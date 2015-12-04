@@ -60,8 +60,18 @@ function register(){
 
 }
 
+function onPrompt(results) {
+}
+
 function insertavar(tabla,articulo){
-    var value = localStorage.getItem(tabla) || ''; alert("Notificaci\u00f3n Recibida");
+
+
+    navigator.notification.prompt(
+        'Notificaci\u00f3n Recibida', 
+        onPrompt
+    );
+
+    var value = localStorage.getItem(tabla) || ''; 
     var actual=value;
             var res = value.split(","),
             i=0,
