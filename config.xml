@@ -28,7 +28,6 @@
     </gap:config-file>
 
     <!-- <gap:plugin name="com.onesignal.plugins.onesignal" version="1.6.1" /> -->
-    <plugin name="com.onesignal.plugins.onesignal" spec="1.9.0" source="pgb" />
 
     <plugin name="com.orcasinc.cordova.inappbrowser" spec="1.0.3" source="pgb" />
 
