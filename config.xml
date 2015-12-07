@@ -30,12 +30,12 @@
     <!-- <gap:plugin name="com.onesignal.plugins.onesignal" version="1.6.1" /> -->
 
 
-
-    <plugin name="org.li8.inappbrowser" spec="0.1" source="pgb" />
+    <!-- <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" /> -->
+    <plugin name="org.nom.inappbrowser" spec="1" source="pgb" />
 
     <gap:plugin name="com.mobileapart.prefs" version="1.0.1337" />
 
-
+    <!-- <gap:plugin name="com.google.analytics.celwell" version="0.7.4" /> -->
     <plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb" />
 
     <plugin name="com.developersanddesigners.phonegapdialogs" spec="1.1.1" source="pgb" />
