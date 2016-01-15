@@ -16,7 +16,7 @@ $.ajax({
       },
       error: function(jqXHR, textStatus, errorThrown) {
         
-          alert(jqXHR.responseText);
+          alert(jqXHR.status);
       }
     });
 
