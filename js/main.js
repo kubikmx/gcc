@@ -21,7 +21,7 @@ $("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gi
 
         });
 
-        restore("kubik_noticias",newlist);
+        /*restore("kubik_noticias",newlist);
 
         var value = localStorage.getItem('kubik_noticias') || '';
         var actual=value;
@@ -30,7 +30,7 @@ $("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gi
           existe=0; 
           for(i in res){ 
               $("#element_"+res[i]).append('<div class="alertblock"></div>');
-          }
+          }*/
 
     },'json');
 }
