@@ -18,10 +18,10 @@ var app = {
 
     receivedEvent: function(id) {
         
-        window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
+        /*window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
                                         {googleProjectNumber: "988145283407",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
-        updatemessages();
+        updatemessages();*/
 
         window.analytics.startTrackerWithId('UA-65940888-1');
     },
@@ -87,7 +87,7 @@ function insertavar(tabla,articulo){
 
 }
 
-function updatemessages(){
+function updatemessages(){/*
     var value = localStorage.getItem('kubik_noticias') || '';
     var res = value.split(","),
         i=0,
@@ -148,6 +148,6 @@ function updatemessages(){
         } else {
             document.getElementById("notificacion_t").style.display = "none";
         }            
-   
+   */
 }
 

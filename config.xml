@@ -3,8 +3,8 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         xmlns:android   = "http://schemas.android.com/apk/res/android"
         id          = "mx.kubik.gcc"
-        versionCode = "18" 
-        version     = "1.0.8" >
+        versionCode = "19" 
+        version     = "1.0.9" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -28,7 +28,7 @@
     </gap:config-file>
 
     <!-- <gap:plugin name="com.onesignal.plugins.onesignal" version="1.6.1" /> -->
-    <plugin name="com.onesignal.plugins.onesignal" spec="1.9.0" source="pgb" />
+    <!-- <plugin name="com.onesignal.plugins.onesignal" spec="1.9.0" source="pgb" />-->
 
     <plugin name="com.orcasinc.cordova.inappbrowser" spec="1.0.3" source="pgb" />
 
