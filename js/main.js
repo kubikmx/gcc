@@ -15,14 +15,8 @@ $.ajax({
           alert('OK');
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        var result = [];
-        for (var l in jqXHR){
-          if (jqXHR.hasOwnProperty(l){
-            result.push(l+': '+jqXHR[l]);
-          }
-        }
-        alert(result.join('\n'));
-
+        
+          alert(jqXHR.status);
       }
     });
 
