@@ -5,9 +5,10 @@ function onLoad(){
 function loadinfo(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v2</div>");
   
-  $.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
+  //$.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
+  $.getJSON("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
         $("#listado_normal").html("");
         var newlist="";
         $.each(result, function(i, field){
@@ -31,8 +32,8 @@ $("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gi
           for(i in res){ 
               $("#element_"+res[i]).append('<div class="alertblock"></div>');
           }*/
-
-    },'json');
+    });
+    //},'json');
 }
 
 function loadtorneos(){
