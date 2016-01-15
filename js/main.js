@@ -6,10 +6,10 @@ function loadinfo(){
   $.support.cors = true;
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v4</div>");
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v5</div>");
   
   //$.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
-  $.getJSON("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
+  $.getJSON("https://s199975.gridserver.com/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
         $("#listado_normal").html("");
         var newlist="";
         $.each(result, function(i, field){
