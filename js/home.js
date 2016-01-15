@@ -87,7 +87,7 @@ function insertavar(tabla,articulo){
 
 }
 
-function updatemessages(){/*
+function updatemessages(){
     var value = localStorage.getItem('kubik_noticias') || '';
     var res = value.split(","),
         i=0,
@@ -148,6 +148,6 @@ function updatemessages(){/*
         } else {
             document.getElementById("notificacion_t").style.display = "none";
         }            
-   */
+   
 }
 

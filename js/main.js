@@ -3,27 +3,11 @@ function onLoad(){
 }
 
 function loadinfo(){
-  $.support.cors = true;
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v8</div>");
-
-$.ajax({
-      type: 'POST',
-      url:  "https://s199975.gridserver.com/cc/webservices/noticias.php",
-      success: function(data, textStatus, jqXHR) {
-          alert('OK');
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        
-          alert(jqXHR.status);
-      }
-    });
-
-
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'></div>");
   
-  //$.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
-  $.getJSON("https://s199975.gridserver.com/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
+  $.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
         $("#listado_normal").html("");
         var newlist="";
         $.each(result, function(i, field){
@@ -37,7 +21,7 @@ $.ajax({
 
         });
 
-        /*restore("kubik_noticias",newlist);
+        restore("kubik_noticias",newlist);
 
         var value = localStorage.getItem('kubik_noticias') || '';
         var actual=value;
@@ -46,9 +30,9 @@ $.ajax({
           existe=0; 
           for(i in res){ 
               $("#element_"+res[i]).append('<div class="alertblock"></div>');
-          }*/
-    });
-    //},'json');
+          }
+
+    },'json');
 }
 
 function loadtorneos(){
