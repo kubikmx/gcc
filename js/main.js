@@ -6,7 +6,20 @@ function loadinfo(){
   $.support.cors = true;
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v5</div>");
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v6</div>");
+
+$.ajax({
+      type: 'POST',
+      url:  "https://s199975.gridserver.com/cc/webservices/noticias.php",
+      success: function(data, textStatus, jqXHR) {
+          alert('OK');
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        alert('Ha ocurrido un error'+textStatus);
+      }
+    });
+
+
   
   //$.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
   $.getJSON("https://s199975.gridserver.com/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
