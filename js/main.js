@@ -6,7 +6,7 @@ function loadinfo(){
   $.support.cors = true;
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v6</div>");
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v7</div>");
 
 $.ajax({
       type: 'POST',
@@ -15,7 +15,7 @@ $.ajax({
           alert('OK');
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        alert('Ha ocurrido un error'+textStatus);
+        alert(jqXHR+":"+errorThrown);
       }
     });
 
