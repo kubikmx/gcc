@@ -19,6 +19,7 @@
     </author>
 
     <access origin="http://www.k-i.co" subdomains="true" />
+    <access origin="*" />
 
     
     <gap:config-file platform="ios" parent="UIStatusBarHidden">
