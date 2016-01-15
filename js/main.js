@@ -5,7 +5,7 @@ function onLoad(){
 function loadinfo(){
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v2</div>");
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v3</div>");
   
   //$.post("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
   $.getJSON("http://www.k-i.co/cc/webservices/noticias.php"+'?r='+Math.random(), function(result){
