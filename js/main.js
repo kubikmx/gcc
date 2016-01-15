@@ -6,7 +6,7 @@ function loadinfo(){
   $.support.cors = true;
   //window.analytics.startTrackerWithId('UA-65940888-1');
   //window.analytics.trackView('Noticias');
-$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v7</div>");
+$("#listado_normal").html("<div class='loading'><img src='images/loadercircle.gif'>v8</div>");
 
 $.ajax({
       type: 'POST',
@@ -15,7 +15,14 @@ $.ajax({
           alert('OK');
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        alert(jqXHR+":"+errorThrown);
+        var result = [];
+        for (var l in jqXHR){
+          if (jqXHR.hasOwnProperty(l){
+            result.push(l+': '+jqXHR[l]);
+          }
+        }
+        alert(result.join('\n'));
+
       }
     });
 
