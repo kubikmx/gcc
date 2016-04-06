@@ -18,10 +18,10 @@ var app = {
 
     receivedEvent: function(id) {
         
-        /*window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
-                                        {googleProjectNumber: "988145283407",autoRegister: true},
+        window.plugins.OneSignal.init( "db69893c-153a-11e5-8e35-a78e6a279962",
+                                        {googleProjectNumber: "585933506047",autoRegister: true},
                                         app.didReceiveRemoteNotificationCallBack);
-        updatemessages();*/
+        updatemessages();
 
         window.analytics.startTrackerWithId('UA-65940888-1');
     },
@@ -66,10 +66,10 @@ function onPrompt(results) {
 function insertavar(tabla,articulo){
 
 
-    navigator.notification.prompt(
+    /*navigator.notification.prompt(
         'Notificaci\u00f3n Recibida', 
         onPrompt
-    );
+    );*/
 
     var value = localStorage.getItem(tabla) || ''; 
     var actual=value;
